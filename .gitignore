@@ -36,6 +36,9 @@ nosetests.xml
 coverage.xml
 htmlcov
 
+# Jupyter notebooks
+*.ipynb
+
 # Translations
 *.mo
 
