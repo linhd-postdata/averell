@@ -21,6 +21,7 @@ develop-eggs
 lib
 lib64
 venv*/
+env*/
 pyvenv*/
 pip-wheel-metadata/
 
@@ -35,6 +36,9 @@ pip-log.txt
 nosetests.xml
 coverage.xml
 htmlcov
+
+# Jupyter notebooks
+*.ipynb
 
 # Translations
 *.mo
