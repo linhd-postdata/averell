@@ -12,6 +12,12 @@ CORPORA_SOURCES = {
 
 
 def get_corpora(corpus_index_list=[*CORPORA_SOURCES], output_folder="corpora"):
+    """
+    Download corpus from a list of sources
+    :param corpus_index_list: List with the indexes of CORPORA_SOURCES to choose
+    which corpus is going to be downloaded
+    :param output_folder: The folder where the corpus is going to be saved
+    """
     for index in corpus_index_list:
         file_name, _ = urllib.request.urlretrieve(CORPORA_SOURCES[index])
         with ZipFile(file_name, 'r') as zipObj:
