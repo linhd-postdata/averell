@@ -43,7 +43,7 @@
     url: https://github.com/linhd-postdata/adsoScansionSystem/releases/download/1.0.0/ADSO_gold_standard_100poems.zip
     size: 128K
     doc_quantity: 100
-    word_quantity: ------
+    word_quantity: 9208
     granularity:
         - stanza
         - line

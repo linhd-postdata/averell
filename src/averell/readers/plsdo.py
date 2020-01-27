@@ -62,4 +62,3 @@ def parse_xml(xml_file):
 def get_features(path):
     for filename in path.rglob('*.xml'):
         parse_xml(str(filename))
-
