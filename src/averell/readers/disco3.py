@@ -1,5 +1,8 @@
 import re
 import xml.etree.ElementTree as ETree
+from pathlib import Path
+
+XML_PATH = Path("tei") / "all-periods-per-author"
 
 
 def parse_xml(xml_file):
@@ -62,8 +65,8 @@ def parse_xml(xml_file):
                     f".//*[@resource='disco:{sonnet_id}']"
                     + "/{http://www.tei-c.org/ns/1.0}title[@property='dc:alternative']")
                 if alt_title is not None:
-                    alt_title = re.sub(r"[\n ]+", " ",
-                                       "".join(alt_title.itertext()))
+                    alt_title = re.sub(
+                        r"[\n ]+", " ", "".join(alt_title.itertext()))
                     work_dict.update({"poem_alt_title": alt_title})
 
             line_number = 1
@@ -94,7 +97,8 @@ def parse_xml(xml_file):
 
                             stanza_text.append(line_text)
                             if line_dict["rhyme"] != "None":
-                                stanza_rhyme_pattern.append(line.attrib["rhyme"])
+                                stanza_rhyme_pattern.append(
+                                    line.attrib["rhyme"])
                             line_number += 1
                             line_list.append(line_dict)
 
@@ -112,13 +116,11 @@ def parse_xml(xml_file):
             work_dict.update({'stanzas': stanza_list})
             sonnet_list.append(work_dict)
     # End line groups
-
     if is_ensemble:
         id_list.sort()
         for sonnet in sonnet_list:
             sonnet.update(
                 {"work_number": str(id_list.index(sonnet['poem_id']) + 1)})
-
     for sonnet in sonnet_list:
         sonnet_dict = {**ensemble_dict, **sonnet}
         yield sonnet_dict
