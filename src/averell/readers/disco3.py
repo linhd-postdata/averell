@@ -1,6 +1,8 @@
 import re
 import xml.etree.ElementTree as ETree
+from pathlib import Path
 
+XML_PATH = Path("tei") / "all-periods-per-author"
 
 def parse_xml(xml_file):
     """
@@ -129,5 +131,5 @@ def get_features(path):
 
     :param path: path of the corpora folder
     """
-    for filename in path.rglob('*.xml'):
+    for filename in (Path(path) / XML_PATH).rglob('*.xml'):
         parse_xml(str(filename))
