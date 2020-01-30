@@ -131,5 +131,5 @@ def get_features(path):
 
     :param path: path of the corpora folder
     """
-    for filename in path.rglob('*.xml'):
+    for filename in (Path(path) / XML_PATH).rglob('*.xml'):
         parse_xml(str(filename))
