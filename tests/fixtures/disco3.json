@@ -1,0 +1,106 @@
+[
+    {
+        "ensemble_id": "s235g_0492",
+        "ensemble_title": "De El mejor tutor es Dios",
+        "ensemble_alt_title": "Imágenes confusas del deseo.",
+        "poem_id": "s235g_0492-1",
+        "poem_type": "sonnet",
+        "author": "Luis Belmonte Bermúdez",
+        "language": "Spanish",
+        "poem_title": "Dialogado: Serafina y Carlos",
+        "stanzas": [
+            {
+                "stanza_number": "1",
+                "stanza_type": "cuarteto",
+                "rhyme_pattern": "A-B-B-A",
+                "stanza_text": "[Car] Imágenes confusas del deseo\n[Ser] Ilusiones de amor, y de los ojos\n[Car] Alma, es esto verdad o son enrojos?\n[Ser] Es fantástico bien esto que veo?",
+                "lines": [
+                    {
+                        "line_number": "1",
+                        "line_text": "[Car] Imágenes confusas del deseo",
+                        "metrical_pattern": "-+---+---+-",
+                        "rhyme": "A"
+                    },
+                    {
+                        "line_number": "2",
+                        "line_text": "[Ser] Ilusiones de amor, y de los ojos",
+                        "metrical_pattern": "--+--+---+-",
+                        "rhyme": "B"
+                    },
+                    {
+                        "line_number": "3",
+                        "line_text": "[Car] Alma, es esto verdad o son enrojos?",
+                        "metrical_pattern": "+++-+--+-+-",
+                        "rhyme": "B"
+                    },
+                    {
+                        "line_number": "4",
+                        "line_text": "[Ser] Es fantástico bien esto que veo?",
+                        "metrical_pattern": "+-+---+--+-",
+                        "rhyme": "A"
+                    }
+                ]
+            },
+            {
+                "stanza_number": "2",
+                "stanza_type": "terceto",
+                "rhyme_pattern": "A-B-B",
+                "stanza_text": "[Car] Conozco mi desdicha, no lo creo\n[Ser] No renovéis engaños mis enojos\n[Car] O muerte, no me muestres tus despojos!",
+                "lines": [
+                    {
+                        "line_number": "5",
+                        "line_text": "[Car] Conozco mi desdicha, no lo creo",
+                        "metrical_pattern": "-+---+-+-+-",
+                        "rhyme": "A"
+                    },
+                    {
+                        "line_number": "6",
+                        "line_text": "[Ser] No renovéis engaños mis enojos",
+                        "metrical_pattern": "+--+-+---+-",
+                        "rhyme": "B"
+                    },
+                    {
+                        "line_number": "7",
+                        "line_text": "[Car] O muerte, no me muestres tus despojos!",
+                        "metrical_pattern": "-+-+-+---+-",
+                        "rhyme": "B"
+                    }
+                ]
+            }
+        ],
+        "work_number": "1"
+    },
+    {
+        "ensemble_id": "s235g_0492",
+        "ensemble_title": "De El mejor tutor es Dios",
+        "ensemble_alt_title": "Imágenes confusas del deseo.",
+        "poem_id": "s235g_0492-2",
+        "poem_type": "sonnet",
+        "author": "Luis Belmonte Bermúdez",
+        "language": "Spanish",
+        "poem_title": "Dialogado: Ricardo e Irene",
+        "stanzas": [
+            {
+                "stanza_number": "1",
+                "stanza_type": "pareado",
+                "rhyme_pattern": "None",
+                "stanza_text": "[Ri] De qué modo será, dulce, mi suerte\nel yugo de mujer aborrecida?",
+                "lines": [
+                    {
+                        "line_number": "1",
+                        "line_text": "[Ri] De qué modo será, dulce, mi suerte",
+                        "metrical_pattern": "-++--++--+-",
+                        "rhyme": "None"
+                    },
+                    {
+                        "line_number": "2",
+                        "line_text": "el yugo de mujer aborrecida?",
+                        "metrical_pattern": "-+---+---+-",
+                        "rhyme": "None"
+                    }
+                ]
+            }
+        ],
+        "work_number": "2"
+    }
+]
