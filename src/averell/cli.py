@@ -1,23 +1,29 @@
-"""
-Module that contains the command line app.
+from pathlib import Path
 
-Why does this file exist, and why not put this in __main__?
-
-  You might be tempted to import things from __main__ later, but that will cause
-  problems: the code will get executed twice:
-
-  - When you run `python -maverell` python will execute
-    ``__main__.py`` as a script. That means there won't be any
-    ``averell.__main__`` in ``sys.modules``.
-  - When you import __main__ it will get executed again (as a module) because
-    there's no ``averell.__main__`` in ``sys.modules``.
-
-  Also see (1) from http://click.pocoo.org/5/setuptools/#setuptools-integration
-"""
 import click
+from averell.core import get_corpora
 
 
-@click.command()
-@click.argument('names', nargs=-1)
-def main(names):
-    click.echo(repr(names))
+@click.group()
+def main():
+    """
+    Simple CLI for querying corpora on Github
+    """
+    pass
+
+
+@main.command()
+@click.option('--output', default=Path.cwd() / "corpora", help='Folder to download')
+@click.option('--granularity', default=None, help='Granularity')
+@click.argument('ids', nargs=-1)
+def download(ids, granularity, output):
+    """
+    Download the corpus with IDS
+    """
+    numbers = [int(x) for x in ids]
+    # print(numbers, output)
+    get_corpora(numbers, granularity, output)
+
+
+if __name__ == '__main__':
+    main()

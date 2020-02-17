@@ -1,12 +1,15 @@
+import json
 import logging
 import os
 import urllib.request
 from pathlib import Path
 from zipfile import ZipFile
 
+import yaml
 from tqdm import tqdm
 
-from averell.core import CORPORA_SOURCES
+with open('src/averell/corpora.yaml', 'r') as config_file:
+    CORPORA_SOURCES = yaml.load(config_file, Loader=yaml.FullLoader)
 
 DEFAULT_OUTPUT_FOLDER = Path.cwd() / "corpora"
 
@@ -40,30 +43,27 @@ def progress_bar(t):
     return update_to
 
 
-def download_and_uncompress(url, save_dir):
+def download_corpus(url):
     """
     :param url: URL of the corpus file
-    :param save_dir: The folder where the corpus is going to be uncompressed
     """
     filename = url.split('/')[-1]
-    with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1,
-              desc=filename) as t:
-        filename, _ = urllib.request.urlretrieve(url,
-                                                 reporthook=progress_bar(t))
+    with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1, desc=filename) as t:
+        filename, _ = urllib.request.urlretrieve(url, reporthook=progress_bar(t))
+    return filename
+
+
+def uncompress_corpus(filename, save_dir):
+    """
+
+    :param filename:
+    :param save_dir: The folder where the corpus is going to be uncompressed
+    :return:
+    """""
     with ZipFile(filename, 'r') as zipObj:
         zipObj.extractall(save_dir)
     os.remove(filename)
-
-
-def already_downloaded(folder_name, output_folder):
-    """
-
-    """
-    folder_path = Path(output_folder) / folder_name
-    if folder_path.exists():
-        return True
-    else:
-        return False
+    return filename
 
 
 def download_corpora(corpus_indices=None,
@@ -74,41 +74,44 @@ def download_corpora(corpus_indices=None,
     which corpus is going to be downloaded
     :param output_folder: The folder where the corpus is going to be saved
     """
-    if corpus_indices is not None:
+    folder_list = []
+    if corpus_indices:
         for index in tqdm(corpus_indices):
-            if CORPORA_SOURCES.get(index):
+            try:
                 folder_name = CORPORA_SOURCES[index]["properties"]["folder_name"]
-                if already_downloaded(folder_name, output_folder):
-                    print(
-                        f'Corpus {CORPORA_SOURCES[index]["name"]}'
-                        f' already downloaded')
+                folder_path = Path(output_folder) / folder_name
+                if folder_path.exists():
                     logging.info(
                         f'Corpus {CORPORA_SOURCES[index]["name"]}'
                         f' already downloaded')
                     continue
                 else:
                     url = CORPORA_SOURCES[index]["properties"]["url"]
-                    download_and_uncompress(url, output_folder)
-            else:
-                logging.error("Index number not in corpora list")
+                    filename = download_corpus(url)
+                    folder_list.append(uncompress_corpus(filename, output_folder))
+            except IndexError:
+                # logging.error(index_error)
+                return "Error"
+                raise
     else:
-        logging.info("No corpus selected. Nothing will be downloaded")
+        logging.error("No corpus selected. Nothing will be downloaded")
+    return folder_list
 
 
-def get_stanza_features(features):
-    dict_lines = []
-    for stanza_index, key in enumerate(features["stanzas"]):
-        stanza_features = features['stanzas'][stanza_index]
+def get_stanza_features(poem_features):
+    stanza_list = []
+    for stanza_index, key in enumerate(poem_features["stanzas"]):
+        stanza_features = poem_features['stanzas'][stanza_index]
         dic_final = {
             'stanza_number': stanza_features['stanza_number'],
-            'manually_checked': features['manually_checked'],
-            'title': features['title'],
-            'author': features['author'],
+            'manually_checked': poem_features['manually_checked'],
+            'poem_title': poem_features['poem_title'],
+            'author': poem_features['author'],
             'stanza_text': stanza_features['stanza_text'],
             'stanza_type': stanza_features['stanza_type']
         }
-        dict_lines.append(dic_final)
-    return dict_lines
+        stanza_list.append(dic_final)
+    return stanza_list
 
 
 def get_line_features(features):
@@ -132,10 +135,10 @@ def get_word_features(features):
     all_lines_features = get_line_features(features)
     all_words_features = []
     for stanza_index, stanza in enumerate(features["stanzas"]):
-        line = stanza["lines"]
-        for words in line:
-            line_number = int(words["line_number"])
-            for word in words["words"]:
+        lines = stanza["lines"]
+        for line in lines:
+            line_number = int(line["line_number"])
+            for word in line["words"]:
                 word_features = {"word_text": word["word_text"]}
                 line_features = all_lines_features[line_number - 1]
                 word_features.update(line_features)
@@ -147,32 +150,30 @@ def get_word_features(features):
 def get_syllable_features(features):
     all_words_features = get_word_features(features)
     all_syllable_features = []
-    for stanza in features["stanzas"]:
+    word_number = 0
+    for stanza_index, stanza in enumerate(features["stanzas"]):
         lines = stanza["lines"]
-        for line_index, words in enumerate(lines):
-            for word_index, word in enumerate(words["words"]):
-                for syllable in word["syllables"]:
-                    word_features = all_words_features[word_index]
-                    line = lines[line_index]
+        for line in lines:
+            line_number = int(line["line_number"])
+            words = line["words"]
+            for word_index, word in enumerate(words):
+                syllables = word["syllables"]
+                for syllable in syllables:
                     syllable_features = {
                         "syllable": syllable,
-                        "line_number": line["line_number"],
-                        "metrical_pattern": line["metrical_pattern"],
-                        "manually_checked": word_features["manually_checked"],
-                        "title": word_features["title"],
-                        "author": word_features["author"],
-                        "stanza_type": word_features["stanza_type"],
-                        "word_text": word_features["word_text"],
-                        "line_text": line[line_index]["line_text"],
-                        "stanza_number": word_features["stanza_number"]
+                        "line_number": line_number,
                     }
+                    word_features = all_words_features[word_number]
+                    syllable_features.update(word_features)
                     all_syllable_features.append(syllable_features)
+                word_number += 1
     return all_syllable_features
 
 
 def filter_features(features, corpus_index, granularity=None):
     filtered_features = []
-    granularities_list = CORPORA_SOURCES[corpus_index]["properties"]["granularity"]
+    granularities_list = CORPORA_SOURCES[corpus_index]["properties"][
+        "granularity"]
     if granularity in granularities_list:
         if granularity == "stanza":
             filtered_features = get_stanza_features(features)
@@ -182,6 +183,15 @@ def filter_features(features, corpus_index, granularity=None):
             filtered_features = get_word_features(features)
         elif granularity == "syllable":
             filtered_features = get_syllable_features(features)
-        else:
-            print(f"{granularity} not found on corpus properties")
     return filtered_features
+
+
+def write_json(poem_dict, filename):
+    """
+
+    :param poem_dict:
+    :param filename:
+    :return:
+    """
+    with open(filename + ".json", 'w', encoding='utf-8') as f:
+        json.dump(poem_dict, f, ensure_ascii=False, indent=4)
