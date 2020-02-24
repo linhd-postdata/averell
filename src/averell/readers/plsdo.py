@@ -11,6 +11,11 @@ class CommentedTreeBuilder(ETree.TreeBuilder):
 
 
 def parse_xml(xml_file):
+    """
+    XML TEI poem parser for 'Poesía Lírica Castellana Siglo de Oro' corpus
+    :param xml_file: path of xml file
+    :return: poem dict
+    """
     custom_xmlparser = ETree.XMLParser(target=CommentedTreeBuilder())
     poem = {}
     tree = ETree.parse(xml_file, parser=custom_xmlparser)
@@ -73,6 +78,11 @@ def parse_xml(xml_file):
 
 
 def get_features(path):
+    """
+    Function to parse all corpus poems
+    :param path: Corpus path
+    :return: list of poem dicts
+    """
     feature_list = []
     for filename in path.rglob('*.xml'):
         result = parse_xml(str(filename))

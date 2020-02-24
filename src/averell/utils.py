@@ -8,7 +8,8 @@ from zipfile import ZipFile
 import yaml
 from tqdm import tqdm
 
-with open('src/averell/corpora.yaml', 'r') as config_file:
+BASE_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
+with open(BASE_DIR / 'corpora.yaml', 'r') as config_file:
     CORPORA_SOURCES = yaml.load(config_file, Loader=yaml.FullLoader)
 
 DEFAULT_OUTPUT_FOLDER = Path.cwd() / "corpora"
@@ -45,18 +46,20 @@ def progress_bar(t):
 
 def download_corpus(url):
     """
+    Download the corpus zip file
     :param url: URL of the corpus file
+    :return: local filename of the corpus
     """
     filename = url.split('/')[-1]
     with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1, desc=filename) as t:
-        filename, _ = urllib.request.urlretrieve(url, reporthook=progress_bar(t))
+        filename, *_ = urllib.request.urlretrieve(url, reporthook=progress_bar(t))
     return filename
 
 
 def uncompress_corpus(filename, save_dir):
     """
-
-    :param filename:
+    Simple function to uncompress the corpus zip file
+    :param filename: The file that is going to be uncompressed
     :param save_dir: The folder where the corpus is going to be uncompressed
     :return:
     """""
@@ -92,13 +95,17 @@ def download_corpora(corpus_indices=None,
             except IndexError:
                 # logging.error(index_error)
                 return "Error"
-                raise
     else:
         logging.error("No corpus selected. Nothing will be downloaded")
     return folder_list
 
 
 def get_stanza_features(poem_features):
+    """
+    Filter the stanza features of a poem
+    :param poem_features: poem dict
+    :return: Stanzas dict list
+    """
     stanza_list = []
     for stanza_index, key in enumerate(poem_features["stanzas"]):
         stanza_features = poem_features['stanzas'][stanza_index]
@@ -115,6 +122,11 @@ def get_stanza_features(poem_features):
 
 
 def get_line_features(features):
+    """
+    Filter the line features of a poem
+    :param features: poem dict
+    :return: Lines dict list
+    """
     stanza_features = get_stanza_features(features)
     lines_features = []
     for stanza_index, stanza in enumerate(stanza_features):
@@ -132,6 +144,11 @@ def get_line_features(features):
 
 
 def get_word_features(features):
+    """
+    Filter the word features of a poem
+    :param features: poem dict
+    :return: Word dict list
+    """
     all_lines_features = get_line_features(features)
     all_words_features = []
     for stanza_index, stanza in enumerate(features["stanzas"]):
@@ -148,6 +165,11 @@ def get_word_features(features):
 
 
 def get_syllable_features(features):
+    """
+    Filter the syllable features of a poem
+    :param features: poem dict
+    :return: Syllable dict list
+    """
     all_words_features = get_word_features(features)
     all_syllable_features = []
     word_number = 0
@@ -171,6 +193,13 @@ def get_syllable_features(features):
 
 
 def filter_features(features, corpus_index, granularity=None):
+    """
+    Select the granularity
+    :param features: Corpora poems dict
+    :param corpus_index: Corpus index to be filtered
+    :param granularity:
+    :return: list of rows with the granularity info
+    """
     filtered_features = []
     granularities_list = CORPORA_SOURCES[corpus_index]["properties"][
         "granularity"]

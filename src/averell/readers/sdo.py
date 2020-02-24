@@ -3,6 +3,11 @@ import xml.etree.ElementTree as ETree
 
 
 def parse_xml(xml_file):
+    """
+    XML TEI poem parser for corpus 'Sonetos del siglo de oro'
+    :param xml_file: path of xml file
+    :return: poem dict
+    """
     poem = {}
     stanza_list = []
     tree = ETree.parse(xml_file)
@@ -44,6 +49,11 @@ def parse_xml(xml_file):
 
 
 def get_features(path):
+    """
+    Function to parse all corpus poems
+    :param path: Corpus path
+    :return: list of poem dicts
+    """
     feature_list = []
     for filename in path.rglob('*.xml'):
         result = parse_xml(str(filename))

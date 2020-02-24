@@ -4,6 +4,11 @@ from pathlib import Path
 
 
 def parse_xml(xml_file):
+    """
+    XML TEI poem parser for 'disco' corpus
+    :param xml_file: path of xml file
+    :return: poem dict
+    """
     tree = ETree.parse(xml_file)
     root = tree.getroot()
 
@@ -50,8 +55,9 @@ def parse_xml(xml_file):
 
 def get_features(path):
     """
-
-    :param path: path of the corpora folder
+    Function to parse all corpus poems
+    :param path: Corpus path
+    :return: list of poem dicts
     """
     feature_list = []
     for filename in (Path(path)).rglob('*/per-sonnet/*.xml'):

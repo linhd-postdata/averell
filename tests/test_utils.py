@@ -1,8 +1,8 @@
 import json
+import os
 from pathlib import Path
 from unittest import mock
-from unittest.mock import Mock, patch
-from zipfile import ZipFile
+from unittest.mock import patch
 
 import pytest
 
@@ -13,6 +13,9 @@ from averell.utils import get_stanza_features
 from averell.utils import get_line_features
 from averell.utils import get_word_features
 from averell.utils import get_syllable_features
+
+
+TESTS_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
 
 
 @pytest.fixture
@@ -50,21 +53,11 @@ def plsdo():
     return json.loads(Path("tests/fixtures/plsdo.json").read_text())
 
 
-def side_effect_download():
-    url = str(Path.cwd() / "tests" / "fixtures" / "test.zip")
-    with ZipFile(url, 'r') as zipObj:
-        zipObj.extractall()
-    return url.split('/')[-1]
-
-
 @patch('urllib.request.urlretrieve')
 def test_download_corpus(mock_request):
-    mock_request.side_effect = side_effect_download()
     url = "https://github.com/pruizf/disco/archive/master.zip"
-    # mock_request.return_value = "master.zip"
+    mock_request.return_value = "master.zip", None
     assert "master.zip" == download_corpus(url)
-    # output = download_corpus("https://github.com/pruizf/disco/archive/master.zip")
-    # assert "master.zip" == output
 
 
 def test_download_corpora_no_indices():
@@ -75,9 +68,14 @@ def test_download_corpora_index_not_in_range():
     assert download_corpora([500000]) == "Error"
 
 
-def test_download_corpora_already_downloaded():
-    # TODO: test already downloaded
-    return
+@patch('averell.utils.Path.exists')
+def test_download_corpora_already_downloaded(mock_exists):
+    mock_exists.return_value = True
+    assert [] == download_corpora([1])
+
+
+def test_download_corpora():
+    assert True
 
 
 def test_get_stanza_features(stanza_features):

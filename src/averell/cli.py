@@ -9,7 +9,6 @@ def main():
     """
     Simple CLI for querying corpora on Github
     """
-    pass
 
 
 @main.command()
@@ -22,7 +21,8 @@ def download(ids, granularity, output):
     """
     numbers = [int(x) for x in ids]
     # print(numbers, output)
-    get_corpora(numbers, granularity, output)
+    corpora_features = get_corpora(numbers, granularity, output)
+    return corpora_features
 
 
 if __name__ == '__main__':

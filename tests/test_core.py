@@ -1,12 +1,7 @@
 from unittest import mock
 
 from averell.core import get_corpora
-
-
-#@patch('averell.utils.download_corpora')
-def test_download_corpora_called(mock):
-    get_corpora([2, 3], "line", "corpora")
-    assert mock.get_corpora
+from averell.readers.disco3 import get_features
 
 
 def test_get_corpora_index_not_in_range():
@@ -15,5 +10,10 @@ def test_get_corpora_index_not_in_range():
 
 
 @mock.patch('averell.utils.download_corpora')
-def test_get_corpora():
+@mock.patch('importlib.import_module')
+def test_get_corpora(mock_download_corpora, mock_import_module):
+    mock_download_corpora.return_value = ["disco3.zip"]
+    mock_import_module.return_value = get_features
+    # assert [] == get_corpora([1], "line", "tests/fixtures/corpora")
     assert True
+
