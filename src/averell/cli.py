@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import click
+
 from averell.core import get_corpora
 
 

@@ -1,4 +1,3 @@
-import re
 import xml.etree.ElementTree as ETree
 from pathlib import Path
 

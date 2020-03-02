@@ -3,10 +3,10 @@ import logging
 import os
 from pathlib import Path
 
+from .utils import CORPORA_SOURCES
 from .utils import download_corpora
 from .utils import filter_features
 from .utils import write_json
-from .utils import CORPORA_SOURCES
 
 DEFAULT_OUTPUT_FOLDER = Path.cwd() / "corpora"
 
@@ -51,7 +51,7 @@ def get_corpora(corpus_indices=None, granularity=None,
                     logging.error(f"'{granularity}' granularity not found on '{corpus_name}' properties")
             else:
                 corpora_features.append(features)
-    except IndexError as index_error:
+    except IndexError:
         logging.error("Index number not in corpora list")
     finally:
         return corpora_features

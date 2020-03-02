@@ -1,19 +1,17 @@
 import json
 import os
 from pathlib import Path
-from unittest import mock
 from unittest.mock import patch
 
 import pytest
 
-from averell.utils import download_corpus
 from averell.utils import download_corpora
+from averell.utils import download_corpus
 from averell.utils import filter_features
-from averell.utils import get_stanza_features
 from averell.utils import get_line_features
-from averell.utils import get_word_features
+from averell.utils import get_stanza_features
 from averell.utils import get_syllable_features
-
+from averell.utils import get_word_features
 
 TESTS_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
 

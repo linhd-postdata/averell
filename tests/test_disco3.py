@@ -3,11 +3,10 @@ from pathlib import Path
 from unittest.mock import patch
 
 import pytest
+from tests.test_utils import TESTS_DIR
 
 from averell.readers.disco3 import get_features
 from averell.readers.disco3 import parse_xml
-
-from tests.test_utils import TESTS_DIR
 
 
 @pytest.fixture
