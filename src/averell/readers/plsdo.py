@@ -1,6 +1,8 @@
 import re
 import xml.etree.ElementTree as ETree
 
+from averell.utils import TEI_NAMESPACE as NS
+
 
 class CommentedTreeBuilder(ETree.TreeBuilder):
     def comment(self, data):
@@ -19,17 +21,16 @@ def parse_xml(xml_file):
     :param xml_file: Path for the xml file
     :return: Poem python dict with the data obtained
     """
-    ns = "{http://www.tei-c.org/ns/1.0}"
     custom_xmlparser = ETree.XMLParser(target=CommentedTreeBuilder())
     poem = {}
     tree = ETree.parse(xml_file, parser=custom_xmlparser)
     root = tree.getroot()
     stanza_list = []
     analysis_description = "".join(
-        root.find(f".//*{ns}metDecl/{ns}p").itertext())
-    line_group_list = root.findall(f".//{ns}lg")
-    title = root.find(f".//{ns}bibl/{ns}title").text
-    author = root.find(f".//{ns}bibl/{ns}author").text
+        root.find(f".//*{NS}metDecl/{NS}p").itertext())
+    line_group_list = root.findall(f".//{NS}lg")
+    title = root.find(f".//{NS}bibl/{NS}title").text
+    author = root.find(f".//{NS}bibl/{NS}author").text
 
     manually_checked = 'manual' in analysis_description
 
@@ -46,7 +47,7 @@ def parse_xml(xml_file):
             poem_lines.append(
                 {"line_text": line_text, "metrical_pattern": metrical_pattern})
             stanza_text.append(line_text)
-            for word in line.findall(f".//{ns}w"):
+            for word in line.findall(f".//{NS}w"):
                 word_dict = {}
                 has_synalepha = False
                 if re.match(r"[aeiouáéíóú]", word.text[-1]):

@@ -1,5 +1,7 @@
 import xml.etree.ElementTree as ETree
 
+from averell.utils import TEI_NAMESPACE as NS
+
 
 def parse_xml(xml_file):
     """
@@ -11,14 +13,13 @@ def parse_xml(xml_file):
     :param xml_file: Path for the xml file
     :return: Poem python dict with the data obtained
     """
-    ns = "{http://www.tei-c.org/ns/1.0}"
     poem = {}
     stanza_list = []
     tree = ETree.parse(xml_file)
     root = tree.getroot()
-    title = root.find(f".//{ns}head/{ns}title").text
-    author = root.find(f".//{ns}author").text
-    line_group_list = root.findall(f".//*{ns}lg")
+    title = root.find(f".//{NS}head/{NS}title").text
+    author = root.find(f".//{NS}author").text
+    line_group_list = root.findall(f".//*{NS}lg")
     manually_checked = True
     poem.update({
         "manually_checked": manually_checked,

@@ -2,6 +2,8 @@ import re
 import xml.etree.ElementTree as ETree
 from pathlib import Path
 
+from averell.utils import TEI_NAMESPACE as NS
+
 XML_PATH = Path("tei") / "all-periods-per-author"
 
 
@@ -15,19 +17,18 @@ def parse_xml(xml_file):
     :param xml_file: Path for the xml file
     :return: Poem python dict with the data obtained
     """
-    ns = "{http://www.tei-c.org/ns/1.0}"
     tree = ETree.parse(xml_file)
     root = tree.getroot()
 
     poem = {}
     stanza_list = []
 
-    analysis_description = root.find(f".//{ns}metDecl/{ns}p").text
-    title = root.find(f".//{ns}head").text
-    author = root.find(f".//{ns}author").text
-    line_group_list = root.findall(f".//*{ns}lg")
+    analysis_description = root.find(f".//{NS}metDecl/{NS}p").text
+    title = root.find(f".//{NS}head").text
+    author = root.find(f".//{NS}author").text
+    line_group_list = root.findall(f".//*{NS}lg")
     manually_checked = 'manual' in analysis_description
-    alt_title = root.find(f".//*{ns}bibl/{ns}title[@property='dc:alternative']")
+    alt_title = root.find(f".//*{NS}bibl/{NS}title[@property='dc:alternative']")
     poem.update({
         "manually_checked": manually_checked,
         "poem_title": title,
