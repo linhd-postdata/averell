@@ -1,4 +1,3 @@
-
 import re
 import xml.etree.ElementTree as ETree
 
@@ -12,22 +11,25 @@ class CommentedTreeBuilder(ETree.TreeBuilder):
 
 def parse_xml(xml_file):
     """
-    XML TEI poem parser for 'Poesía Lírica Castellana Siglo de Oro' corpus
-    :param xml_file: path of xml file
-    :return: poem dict
+    XML TEI poem parser for 'Poesía Lírica Castellana Siglo de Oro' corpus.
+    We read the data and find elements like title, author, etc with XPath
+    expressions.
+    Then, we iterate over the poem text and we look for each stanza, line, word
+    and syllable data.
+    :param xml_file: Path for the xml file
+    :return: Poem python dict with the data obtained
     """
+    ns = "{http://www.tei-c.org/ns/1.0}"
     custom_xmlparser = ETree.XMLParser(target=CommentedTreeBuilder())
     poem = {}
     tree = ETree.parse(xml_file, parser=custom_xmlparser)
     root = tree.getroot()
     stanza_list = []
-    analysis_description = "".join(root.find(
-        ".//*{http://www.tei-c.org/ns/1.0}metDecl/{http://www.tei-c.org/ns/1.0}p").itertext())
-    line_group_list = root.findall(".//{http://www.tei-c.org/ns/1.0}lg")
-    title = root.find(
-        ".//{http://www.tei-c.org/ns/1.0}bibl/{http://www.tei-c.org/ns/1.0}title").text
-    author = root.find(
-        ".//{http://www.tei-c.org/ns/1.0}bibl/{http://www.tei-c.org/ns/1.0}author").text
+    analysis_description = "".join(
+        root.find(f".//*{ns}metDecl/{ns}p").itertext())
+    line_group_list = root.findall(f".//{ns}lg")
+    title = root.find(f".//{ns}bibl/{ns}title").text
+    author = root.find(f".//{ns}bibl/{ns}author").text
 
     manually_checked = 'manual' in analysis_description
 
@@ -44,7 +46,7 @@ def parse_xml(xml_file):
             poem_lines.append(
                 {"line_text": line_text, "metrical_pattern": metrical_pattern})
             stanza_text.append(line_text)
-            for word in line.findall(".//{http://www.tei-c.org/ns/1.0}w"):
+            for word in line.findall(f".//{ns}w"):
                 word_dict = {}
                 has_synalepha = False
                 if re.match(r"[aeiouáéíóú]", word.text[-1]):
@@ -79,9 +81,9 @@ def parse_xml(xml_file):
 
 def get_features(path):
     """
-    Function to parse all corpus poems
-    :param path: Corpus path
-    :return: list of poem dicts
+    Function to find each poem file and parse it
+    :param path: Corpus Path
+    :return: List of poem dicts
     """
     feature_list = []
     for filename in path.rglob('*.xml'):

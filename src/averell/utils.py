@@ -46,9 +46,11 @@ def progress_bar(t):
 
 def download_corpus(url):
     """
-    Download the corpus zip file
-    :param url: URL of the corpus file
-    :return: local filename of the corpus
+    Function to download the corpus zip file from external source
+    :param url: string
+        URL of the corpus file
+    :return: string
+        Local filename of the corpus
     """
     filename = url.split('/')[-1]
     with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1, desc=filename) as t:
@@ -59,9 +61,12 @@ def download_corpus(url):
 def uncompress_corpus(filename, save_dir):
     """
     Simple function to uncompress the corpus zip file
-    :param filename: The file that is going to be uncompressed
-    :param save_dir: The folder where the corpus is going to be uncompressed
-    :return:
+    :param filename: string
+        The file that is going to be uncompressed
+    :param save_dir: string
+        The folder where the corpus is going to be uncompressed
+    :return: string
+        Filename of uncompressed corpus
     """""
     with ZipFile(filename, 'r') as zipObj:
         zipObj.extractall(save_dir)
@@ -73,9 +78,11 @@ def download_corpora(corpus_indices=None,
                      output_folder=DEFAULT_OUTPUT_FOLDER):
     """
     Download corpus from a list of sources to a local folder
-    :param corpus_indices: List with the indexes of CORPORA_SOURCES to choose
-    which corpus is going to be downloaded
-    :param output_folder: The folder where the corpus is going to be saved
+    :param corpus_indices: list
+        List with the indexes of CORPORA_SOURCES to choose which corpus
+        is going to be downloaded
+    :param output_folder: string
+        The folder where the corpus is going to be saved
     """
     folder_list = []
     if corpus_indices:
@@ -93,7 +100,7 @@ def download_corpora(corpus_indices=None,
                     filename = download_corpus(url)
                     folder_list.append(uncompress_corpus(filename, output_folder))
             except IndexError:
-                # logging.error(index_error)
+                logging.error("Index number not in corpora list")
                 return "Error"
     else:
         logging.error("No corpus selected. Nothing will be downloaded")
@@ -103,8 +110,10 @@ def download_corpora(corpus_indices=None,
 def get_stanza_features(poem_features):
     """
     Filter the stanza features of a poem
-    :param poem_features: poem dict
-    :return: Stanzas dict list
+    :param poem_features: dict
+        Poem dictionary
+    :return: dict list
+        Stanzas dict list
     """
     stanza_list = []
     for stanza_index, key in enumerate(poem_features["stanzas"]):
@@ -124,8 +133,10 @@ def get_stanza_features(poem_features):
 def get_line_features(features):
     """
     Filter the line features of a poem
-    :param features: poem dict
-    :return: Lines dict list
+    :param features: dict
+        Poem dictionary
+    :return: dict list
+        Lines dict list
     """
     stanza_features = get_stanza_features(features)
     lines_features = []
@@ -146,8 +157,10 @@ def get_line_features(features):
 def get_word_features(features):
     """
     Filter the word features of a poem
-    :param features: poem dict
-    :return: Word dict list
+    :param features: dict
+        Poem dictionary
+    :return: dict list
+        Words dict list
     """
     all_lines_features = get_line_features(features)
     all_words_features = []
@@ -167,8 +180,10 @@ def get_word_features(features):
 def get_syllable_features(features):
     """
     Filter the syllable features of a poem
-    :param features: poem dict
-    :return: Syllable dict list
+    :param features: dict
+        Poem dictionary
+    :return: dict list
+        Syllables dict list
     """
     all_words_features = get_word_features(features)
     all_syllable_features = []
@@ -195,10 +210,14 @@ def get_syllable_features(features):
 def filter_features(features, corpus_index, granularity=None):
     """
     Select the granularity
-    :param features: Corpora poems dict
-    :param corpus_index: Corpus index to be filtered
-    :param granularity:
-    :return: list of rows with the granularity info
+    :param features: dict
+        Corpora poems dict
+    :param corpus_index: int
+        Corpus index to be filtered
+    :param granularity: string
+        Level to filter the poem (stanza, line, word or syllable)
+    :return: list
+        List of rows with the granularity info
     """
     filtered_features = []
     granularities_list = CORPORA_SOURCES[corpus_index]["properties"][
@@ -217,9 +236,11 @@ def filter_features(features, corpus_index, granularity=None):
 
 def write_json(poem_dict, filename):
     """
-
-    :param poem_dict:
-    :param filename:
+    Simple function to save data in json format
+    :param poem_dict: dict
+        Python dict with poem data
+    :param filename: string
+        JSON filename that will be written with the poem data
     :return:
     """
     with open(filename + ".json", 'w', encoding='utf-8') as f:

@@ -14,6 +14,7 @@ from averell.utils import get_syllable_features
 from averell.utils import get_word_features
 
 TESTS_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
+FIXTURES_DIR = TESTS_DIR / "fixtures"
 
 
 @pytest.fixture
@@ -23,32 +24,32 @@ def zip_test():
 
 @pytest.fixture
 def stanza_features():
-    return json.loads(Path("tests/fixtures/stanza_features.json").read_text())
+    return json.loads((FIXTURES_DIR / "stanza_features.json").read_text())
 
 
 @pytest.fixture
 def line_features():
-    return json.loads(Path("tests/fixtures/line_features.json").read_text())
+    return json.loads((FIXTURES_DIR / "line_features.json").read_text())
 
 
 @pytest.fixture
 def word_features():
-    return json.loads(Path("tests/fixtures/word_features.json").read_text())
+    return json.loads((FIXTURES_DIR / "word_features.json").read_text())
 
 
 @pytest.fixture
 def syllable_features():
-    return json.loads(Path("tests/fixtures/syllable_features.json").read_text())
+    return json.loads((FIXTURES_DIR / "syllable_features.json").read_text())
 
 
 @pytest.fixture
 def sdo():
-    return json.loads(Path("tests/fixtures/sdo.json").read_text())
+    return json.loads((FIXTURES_DIR / "sdo.json").read_text())
 
 
 @pytest.fixture
 def plsdo():
-    return json.loads(Path("tests/fixtures/plsdo.json").read_text())
+    return json.loads((FIXTURES_DIR / "plsdo.json").read_text())
 
 
 @patch('urllib.request.urlretrieve')
@@ -77,22 +78,22 @@ def test_download_corpora():
 
 
 def test_get_stanza_features(stanza_features):
-    features = json.loads(Path("tests/fixtures/sdo.json").read_text())
+    features = json.loads((FIXTURES_DIR / "sdo.json").read_text())
     assert get_stanza_features(features) == stanza_features
 
 
 def test_get_line_features(line_features):
-    features = json.loads(Path("tests/fixtures/sdo.json").read_text())
+    features = json.loads((FIXTURES_DIR / "sdo.json").read_text())
     assert get_line_features(features) == line_features
 
 
 def test_get_word_features(word_features):
-    features = json.loads(Path("tests/fixtures/plsdo.json").read_text())
+    features = json.loads((FIXTURES_DIR / "plsdo.json").read_text())
     assert get_word_features(features) == word_features
 
 
 def test_get_syllable_features(syllable_features):
-    features = json.loads(Path("tests/fixtures/plsdo.json").read_text())
+    features = json.loads((FIXTURES_DIR / "plsdo.json").read_text())
     assert get_syllable_features(features) == syllable_features
 
 

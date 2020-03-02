@@ -4,25 +4,29 @@ import xml.etree.ElementTree as ETree
 
 def parse_xml(xml_file):
     """
-    XML TEI poem parser for corpus 'Sonetos del siglo de oro'
-    :param xml_file: path of xml file
-    :return: poem dict
+    XML TEI poem parser for 'Sonetos Siglo de Oro' corpus.
+    We read the data and find elements like title, author, etc with XPath
+    expressions.
+    Then, we iterate over the poem text and we look for each stanza and line
+    data.
+    :param xml_file: Path for the xml file
+    :return: Poem python dict with the data obtained
     """
+    ns = "{http://www.tei-c.org/ns/1.0}"
     poem = {}
     stanza_list = []
     tree = ETree.parse(xml_file)
     root = tree.getroot()
-    analysis_description = root.find(
-        ".//{http://www.tei-c.org/ns/1.0}metDecl/{http://www.tei-c.org/ns/1.0}p").text
-    title = root.find(
-        ".//{http://www.tei-c.org/ns/1.0}head/{http://www.tei-c.org/ns/1.0}title").text
-    author = root.find(".//{http://www.tei-c.org/ns/1.0}author").text
-    line_group_list = root.findall(".//*{http://www.tei-c.org/ns/1.0}lg")
+    analysis_description = root.find(f".//{ns}metDecl/{ns}p").text
+    title = root.find(f".//{ns}head/{ns}title").text
+    author = root.find(f".//{ns}author").text
+    line_group_list = root.findall(f".//*{ns}lg")
     manually_checked = 'manual' in analysis_description
     if title is not None:
         poem.update({"poem_title": title})
     else:
-        poem.update({"poem_title": os.path.splitext(os.path.basename(xml_file))[0]})
+        poem.update(
+            {"poem_title": os.path.splitext(os.path.basename(xml_file))[0]})
     poem.update({
         "manually_checked": manually_checked,
         "author": author
@@ -50,9 +54,9 @@ def parse_xml(xml_file):
 
 def get_features(path):
     """
-    Function to parse all corpus poems
-    :param path: Corpus path
-    :return: list of poem dicts
+    Function to find each poem file and parse it
+    :param path: Corpus Path
+    :return: List of poem dicts
     """
     feature_list = []
     for filename in path.rglob('*.xml'):

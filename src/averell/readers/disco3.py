@@ -7,26 +7,27 @@ XML_PATH = Path("tei") / "all-periods-per-author"
 
 def parse_xml(xml_file):
     """
-    XML TEI poem parser for 'disco v3' corpus
-    :param xml_file: path of xml file
-    :return: poem dict
+    XML TEI poem parser for 'disco 3' corpus.
+    We read the data and find elements like title, author, etc with XPath
+    expressions.
+    Then, we iterate over the poem text and we look for each stanza and line
+    data.
+    :param xml_file: Path for the xml file
+    :return: Poem python dict with the data obtained
     """
+    ns = "{http://www.tei-c.org/ns/1.0}"
     tree = ETree.parse(xml_file)
     root = tree.getroot()
 
     poem = {}
     stanza_list = []
 
-    analysis_description = root.find(
-        ".//{http://www.tei-c.org/ns/1.0}metDecl/{http://www.tei-c.org/ns/1.0}p").text
-    title = root.find(
-        ".//{http://www.tei-c.org/ns/1.0}head").text
-    author = root.find(".//{http://www.tei-c.org/ns/1.0}author").text
-    line_group_list = root.findall(".//*{http://www.tei-c.org/ns/1.0}lg")
+    analysis_description = root.find(f".//{ns}metDecl/{ns}p").text
+    title = root.find(f".//{ns}head").text
+    author = root.find(f".//{ns}author").text
+    line_group_list = root.findall(f".//*{ns}lg")
     manually_checked = 'manual' in analysis_description
-    alt_title = root.find(
-        ".//*{http://www.tei-c.org/ns/1.0}bibl"
-        "/{http://www.tei-c.org/ns/1.0}title[@property='dc:alternative']")
+    alt_title = root.find(f".//*{ns}bibl/{ns}title[@property='dc:alternative']")
     poem.update({
         "manually_checked": manually_checked,
         "poem_title": title,
@@ -60,12 +61,13 @@ def parse_xml(xml_file):
 
 def get_features(path):
     """
-    Function to parse all corpus poems
-    :param path: Corpus path
-    :return: list of poem dicts
+    Function to find each poem file and parse it
+    :param path: Corpus Path
+    :return: List of poem dicts
     """
+    xml_files = Path("*") / "per-sonnet" / "*.xml"
     feature_list = []
-    for filename in (Path(path)).rglob('*/per-sonnet/*.xml'):
+    for filename in (Path(path)).rglob(str(xml_files)):
         result = parse_xml(str(filename))
         feature_list.append(result)
     return feature_list

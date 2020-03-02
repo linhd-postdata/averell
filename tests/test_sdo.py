@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 from unittest.mock import patch
 
 import pytest
@@ -11,11 +10,13 @@ from averell.readers.sdo import parse_xml
 
 @pytest.fixture
 def sdo():
-    return json.loads(Path("tests/fixtures/sdo.json").read_text())
+    path = TESTS_DIR / "fixtures" / "sdo.json"
+    return json.loads(path.read_text())
 
 
 def test_parse_xml(sdo):
-    poem = parse_xml("tests/fixtures/input_sdo.xml")
+    path = TESTS_DIR / "fixtures" / "input_sdo.xml"
+    poem = parse_xml(str(path))
     assert poem == sdo
 
 

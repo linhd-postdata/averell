@@ -3,18 +3,22 @@ import xml.etree.ElementTree as ETree
 
 def parse_xml(xml_file):
     """
-    XML TEI poem parser for ADSO 100 poems corpus
-    :param xml_file: path of xml file
-    :return: poem dict
+    XML TEI poem parser for 'ADSO 100 poems' corpus.
+    We read the data and find elements like title, author, etc with XPath
+    expressions.
+    Then, we iterate over the poem text and we look for each stanza and line
+    data.
+    :param xml_file: Path for the xml file
+    :return: Poem python dict with the data obtained
     """
+    ns = "{http://www.tei-c.org/ns/1.0}"
     poem = {}
     stanza_list = []
     tree = ETree.parse(xml_file)
     root = tree.getroot()
-    title = root.find(
-        ".//{http://www.tei-c.org/ns/1.0}head/{http://www.tei-c.org/ns/1.0}title").text
-    author = root.find(".//{http://www.tei-c.org/ns/1.0}author").text
-    line_group_list = root.findall(".//*{http://www.tei-c.org/ns/1.0}lg")
+    title = root.find(f".//{ns}head/{ns}title").text
+    author = root.find(f".//{ns}author").text
+    line_group_list = root.findall(f".//*{ns}lg")
     manually_checked = True
     poem.update({
         "manually_checked": manually_checked,
@@ -44,9 +48,9 @@ def parse_xml(xml_file):
 
 def get_features(path):
     """
-    Function to parse all corpus poems
-    :param path: Corpus path
-    :return: list of poem dicts
+    Function to find each poem file and parse it
+    :param path: Corpus Path
+    :return: List of poem dicts
     """
     feature_list = []
     for filename in path.rglob('*.xml'):

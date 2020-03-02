@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 from unittest.mock import patch
 
 import pytest
@@ -11,11 +10,13 @@ from averell.readers.goldpoems import parse_xml
 
 @pytest.fixture
 def goldpoems():
-    return json.loads(Path("tests/fixtures/goldpoems.json").read_text())
+    path = TESTS_DIR / "fixtures" / "goldpoems.json"
+    return json.loads(path.read_text())
 
 
 def test_parse_xml(goldpoems):
-    poem = parse_xml("tests/fixtures/input_goldpoems.xml")
+    path = TESTS_DIR / "fixtures" / "input_goldpoems.xml"
+    poem = parse_xml(str(path))
     assert poem == goldpoems
 
 

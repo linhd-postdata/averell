@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 from unittest.mock import patch
 
 import pytest
@@ -11,11 +10,13 @@ from averell.readers.disco import parse_xml
 
 @pytest.fixture
 def disco():
-    return json.loads(Path("tests/fixtures/disco.json").read_text())
+    path = TESTS_DIR / "fixtures" / "disco.json"
+    return json.loads(path.read_text())
 
 
 def test_parse_xml(disco):
-    poem = parse_xml("tests/fixtures/input_disco.xml")
+    path = TESTS_DIR / "fixtures" / "input_disco.xml"
+    poem = parse_xml(str(path))
     assert poem == disco
 
 
