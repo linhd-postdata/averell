@@ -39,7 +39,7 @@
   properties:
     folder_name: gold
     license: CC-BY-NC 4.0
-    reader: averell.readers.goldpoems
+    reader: averell.readers.sdo
     url: https://github.com/linhd-postdata/adsoScansionSystem/releases/download/1.0.0/ADSO_gold_standard_100poems.zip
     size: 128K
     doc_quantity: 100
@@ -61,15 +61,3 @@
         - line
         - word
         - syllable
-- name: Dracor Calderón
-  properties:
-    folder_name: caldracor-master
-    license: CC0
-    reader: averell.readers.dracor
-    url: https://github.com/dracor-org/caldracor/archive/master.zip
-    size: 1.7M
-    doc_quantity: 55
-    word_quantity: 377791
-    granularity:
-        - stanza
-        - line

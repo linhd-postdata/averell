@@ -4,23 +4,23 @@ from unittest.mock import patch
 import pytest
 from tests.test_utils import TESTS_DIR
 
-from averell.readers.disco3 import get_features
-from averell.readers.disco3 import parse_xml
+from averell.readers.sdo import get_features
+from averell.readers.sdo import parse_xml
 
 
 @pytest.fixture
-def disco3():
-    path = TESTS_DIR / "fixtures" / "disco3.json"
+def sdo():
+    path = TESTS_DIR / "fixtures" / "sdo.json"
     return json.loads(path.read_text())
 
 
-def test_parse_xml(disco3):
-    path = TESTS_DIR / "fixtures" / "input_disco3.xml"
+def test_parse_xml(sdo):
+    path = TESTS_DIR / "fixtures" / "input_sdo.xml"
     poem = parse_xml(str(path))
-    assert poem == disco3
+    assert poem == sdo
 
 
-@patch('averell.readers.disco3.parse_xml')
+@patch('averell.readers.sdo.parse_xml')
 def test_get_features(mock_parse_xml):
     path = TESTS_DIR / "fixtures" / "test"
     mock_parse_xml.return_value = {}

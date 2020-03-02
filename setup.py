@@ -67,10 +67,7 @@ setup(
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
     python_requires='>3.6.*',
-    install_requires=[
-        'click',
-        # eg: 'aspectlib==1.1.1', 'six>=1.7',
-    ],
+    install_requires=read("requirements.txt").split("\n"),
     extras_require={
         # eg:
         #   'rst': ['docutils>=0.11'],
