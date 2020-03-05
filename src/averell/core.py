@@ -5,23 +5,22 @@ from pathlib import Path
 
 from .utils import CORPORA_SOURCES
 from .utils import download_corpora
-from .utils import filter_features
+from .utils import filter_corpus_features
+from .utils import read_features
 from .utils import write_json
 
 DEFAULT_OUTPUT_FOLDER = Path.cwd() / "corpora"
+logging.getLogger().setLevel(logging.INFO)
 
 
-def get_corpora(corpus_indices=None, granularity=None,
-                output_folder=DEFAULT_OUTPUT_FOLDER):
+def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
     """
     Download and uncompress selected corpora
     :param corpus_indices: Indices of the corpus that will be downloaded
-    :param granularity: Level of the corpus that will be parsered
     :param output_folder: Local folder where the corpus is going to be
     uncompressed
     :return: Python dict with all corpora features
     """
-
     corpora_features = []
     try:
         download_corpora(corpus_indices, output_folder)
@@ -32,36 +31,69 @@ def get_corpora(corpus_indices=None, granularity=None,
                 CORPORA_SOURCES[index]["properties"]["reader"]), "get_features")
             features = get_features(Path(output_folder) / folder_name)
             for poem in features:
-                author_path = gen_path / "parser" / poem["author"].replace(" ",
-                                                                           "")
+                author = poem["author"].replace(" ", "")
+                author_path = gen_path / "parser" / author
                 if not author_path.exists():
                     os.makedirs(author_path)
                 write_json(poem, str(
                     author_path / poem["poem_title"].title().replace(" ", "")))
-            if granularity is not None:
-                granularities_list = CORPORA_SOURCES[index]["properties"][
-                    "granularity"]
-                if granularity in granularities_list:
-                    for poem in features:
-                        filtered_features = filter_features(poem, index,
-                                                            granularity)
-                        granularity_path = gen_path / granularity / poem[
-                            "author"].replace(" ", "")
-                        if filtered_features:
-                            if not granularity_path.exists():
-                                os.makedirs(granularity_path)
-                            write_json(filtered_features, str(
-                                granularity_path / poem[
-                                    "poem_title"].title().replace(" ", "")))
-                            corpora_features.append(filtered_features)
-                else:
-                    corpus_name = CORPORA_SOURCES[index]["name"]
-                    logging.error(
-                        f"'{granularity}' granularity not found on "
-                        f"'{corpus_name}' properties")
             else:
                 corpora_features.append(features)
     except IndexError:
         logging.error("Index number not in corpora list")
     finally:
         return corpora_features
+
+
+def export_corpora(corpus_ids, granularity, corpora_folder):
+    """
+    Generates a single JSON file with the chosen granularity for all of the
+    selected corpora
+    :param corpus_ids: IDs of the corpora that will be exported
+    :param granularity: Level of parsing granularity
+    :param corpora_folder: Local folder where the corpora is located
+    :return: Python dict with the chosen granularity for all of the selected
+        corpora
+    """
+    corpora_features = []
+    if Path(corpora_folder).exists():
+        if not corpus_ids:
+            logging.error("No CORPUS ID selected")
+        else:
+            if granularity is not None:
+                for index in corpus_ids:
+                    corpus_id = index - 1
+                    try:
+                        corpus_folder = CORPORA_SOURCES[corpus_id][
+                            "properties"]["folder_name"]
+                    except IndexError:
+                        logging.error("ID not in corpora list")
+                    else:
+                        if not (Path(corpora_folder) / corpus_folder).exists():
+                            logging.error(
+                                f'{CORPORA_SOURCES[corpus_id]["name"]}'
+                                f' not downloaded')
+                            continue
+                        granularities_list = CORPORA_SOURCES[corpus_id][
+                            "properties"]["granularity"]
+                        if granularity not in granularities_list:
+                            corpus_name = CORPORA_SOURCES[corpus_id]["name"]
+                            logging.error(
+                                f"'{granularity}' granularity not found on "
+                                f"'{corpus_name}' properties")
+                            continue
+                        features = read_features(
+                            Path(corpora_folder) / corpus_folder)
+                        write_json(features, "tests/fixtures/corpus_features")
+                        filtered_features = filter_corpus_features(features,
+                                                                   corpus_id,
+                                                                   granularity)
+                        corpora_features.extend(filtered_features)
+            else:
+                logging.error("No GRANULARITY selected")
+        if corpora_features:
+            write_json(corpora_features,
+                       str(Path(corpora_folder) / granularity))
+    else:
+        logging.error("Corpora folder not found")
+    return corpora_features

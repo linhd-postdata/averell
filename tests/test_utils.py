@@ -7,6 +7,7 @@ import pytest
 
 from averell.utils import download_corpora
 from averell.utils import download_corpus
+from averell.utils import filter_corpus_features
 from averell.utils import filter_features
 from averell.utils import get_line_features
 from averell.utils import get_stanza_features
@@ -64,7 +65,12 @@ def test_download_corpora_no_indices():
 
 
 def test_download_corpora_index_not_in_range():
-    assert download_corpora([500000]) == "Error"
+    try:
+        download_corpora([-3])
+    except IndexError:
+        assert True
+    else:
+        assert False
 
 
 @patch('averell.utils.Path.exists')
@@ -120,4 +126,16 @@ def test_filter_features_granularity_word(plsdo, word_features):
 
 def test_filter_features_granularity_syllable(plsdo, syllable_features):
     granularity = "syllable"
-    assert filter_features(plsdo, 4, granularity) == syllable_features
+    output = filter_features(plsdo, 4, granularity)
+    assert output == syllable_features
+
+
+@pytest.fixture
+def corpus_line():
+    return json.loads((FIXTURES_DIR / "corpus_line.json").read_text())
+
+
+def test_filter_corpus_features(corpus_line):
+    granularity = "line"
+    features = json.loads((FIXTURES_DIR / "corpus_features.json").read_text())
+    assert filter_corpus_features(features, 2, granularity) == corpus_line
