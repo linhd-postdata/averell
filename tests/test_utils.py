@@ -13,6 +13,7 @@ from averell.utils import get_line_features
 from averell.utils import get_stanza_features
 from averell.utils import get_syllable_features
 from averell.utils import get_word_features
+from averell.utils import read_features
 
 TESTS_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
 FIXTURES_DIR = TESTS_DIR / "fixtures"
@@ -135,7 +136,18 @@ def corpus_line():
     return json.loads((FIXTURES_DIR / "corpus_line.json").read_text())
 
 
-def test_filter_corpus_features(corpus_line):
+@pytest.fixture
+def corpus_features():
+    return json.loads((FIXTURES_DIR / "corpus_features.json").read_text())
+
+
+def test_filter_corpus_features(corpus_line, corpus_features):
     granularity = "line"
-    features = json.loads((FIXTURES_DIR / "corpus_features.json").read_text())
-    assert filter_corpus_features(features, 2, granularity) == corpus_line
+    features = corpus_features
+    output = filter_corpus_features(features, 2, granularity)
+    assert output == corpus_line
+
+
+def test_read_features(corpus_features):
+    output = read_features(Path("tests") / "fixtures")
+    assert output == corpus_features

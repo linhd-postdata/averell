@@ -261,27 +261,12 @@ def write_json(poem_dict, filename):
 
 def read_features(corpus_folder):
     """
-
-    :param corpus_folder:
-    :return:
+    Read the dictionary of each poem in "corpus_folder" and
+    return the list of python dictionaries
+    :param corpus_folder: Local folder where the corpus is located
+    :return: List of python dictionaries with the poems features
     """
     features_path = Path.cwd() / Path(corpus_folder) / "averell" / "parser"
-    print(features_path)
     features = [json.loads(json_file.read_text()) for json_file in
                 features_path.rglob("*.json")]
     return features
-
-
-def export_corpora_granularity(granularity, corpus_folder):
-    print(corpus_folder)
-    file_path = str(DEFAULT_OUTPUT_FOLDER / "corpora_") + granularity
-    lines = []
-    if Path(file_path + ".json").exists():
-        json_file = Path(file_path + ".json")
-        lines.extend(json.loads(json_file.read_text()))
-    for json_file in Path(corpus_folder).glob(
-        f"averell/{granularity}/*/*.json"):
-        lines.extend(json.loads(json_file.read_text()))
-
-    write_json(lines, file_path)
-    # return file_path

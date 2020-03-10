@@ -84,7 +84,6 @@ def export_corpora(corpus_ids, granularity, corpora_folder):
                             continue
                         features = read_features(
                             Path(corpora_folder) / corpus_folder)
-                        write_json(features, "tests/fixtures/corpus_features")
                         filtered_features = filter_corpus_features(features,
                                                                    corpus_id,
                                                                    granularity)
