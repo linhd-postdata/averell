@@ -214,13 +214,13 @@ def filter_features(features, corpus_index, granularity=None):
     """
     Select the granularity
     :param features: dict
-        Corpora poems dict
+        Poem python dict
     :param corpus_index: int
         Corpus index to be filtered
     :param granularity: string
         Level to filter the poem (stanza, line, word or syllable)
     :return: list
-        List of rows with the granularity info
+        List of rows with the poem granularity info
     """
     filtered_features = []
     granularities_list = CORPORA_SOURCES[corpus_index]["properties"][
@@ -238,6 +238,17 @@ def filter_features(features, corpus_index, granularity=None):
 
 
 def filter_corpus_features(corpus_features, corpus_id, granularity):
+    """
+    Get the granularity features for each poem in corpus
+    :param corpus_features: list of dicts
+        List of corpus poems python dicts
+    :param corpus_id: int
+        Corpus id to be filtered
+    :param granularity: string
+        Level to filter the poem (stanza, line, word or syllable)
+    :return: list
+        List of rows with the corpus granularity info
+    """
     corpus_filtered_features = []
     for poem_features in corpus_features:
         poem_filtered_features = filter_features(poem_features, corpus_id,

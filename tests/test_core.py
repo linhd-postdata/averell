@@ -2,11 +2,11 @@ import json
 from unittest import mock
 
 import pytest
+from tests.test_utils import FIXTURES_DIR
+
 from averell.core import export_corpora
 from averell.core import get_corpora
 from averell.readers.disco3 import get_features
-
-from tests.test_utils import FIXTURES_DIR
 
 
 def test_get_corpora_index_not_in_range():
@@ -30,4 +30,3 @@ def corpus_features():
 
 def test_export_corpora_folder_not_exists():
     assert [] == export_corpora([2, 3], "line", "kgalsjlkjsadfhk")
-

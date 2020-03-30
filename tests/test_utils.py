@@ -148,6 +148,11 @@ def test_filter_corpus_features(corpus_line, corpus_features):
     assert output == corpus_line
 
 
-def test_read_features(corpus_features):
+@pytest.fixture
+def corpora_features():
+    return json.loads((FIXTURES_DIR / "corpora_features.json").read_text())
+
+
+def test_read_features(corpora_features):
     output = read_features(Path("tests") / "fixtures")
-    assert output == corpus_features
+    assert output == corpora_features
