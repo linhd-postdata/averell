@@ -283,4 +283,6 @@ def read_features(corpus_folder):
     features = []
     for json_file in features_path.rglob("*.json"):
         features.append(json.loads(json_file.read_text()))
+
+    features = sorted(features, key=lambda i: i['poem_title'])
     return features
