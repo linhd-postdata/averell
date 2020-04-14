@@ -64,20 +64,17 @@ def export_corpora(corpus_ids, granularity, corpora_folder):
                 for index in corpus_ids:
                     corpus_id = index - 1
                     try:
-                        corpus_folder = CORPORA_SOURCES[corpus_id][
-                            "properties"]["folder_name"]
+                        corpus = CORPORA_SOURCES[corpus_id]
                     except IndexError:
                         logging.error("ID not in corpora list")
                     else:
+                        corpus_folder = corpus["properties"]["folder_name"]
+                        corpus_name = corpus["name"]
                         if not (Path(corpora_folder) / corpus_folder).exists():
-                            logging.error(
-                                f'{CORPORA_SOURCES[corpus_id]["name"]}'
-                                f' not downloaded')
+                            logging.error(f'{corpus_name} not downloaded')
                             continue
-                        granularities_list = CORPORA_SOURCES[corpus_id][
-                            "properties"]["granularity"]
+                        granularities_list = corpus["properties"]["granularity"]
                         if granularity not in granularities_list:
-                            corpus_name = CORPORA_SOURCES[corpus_id]["name"]
                             logging.error(
                                 f"'{granularity}' granularity not found on "
                                 f"'{corpus_name}' properties")

@@ -278,8 +278,6 @@ def read_features(corpus_folder):
     :return: List of python dictionaries with the poems features
     """
     features_path = Path.cwd() / Path(corpus_folder) / "averell" / "parser"
-    # features = [json.loads(json_file.read_text()) for json_file in
-    #            features_path.rglob("*.json")]
     features = []
     for json_file in features_path.rglob("*.json"):
         features.append(json.loads(json_file.read_text()))
