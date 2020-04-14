@@ -55,8 +55,10 @@ def download_corpus(url):
         Local filename of the corpus
     """
     filename = url.split('/')[-1]
-    with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1, desc=filename) as t:
-        filename, *_ = urllib.request.urlretrieve(url, reporthook=progress_bar(t))
+    with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1,
+              desc=filename) as t:
+        filename, *_ = urllib.request.urlretrieve(url,
+                                                  reporthook=progress_bar(t))
     return filename
 
 
@@ -89,21 +91,20 @@ def download_corpora(corpus_indices=None,
     folder_list = []
     if corpus_indices:
         for index in tqdm(corpus_indices):
-            try:
-                folder_name = CORPORA_SOURCES[index]["properties"]["folder_name"]
-                folder_path = Path(output_folder) / folder_name
-                if folder_path.exists():
-                    logging.info(
-                        f'Corpus {CORPORA_SOURCES[index]["name"]}'
-                        f' already downloaded')
-                    continue
-                else:
-                    url = CORPORA_SOURCES[index]["properties"]["url"]
-                    filename = download_corpus(url)
-                    folder_list.append(uncompress_corpus(filename, output_folder))
-            except IndexError:
-                logging.error("Index number not in corpora list")
-                return "Error"
+            if index < 0:
+                raise IndexError
+            folder_name = CORPORA_SOURCES[index]["properties"][
+                "folder_name"]
+            folder_path = Path(output_folder) / folder_name
+            if folder_path.exists():
+                logging.info(f'Corpus {CORPORA_SOURCES[index]["name"]}'
+                             f' already downloaded')
+                continue
+            else:
+                url = CORPORA_SOURCES[index]["properties"]["url"]
+                filename = download_corpus(url)
+                folder_list.append(uncompress_corpus(
+                    filename, output_folder))
     else:
         logging.error("No corpus selected. Nothing will be downloaded")
     return folder_list
@@ -213,13 +214,13 @@ def filter_features(features, corpus_index, granularity=None):
     """
     Select the granularity
     :param features: dict
-        Corpora poems dict
+        Poem python dict
     :param corpus_index: int
         Corpus index to be filtered
     :param granularity: string
         Level to filter the poem (stanza, line, word or syllable)
     :return: list
-        List of rows with the granularity info
+        List of rows with the poem granularity info
     """
     filtered_features = []
     granularities_list = CORPORA_SOURCES[corpus_index]["properties"][
@@ -236,6 +237,26 @@ def filter_features(features, corpus_index, granularity=None):
     return filtered_features
 
 
+def filter_corpus_features(corpus_features, corpus_id, granularity):
+    """
+    Get the granularity features for each poem in corpus
+    :param corpus_features: list of dicts
+        List of corpus poems python dicts
+    :param corpus_id: int
+        Corpus id to be filtered
+    :param granularity: string
+        Level to filter the poem (stanza, line, word or syllable)
+    :return: list
+        List of rows with the corpus granularity info
+    """
+    corpus_filtered_features = []
+    for poem_features in corpus_features:
+        poem_filtered_features = filter_features(poem_features, corpus_id,
+                                                 granularity)
+        corpus_filtered_features.extend(poem_filtered_features)
+    return corpus_filtered_features
+
+
 def write_json(poem_dict, filename):
     """
     Simple function to save data in json format
@@ -247,3 +268,19 @@ def write_json(poem_dict, filename):
     """
     with open(filename + ".json", 'w', encoding='utf-8') as f:
         json.dump(poem_dict, f, ensure_ascii=False, indent=4)
+
+
+def read_features(corpus_folder):
+    """
+    Read the dictionary of each poem in "corpus_folder" and
+    return the list of python dictionaries
+    :param corpus_folder: Local folder where the corpus is located
+    :return: List of python dictionaries with the poems features
+    """
+    features_path = Path.cwd() / Path(corpus_folder) / "averell" / "parser"
+    features = []
+    for json_file in features_path.rglob("*.json"):
+        features.append(json.loads(json_file.read_text()))
+
+    features = sorted(features, key=lambda i: i['poem_title'])
+    return features
