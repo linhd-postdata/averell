@@ -160,5 +160,5 @@ def test_read_features(corpora_features):
 
 
 def test_pretty_string():
-    output = "This is\na divided\nstring"
-    assert output == pretty_string("This is a divided string", 2)
+    output = "This is\na split\nstring"
+    assert output == pretty_string("This is a split string", 2)

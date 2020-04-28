@@ -291,7 +291,7 @@ def pretty_string(text, n_words):
     cells to use in `tabulate_corpora`
 
     :param text: String to be converted
-    :param n_words: Number of words in which the line break will be added
+    :param n_words: Number of words to add a line break after
     :return: String with line break every number of words entered
     :rtype: str
     """
@@ -304,20 +304,21 @@ def pretty_string(text, n_words):
 def get_main_corpora_info():
     """Create dict with the main corpora info saved in CORPORA_SOURCES
 
-    :return: Dictionary with the corpora info to show
+    :return: Dictionary with the corpora info to be shown
     :rtype: dict
     """
     table = []
     for corpus_info in CORPORA_SOURCES:
         corpus_id = CORPORA_SOURCES.index(corpus_info) + 1
+        corpus_props = corpus_info["properties"]
         table.append({
             "id": corpus_id,
             "name": pretty_string(corpus_info["name"], 2),
-            "size": corpus_info["properties"]["size"],
-            "docs": corpus_info["properties"]["doc_quantity"],
-            "words": corpus_info["properties"]["word_quantity"],
+            "size": corpus_props["size"],
+            "docs": corpus_props["doc_quantity"],
+            "words": corpus_props["word_quantity"],
             "granularity": pretty_string(
-                '\n'.join(corpus_info["properties"]["granularity"]), 1),
-            "license": pretty_string(corpus_info["properties"]["license"], 1),
+                '\n'.join(corpus_props["granularity"]), 1),
+            "license": pretty_string(corpus_props["license"], 1),
         })
     return table
