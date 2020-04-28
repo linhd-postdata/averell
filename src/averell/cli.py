@@ -39,8 +39,8 @@ def export(ids, granularity, corpora_folder):
     export_corpora(ids, granularity, corpora_folder)
 
 
-@main.command()
-def list():
+@main.command(name="list")
+def list_command():
     """Show the CORPORA info
     """
     table = get_main_corpora_info()
