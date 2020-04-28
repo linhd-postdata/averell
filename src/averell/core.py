@@ -4,12 +4,10 @@ import os
 from pathlib import Path
 
 import click
-from tabulate import tabulate
 
 from .utils import CORPORA_SOURCES
 from .utils import download_corpora
 from .utils import filter_corpus_features
-from .utils import get_main_corpora_info
 from .utils import read_features
 from .utils import write_json
 
@@ -97,11 +95,3 @@ def export_corpora(corpus_ids, granularity, corpora_folder):
     else:
         logging.error("Corpora folder not found")
     return corpora_features
-
-
-def list_corpora():
-    """Print table with the main corpora info saved in CORPORA_SOURCES
-
-    """
-    table = get_main_corpora_info()
-    click.echo(tabulate(table, headers="keys", numalign="right"))

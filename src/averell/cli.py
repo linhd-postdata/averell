@@ -1,10 +1,11 @@
 from pathlib import Path
 
 import click
+from tabulate import tabulate
 
 from .core import export_corpora
 from .core import get_corpora
-from .core import list_corpora
+from .utils import get_main_corpora_info
 
 
 @click.group()
@@ -42,7 +43,8 @@ def export(ids, granularity, corpora_folder):
 def list():
     """Show the CORPORA info
     """
-    list_corpora()
+    table = get_main_corpora_info()
+    click.echo(tabulate(table, headers="keys", numalign="right"))
 
 
 if __name__ == '__main__':
