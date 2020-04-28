@@ -50,7 +50,7 @@
 - name: Poesía Lírica Castellana Siglo de Oro
   properties:
     folder_name: CorpusGeneralPoesiaLiricaCastellanaDelSigloDeOro-master
-    license: Unspecified
+    license: CC-BY-NC 4.0
     reader: averell.readers.plsdo
     url: https://github.com/bncolorado/CorpusGeneralPoesiaLiricaCastellanaDelSigloDeOro/archive/master.zip
     size: 3.8M

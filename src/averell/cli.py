@@ -1,9 +1,11 @@
 from pathlib import Path
 
 import click
+from tabulate import tabulate
 
 from .core import export_corpora
 from .core import get_corpora
+from .utils import get_main_corpora_info
 
 
 @click.group()
@@ -35,6 +37,14 @@ def export(ids, granularity, corpora_folder):
     Parse the corpus with IDs with the GRANULARITY into CORPORA-FOLDER
     """
     export_corpora(ids, granularity, corpora_folder)
+
+
+@main.command(name="list")
+def list_command():
+    """Show the CORPORA info
+    """
+    table = get_main_corpora_info()
+    click.echo(tabulate(table, headers="keys", numalign="right"))
 
 
 if __name__ == '__main__':

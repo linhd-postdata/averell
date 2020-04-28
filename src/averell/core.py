@@ -3,6 +3,8 @@ import logging
 import os
 from pathlib import Path
 
+import click
+
 from .utils import CORPORA_SOURCES
 from .utils import download_corpora
 from .utils import filter_corpus_features
@@ -40,7 +42,7 @@ def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
             else:
                 corpora_features.append(features)
     except IndexError:
-        logging.error("Index number not in corpora list")
+        click.echo("Index number not in corpora list", err=True)
     finally:
         return corpora_features
 
