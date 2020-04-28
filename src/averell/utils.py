@@ -310,15 +310,14 @@ def get_main_corpora_info():
     table = []
     for corpus_info in CORPORA_SOURCES:
         corpus_id = CORPORA_SOURCES.index(corpus_info) + 1
-        corpus_props = corpus_info["properties"]
+        props = corpus_info["properties"]
         table.append({
             "id": corpus_id,
             "name": pretty_string(corpus_info["name"], 2),
-            "size": corpus_props["size"],
-            "docs": corpus_props["doc_quantity"],
-            "words": corpus_props["word_quantity"],
-            "granularity": pretty_string(
-                '\n'.join(corpus_props["granularity"]), 1),
-            "license": pretty_string(corpus_props["license"], 1),
+            "size": props["size"],
+            "docs": props["doc_quantity"],
+            "words": props["word_quantity"],
+            "granularity": pretty_string('\n'.join(props["granularity"]), 1),
+            "license": pretty_string(props["license"], 1),
         })
     return table
