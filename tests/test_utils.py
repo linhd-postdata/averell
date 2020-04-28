@@ -13,7 +13,10 @@ from averell.utils import get_line_features
 from averell.utils import get_stanza_features
 from averell.utils import get_syllable_features
 from averell.utils import get_word_features
+from averell.utils import pretty_string
 from averell.utils import read_features
+
+# from averell.utils import get_main_corpora_info
 
 TESTS_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
 FIXTURES_DIR = TESTS_DIR / "fixtures"
@@ -156,3 +159,12 @@ def corpora_features():
 def test_read_features(corpora_features):
     output = read_features(Path("tests") / "fixtures")
     assert output == corpora_features
+
+
+def test_pretty_string():
+    output = "This is\na divided\nstring"
+    assert output == pretty_string("This is a divided string", 2)
+
+
+# def test_get_main_corpora_info():
+#     assert True

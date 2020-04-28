@@ -6,7 +6,11 @@ from tests.test_utils import FIXTURES_DIR
 
 from averell.core import export_corpora
 from averell.core import get_corpora
+# from averell.core import list_corpora
 from averell.readers.disco3 import get_features
+
+# from unittest.mock import call
+# from unittest.mock import patch
 
 
 def test_get_corpora_index_not_in_range():
@@ -30,3 +34,9 @@ def corpus_features():
 
 def test_export_corpora_folder_not_exists():
     assert [] == export_corpora([2, 3], "line", "kgalsjlkjsadfhk")
+
+
+# @patch('click.echo')
+# def test_list_corpora(mocked_echo):
+#     list_corpora()
+#     assert mocked_echo.mock_calls == [call()]

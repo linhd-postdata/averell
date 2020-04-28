@@ -2,6 +2,7 @@ from click.testing import CliRunner
 
 from averell.cli import download
 from averell.cli import export
+from averell.cli import list
 from averell.cli import main
 
 
@@ -22,5 +23,12 @@ def test_download():
 def test_export():
     runner = CliRunner()
     result = runner.invoke(export, [])
+
+    assert result.exit_code == 0
+
+
+def test_list():
+    runner = CliRunner()
+    result = runner.invoke(list, [])
 
     assert result.exit_code == 0

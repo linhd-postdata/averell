@@ -4,6 +4,7 @@ import click
 
 from .core import export_corpora
 from .core import get_corpora
+from .core import list_corpora
 
 
 @click.group()
@@ -35,6 +36,13 @@ def export(ids, granularity, corpora_folder):
     Parse the corpus with IDs with the GRANULARITY into CORPORA-FOLDER
     """
     export_corpora(ids, granularity, corpora_folder)
+
+
+@main.command()
+def list():
+    """Show the CORPORA info
+    """
+    list_corpora()
 
 
 if __name__ == '__main__':
