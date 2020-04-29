@@ -22,10 +22,6 @@ def progress_bar(t):
     Wraps tqdm instance.
     Don't forget to close() or __exit__() the tqdm instance once you're done
     (easiest using `with` syntax).
-    Example:
-        with tqdm(...) as t:
-             reporthook = my_hook(t)
-             urllib.urlretrieve(..., reporthook=reporthook)
     """
     last_b = [0]
 
@@ -47,8 +43,8 @@ def progress_bar(t):
 
 
 def download_corpus(url):
-    """
-    Function to download the corpus zip file from external source
+    """Function to download the corpus zip file from external source
+
     :param url: string
         URL of the corpus file
     :return: string
@@ -63,8 +59,8 @@ def download_corpus(url):
 
 
 def uncompress_corpus(filename, save_dir):
-    """
-    Simple function to uncompress the corpus zip file
+    """Simple function to uncompress the corpus zip file
+
     :param filename: string
         The file that is going to be uncompressed
     :param save_dir: string
@@ -80,8 +76,8 @@ def uncompress_corpus(filename, save_dir):
 
 def download_corpora(corpus_indices=None,
                      output_folder=DEFAULT_OUTPUT_FOLDER):
-    """
-    Download corpus from a list of sources to a local folder
+    """Download corpus from a list of sources to a local folder
+
     :param corpus_indices: list
         List with the indexes of CORPORA_SOURCES to choose which corpus
         is going to be downloaded
@@ -111,8 +107,8 @@ def download_corpora(corpus_indices=None,
 
 
 def get_stanza_features(poem_features):
-    """
-    Filter the stanza features of a poem
+    """Filter the stanza features of a poem
+
     :param poem_features: dict
         Poem dictionary
     :return: dict list
@@ -134,8 +130,8 @@ def get_stanza_features(poem_features):
 
 
 def get_line_features(features):
-    """
-    Filter the line features of a poem
+    """Filter the line features of a poem
+
     :param features: dict
         Poem dictionary
     :return: dict list
@@ -158,8 +154,8 @@ def get_line_features(features):
 
 
 def get_word_features(features):
-    """
-    Filter the word features of a poem
+    """Filter the word features of a poem
+
     :param features: dict
         Poem dictionary
     :return: dict list
@@ -181,8 +177,8 @@ def get_word_features(features):
 
 
 def get_syllable_features(features):
-    """
-    Filter the syllable features of a poem
+    """Filter the syllable features of a poem
+
     :param features: dict
         Poem dictionary
     :return: dict list
@@ -211,8 +207,8 @@ def get_syllable_features(features):
 
 
 def filter_features(features, corpus_index, granularity=None):
-    """
-    Select the granularity
+    """Select the granularity
+
     :param features: dict
         Poem python dict
     :param corpus_index: int
@@ -238,8 +234,8 @@ def filter_features(features, corpus_index, granularity=None):
 
 
 def filter_corpus_features(corpus_features, corpus_id, granularity):
-    """
-    Get the granularity features for each poem in corpus
+    """Get the granularity features for each poem in corpus
+
     :param corpus_features: list of dicts
         List of corpus poems python dicts
     :param corpus_id: int
@@ -258,22 +254,21 @@ def filter_corpus_features(corpus_features, corpus_id, granularity):
 
 
 def write_json(poem_dict, filename):
-    """
-    Simple function to save data in json format
+    """Simple function to save data in json format
+
     :param poem_dict: dict
         Python dict with poem data
     :param filename: string
         JSON filename that will be written with the poem data
-    :return:
     """
     with open(filename + ".json", 'w', encoding='utf-8') as f:
         json.dump(poem_dict, f, ensure_ascii=False, indent=4)
 
 
 def read_features(corpus_folder):
-    """
-    Read the dictionary of each poem in "corpus_folder" and
+    """Read the dictionary of each poem in "corpus_folder" and
     return the list of python dictionaries
+
     :param corpus_folder: Local folder where the corpus is located
     :return: List of python dictionaries with the poems features
     """
@@ -288,9 +283,9 @@ def read_features(corpus_folder):
 
 def pretty_string(text, n_words):
     """Add a line break every number of words into a text to create multiline
-    cells to use in `tabulate_corpora`
+    cells to use in :py:func:`~averell.utils.get_main_corpora_info`
 
-    :param text: String to be converted
+    :param text: String to be divided
     :param n_words: Number of words to add a line break after
     :return: String with line break every number of words entered
     :rtype: str

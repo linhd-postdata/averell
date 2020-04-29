@@ -16,11 +16,11 @@ logging.getLogger().setLevel(logging.INFO)
 
 
 def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
-    """
-    Download and uncompress selected corpora
+    """Download and uncompress selected corpora
+
     :param corpus_indices: Indices of the corpus that will be downloaded
     :param output_folder: Local folder where the corpus is going to be
-    uncompressed
+        uncompressed
     :return: Python dict with all corpora features
     """
     corpora_features = []
@@ -50,7 +50,8 @@ def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
 def export_corpora(corpus_ids, granularity, corpora_folder):
     """
     Generates a single JSON file with the chosen granularity for all of the
-    selected corpora
+        selected corpora
+
     :param corpus_ids: IDs of the corpora that will be exported
     :param granularity: Level of parsing granularity
     :param corpora_folder: Local folder where the corpora is located

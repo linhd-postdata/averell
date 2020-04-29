@@ -5,5 +5,8 @@ averell
 
     from averell import *
 
-.. automodule:: averell
+.. automodule:: averell.core
+    :members:
+
+.. automodule:: averell.utils
     :members:
