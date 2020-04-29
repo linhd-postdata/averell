@@ -15,7 +15,6 @@ Overview
         | |landscape|
     * - package
       - | |version| |wheel| |supported-versions| |supported-implementations|
-        | |commits-since|
 .. |docs| image:: https://readthedocs.org/projects/averell/badge/?style=flat
     :target: https://readthedocs.org/projects/averell
     :alt: Documentation Status
@@ -47,11 +46,6 @@ Overview
 .. |supported-implementations| image:: https://img.shields.io/pypi/implementation/averell.svg
     :alt: Supported implementations
     :target: https://pypi.org/project/averell
-
-.. |commits-since| image:: https://img.shields.io/github/commits-since/linhd-postdata/averell/v1.0.0..svg
-    :alt: Commits since latest release
-    :target: https://github.com/linhd-postdata/averell/compare/v1.0.0....master
-
 
 
 .. end-badges
