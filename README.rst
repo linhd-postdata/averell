@@ -48,9 +48,9 @@ Overview
     :alt: Supported implementations
     :target: https://pypi.org/project/averell
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/linhd-postdata/averell/0.0.1.svg
+.. |commits-since| image:: https://img.shields.io/github/commits-since/linhd-postdata/averell/v1.0.0..svg
     :alt: Commits since latest release
-    :target: https://github.com/linhd-postdata/averell/compare/0.0.1...master
+    :target: https://github.com/linhd-postdata/averell/compare/v1.0.0....master
 
 
 

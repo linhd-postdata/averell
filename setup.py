@@ -25,7 +25,7 @@ def read(*names, **kwargs):
 
 setup(
     name='averell',
-    version='0.0.1',
+    version='1.0.0',
     license='Apache-2.0',
     description='Corpora downloader and reader for Spanish sources',
     long_description='%s\n%s' % (
