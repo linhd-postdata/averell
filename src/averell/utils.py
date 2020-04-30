@@ -281,18 +281,18 @@ def read_features(corpus_folder):
     return features
 
 
-def pretty_string(text, n_words):
+def pretty_string(text, num_words):
     """Add a line break every number of words into a text to create multiline
     cells to use in :py:func:`~averell.utils.get_main_corpora_info`
 
-    :param text: String to be divided
-    :param n_words: Number of words to add a line break after
+    :param text: String to be split
+    :param num_words: Number of words to add a line break after
     :return: String with line break every number of words entered
     :rtype: str
     """
     words = text.split()
-    grouped_words = [' '.join(words[i: i + n_words]) for i in
-                     range(0, len(words), n_words)]
+    grouped_words = [' '.join(words[i: i + num_words]) for i in
+                     range(0, len(words), num_words)]
     return '\n'.join(grouped_words)
 
 

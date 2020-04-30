@@ -19,7 +19,7 @@ Averell
 .. end-badges
 
 Averell, the python library and command line interface that facilitates working
-with existing repositories of an-notated poetry. \
+with existing repositories of annotated poetry. \
 Averell is able to download an annotated corpus and reconcile different
 TEI entities to provide a unified JSON output at the desired granularity.
 That is, for their investigations some researchers
