@@ -1,5 +1,6 @@
 import json
 from unittest import mock
+from unittest.mock import patch
 
 import pytest
 from tests.test_utils import FIXTURES_DIR
@@ -30,3 +31,38 @@ def corpus_features():
 
 def test_export_corpora_folder_not_exists():
     assert [] == export_corpora([2, 3], "line", "kgalsjlkjsadfhk")
+
+
+def test_export_corpora_granularity_none():
+    assert [] == export_corpora([2, 3], None, FIXTURES_DIR)
+
+
+def test_export_corpora_no_ids():
+    assert [] == export_corpora([], "line", FIXTURES_DIR)
+
+
+def test_export_corpora_id_not_in_list():
+    assert [] == export_corpora([500000], "line", FIXTURES_DIR)
+
+
+def test_export_corpora_id_not_downloaded():
+    assert [] == export_corpora([4], "line", FIXTURES_DIR)
+
+
+def test_export_corpora_granularity_not_in_list():
+    assert [] == export_corpora([3], "kfajdgah", FIXTURES_DIR)
+
+
+@pytest.fixture
+def corpora_features():
+    return json.loads((FIXTURES_DIR / "corpora_features.json").read_text())
+
+
+@pytest.fixture
+def export_features_list():
+    return json.loads((FIXTURES_DIR / "line3.json").read_text())
+
+
+@patch('averell.utils.read_features', corpora_features)
+def test_export_corpora(export_features_list):
+    assert export_corpora([3], "line", FIXTURES_DIR) == export_features_list

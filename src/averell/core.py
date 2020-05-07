@@ -91,8 +91,10 @@ def export_corpora(corpus_ids, granularity, corpora_folder):
             else:
                 logging.error("No GRANULARITY selected")
         if corpora_features:
+            corpora_str = "_".join(map(str, corpus_ids))
+            filename = f"{granularity}{corpora_str}"
             write_json(corpora_features,
-                       str(Path(corpora_folder) / granularity))
+                       str(Path(corpora_folder) / filename))
     else:
         logging.error("Corpora folder not found")
     return corpora_features
