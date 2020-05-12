@@ -74,7 +74,8 @@ def export_corpora(corpus_ids, granularity, corpora_folder):
                         corpus_folder = corpus["properties"]["folder_name"]
                         corpus_name = corpus["name"]
                         if not (Path(corpora_folder) / corpus_folder).exists():
-                            logging.error(f'{corpus_name} not downloaded')
+                            logging.error(f'"{corpus_name}" not found in '
+                                          f'"{corpora_folder}" folder')
                             continue
                         granularities_list = corpus["properties"]["granularity"]
                         if granularity not in granularities_list:
