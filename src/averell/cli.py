@@ -16,14 +16,14 @@ def main():
 
 
 @main.command()
-@click.option('--output', default=Path.cwd() / "corpora",
-              help='Folder to download')
+@click.option('--corpora-folder', default=Path.cwd() / "corpora",
+              help='Local folder where the corpora will be downloaded')
 @click.argument('ids', nargs=-1, type=click.INT)
-def download(ids, output):
+def download(ids, corpora_folder):
     """
     Download the corpus with IDS
     """
-    corpora_features = get_corpora(ids, output)
+    corpora_features = get_corpora(ids, corpora_folder)
     return corpora_features
 
 
