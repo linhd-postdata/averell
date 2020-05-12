@@ -36,6 +36,7 @@ def export(ids, granularity, corpora_folder):
     """
     Parse the corpus with IDs with the GRANULARITY into CORPORA-FOLDER
     """
+    click.echo(f"Using corpora folder: '{corpora_folder}'")
     export_corpora(ids, granularity, corpora_folder)
 
 
