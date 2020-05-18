@@ -2,6 +2,13 @@
 Changelog
 =========
 
+
+1.0.1 (2020-05-18)
+------------------
+
+* Setting up bumbpversion
+* Integration with Zenodo
+
 1.0.0 (2020-04-29)
 ------------------
 
