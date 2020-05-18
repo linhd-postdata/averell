@@ -16,6 +16,10 @@ Averell
     :target: https://readthedocs.org/projects/averell
     :alt: Documentation Status
 
+.. image:: https://zenodo.org/badge/232539126.svg
+    :target: https://zenodo.org/badge/latestdoi/232539126
+    :alt: Zenodo DOI
+
 .. end-badges
 
 Averell, the python library and command line interface that facilitates working
