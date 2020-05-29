@@ -39,7 +39,7 @@ def parse_xml(xml_file):
         poem.update({"poem_alt_title": alt_title})
     line_number = 1
     # Ignoring the first <lg> since it references the entire poem (sonnet),
-    # just keeping the <lg>'s for the stanzas. Otherwise, lines get duplicated. 
+    # just keeping the <lg>'s for the stanzas. Otherwise, lines get duplicated.
     for stanza_number, line_group in enumerate(line_group_list[1:], start=1):
         line_list = []
         stanza_text = []
