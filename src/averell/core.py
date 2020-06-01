@@ -29,7 +29,6 @@ def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
             gen_path = Path(output_folder) / folder_name / "averell"
             get_features = getattr(importlib.import_module(
                 CORPORA_SOURCES[index]["properties"]["reader"]), "get_features")
-            print(get_features)
             features = get_features(Path(output_folder) / folder_name)
             for poem in features:
                 author = poem["author"].replace(" ", "")
