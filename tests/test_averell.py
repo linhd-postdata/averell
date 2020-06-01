@@ -1,3 +1,4 @@
+import logging
 from unittest.mock import patch
 
 from click.testing import CliRunner
@@ -21,6 +22,17 @@ def test_download():
     runner = CliRunner()
     result = runner.invoke(download, [])
 
+    assert result.exit_code == 0
+
+
+@patch('averell.core.download_corpora')
+def test_download_2(mock_download, caplog):
+    mock_download.return_value = []
+    expected = "Downloaded Disco V3 corpus"
+    runner = CliRunner()
+    result = runner.invoke(download, ["2"])
+    with caplog.at_level(logging.INFO):
+        assert expected in caplog.text
     assert result.exit_code == 0
 
 

@@ -3,8 +3,6 @@ import logging
 import os
 from pathlib import Path
 
-import click
-
 from .utils import CORPORA_SOURCES
 from .utils import download_corpora
 from .utils import filter_corpus_features
@@ -39,10 +37,10 @@ def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
                     os.makedirs(author_path)
                 write_json(poem, str(
                     author_path / poem["poem_title"].title().replace(" ", "")))
-            else:
-                corpora_features.append(features)
+            corpora_features.append(features)
+            logging.info(f"Downloaded {CORPORA_SOURCES[index]['name']} corpus")
     except IndexError:
-        click.echo("Index number not in corpora list", err=True)
+        logging.error("Index number not in corpora list")
     finally:
         return corpora_features
 
