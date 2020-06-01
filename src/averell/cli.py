@@ -23,7 +23,8 @@ def download(ids, corpora_folder):
     """
     Download the corpus with IDS
     """
-    corpora_features = get_corpora(ids, corpora_folder)
+    indexes = [corpus_id - 1 for corpus_id in ids]
+    corpora_features = get_corpora(indexes, corpora_folder)
     return corpora_features
 
 
