@@ -1,4 +1,5 @@
 import json
+import logging
 from unittest import mock
 
 import pytest
@@ -6,21 +7,20 @@ from tests.test_utils import FIXTURES_DIR
 
 from averell.core import export_corpora
 from averell.core import get_corpora
-from averell.readers.disco3 import get_features
 
 
-def test_get_corpora_index_not_in_range():
+def test_get_corpora_index_not_in_range(caplog):
     corpus_indices = [500000]
     assert [] == get_corpora(corpus_indices)
+    assert "Index number not in corpora list" in caplog.text
 
 
-@mock.patch('averell.utils.download_corpora')
-@mock.patch('importlib.import_module')
-def test_get_corpora(mock_download_corpora, mock_import_module):
+@mock.patch('averell.core.download_corpora')
+def test_get_corpora(mock_download_corpora, caplog):
     mock_download_corpora.return_value = ["disco3.zip"]
-    mock_import_module.return_value = get_features
-    # assert [] == get_corpora([1], "line", "tests/fixtures/corpora")
-    assert True
+    assert [[]] == get_corpora([1])
+    with caplog.at_level(logging.INFO):
+        assert "Downloaded Disco V3 corpus" in caplog.text
 
 
 @pytest.fixture
