@@ -15,7 +15,8 @@ def gongocorpus():
 
 
 def test_parse_xml(gongocorpus):
-    path = TESTS_DIR / "fixtures" / "test" / "corpus_json" / "segura" / "input_gongocorpus.json"
+    path = TESTS_DIR / "fixtures" / "test" / "corpus_json" \
+           / "segura" / "input_gongocorpus.json"
     poem = parse_json(path)
     assert poem == gongocorpus
 
