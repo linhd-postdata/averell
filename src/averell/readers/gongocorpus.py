@@ -81,7 +81,7 @@ def get_features(path):
     :return: List of poem dicts
     """
     feature_list = []
-    json_files = path / "corpus_json" / "segura"
+    json_files = path / "corpus_json"
     for filename in json_files.rglob("*.json"):
         result = parse_json(filename)
         feature_list.append(result)
