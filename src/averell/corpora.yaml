@@ -61,3 +61,17 @@
         - line
         - word
         - syllable
+- name: Gongocorpus
+  properties:
+    folder_name: gongocorpus-master
+    license: CC-BY-NC-ND 3.0 FR
+    reader: averell.readers.gongocorpus
+    url: https://github.com/linhd-postdata/gongocorpus/archive/master.zip
+    size: 9.2M
+    doc_quantity: 481
+    word_quantity: 99079
+    granularity:
+        - stanza
+        - line
+        - word
+        - syllable
