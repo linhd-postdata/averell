@@ -18,16 +18,14 @@ def parse_json(json_file):
     year = corpus_poem["year"]
     authorship = corpus_poem["authorship"]
     manually_checked = False
-    # poem_type = ""
     scanned_poem = corpus_poem["scanned_poem"]
     poem_text = corpus_poem["text"]
     stanza_list = []
-    line_list = []
-    line_number = 1
-    for stanza_number, stanza in enumerate(corpus_poem["text"]):
-        stanza_type = stanza["stanza_type"]
-        # stanza_text = stanza["stanza_text"]
-        for line_text in poem_text.split("\n"):
+    line_number = 0
+    for stanza_number, stanza in enumerate(poem_text.split("\n\n")):
+        stanza_text = "".join(stanza)
+        line_list = []
+        for line_text in stanza.split("\n"):
             scanned_line = scanned_poem[line_number]
             rythym_info = scanned_line["rhythm"]
             metrical_pattern = rythym_info["stress"]
@@ -60,10 +58,9 @@ def parse_json(json_file):
             })
             line_number += 1
         stanza_list.append({
-            "stanza_number": stanza_number,
-            "stanza_type": stanza_type,
+            "stanza_number": stanza_number + 1,
             "lines": line_list,
-            "stanza_text": poem_text,
+            "stanza_text": stanza_text,
         })
     poem.update({
         "poem_title": title,
@@ -73,7 +70,6 @@ def parse_json(json_file):
         "manually_checked": manually_checked,
         "stanzas": stanza_list
     })
-
     return poem
 
 
