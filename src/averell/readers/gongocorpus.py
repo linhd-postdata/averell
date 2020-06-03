@@ -59,6 +59,7 @@ def parse_json(json_file):
             line_number += 1
         stanza_list.append({
             "stanza_number": stanza_number + 1,
+            "stanza_type": "",
             "lines": line_list,
             "stanza_text": stanza_text,
         })
