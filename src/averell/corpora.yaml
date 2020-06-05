@@ -75,3 +75,16 @@
         - line
         - word
         - syllable
+- name: Eighteenth Century Poetry Archive
+  properties:
+    folder_name: ECPA-master
+    license: CC BY-SA 4.0
+    reader: averell.readers.ecpa
+    url: https://github.com/alhuber1502/ECPA/archive/master.zip
+    size: 2400M
+    doc_quantity: 3084
+    word_quantity: 2063668
+    granularity:
+        - stanza
+        - line
+        - word
