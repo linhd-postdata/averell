@@ -71,7 +71,6 @@ def get_poem_info(xml_file, lines_info, authors):
             if line_info:
                 if n == 0:
                     stanza_type = line_info.get("stanzas", "").get("id", "")
-                # line_length = int(line_info.get("syllab") or 0 )
                 syllab = line_info.get("syllab")
                 line_length = int(syllab) if syllab else ""
                 met = line_info.get("met", "").strip("/")
@@ -96,7 +95,7 @@ def get_poem_info(xml_file, lines_info, authors):
                 if tag == f"{NS}w":
                     word_list.append({"word_text": token.text})
                 if tag in [f"{NS}w", f"{NS}c", f"{NS}pc"]:
-                    token_list.append(token.text)
+                    token_list.append(token.text or "")
             line_text = "".join(token_list).strip()
             line_dict.update({
                 "line_number": line_number + 1,
