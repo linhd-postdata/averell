@@ -31,12 +31,12 @@ def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
                 CORPORA_SOURCES[index]["properties"]["reader"]), "get_features")
             features = get_features(Path(output_folder) / folder_name)
             for poem in features:
-                author = poem["author"].replace(" ", "")
+                author = poem["author"].replace(" ", "")[:30]
                 author_path = gen_path / "parser" / author
                 if not author_path.exists():
                     os.makedirs(author_path)
                 write_json(poem, str(
-                    author_path / poem["poem_title"].title().replace(" ", "")))
+                    author_path / poem["poem_title"].replace(" ", "_")[:30]))
             corpora_features.append(features)
             logging.info(f"Downloaded {CORPORA_SOURCES[index]['name']} corpus")
     except IndexError:

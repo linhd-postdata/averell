@@ -33,7 +33,12 @@ def get_poem_info(xml_file, lines_info, authors):
         manually_checked = True
         met = real.split()
     title = root.find(f".//{NS}head[@type='main']")
-    title_text = " ".join(word.text for word in title.findall(f"{NS}w"))
+    poem_id = metadata.get(f"{XML_NS}id")
+    poem_info = authors[1].get(poem_id)
+    if poem_info:
+        title_text = poem_info.get("title")
+    else:
+        title_text = " ".join(word.text for word in title.findall(f"{NS}w"))
     author = root.find(f"{NS}link[@type='author']").get("target").split("#")[1]
     try:
         author_name = next(aut.get("name") for aut in authors[0].values() if
