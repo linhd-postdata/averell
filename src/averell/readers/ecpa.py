@@ -33,17 +33,23 @@ def get_poem_info(xml_file, lines_info, authors):
         manually_checked = True
         met = real.split()
     title = root.find(f".//{NS}head[@type='main']")
-    title_text = " ".join(x.text for x in title.findall(f"{NS}w"))
+    title_text = " ".join(word.text for word in title.findall(f"{NS}w"))
+    author = root.find(f"{NS}link[@type='author']").get("target").split("#")[1]
+    try:
+        author_name = next(aut.get("name") for aut in authors[0].values() if
+                           aut.get("author") == author)
+    except StopIteration:
+        author_name = '-'
+    poem.update({
+        "poem_title": title_text,
+        "author": author_name,
+    })
     alt_title = root.find(f".//{NS}head[@type='sub']")
     if alt_title:
         alt_title_text = re.sub(r"[\n ]+", " ",
                                 "".join(alt_title.itertext())).strip()
-    author = root.find(f"{NS}link[@type='author']").get("target").split("#")[1]
-    try:
-        author_name = next(x.get("name") for x in authors[0].values() if
-                           x.get("author") == author)
-    except StopIteration:
-        author_name = '-'
+        poem.update({"poem_alt_title": alt_title_text})
+
     line_group_list = root.findall(f".//{NS}lg")
     line_group_list2 = []
     for lg_number, lg in enumerate(line_group_list):
@@ -65,12 +71,15 @@ def get_poem_info(xml_file, lines_info, authors):
             if line_info:
                 if n == 0:
                     stanza_type = line_info.get("stanzas", "").get("id", "")
-                line_length = int(line_info.get("syllab") or 0)
-                met = line_info.get("met").strip("/")
-                foot = line_info.get("foot").get("id")
-                metre = line_info.get("footnum").get("id")
+                # line_length = int(line_info.get("syllab") or 0 )
+                syllab = line_info.get("syllab")
+                line_length = int(syllab) if syllab else ""
+                met = line_info.get("met", "").strip("/")
+                foot = line_info.get("foot").get("id", "")
+                metre = line_info.get("footnum").get("id", "")
                 real = line_info.get("real")
                 if real:
+                    manually_checked = True
                     met = real.strip("/")
                     foot = line_info.get("realfoot").get("id")
                     metre = line_info.get("realfootnum").get("id")
@@ -86,7 +95,7 @@ def get_poem_info(xml_file, lines_info, authors):
                 tag = token.tag
                 if tag == f"{NS}w":
                     word_list.append({"word_text": token.text})
-                if tag in [f"{NS}w", f"{NS}c", f"{NS}pc[@{ECEP_NS}lem]"]:
+                if tag in [f"{NS}w", f"{NS}c", f"{NS}pc"]:
                     token_list.append(token.text)
             line_text = "".join(token_list).strip()
             line_dict.update({
@@ -105,13 +114,9 @@ def get_poem_info(xml_file, lines_info, authors):
             "stanza_text": st,
         })
     poem.update({
-        "poem_title": title_text,
-        "author": author_name,
         "manually_checked": manually_checked,
         "stanzas": stanza_list
     })
-    if alt_title:
-        poem.update({"poem_alt_title": alt_title_text})
     return poem
 
 
