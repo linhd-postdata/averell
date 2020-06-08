@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 from unittest.mock import patch
 
 import pytest
@@ -7,6 +6,8 @@ from tests.test_utils import FIXTURES_DIR
 
 from averell.readers.ecpa import get_features
 from averell.readers.ecpa import get_poem_info
+
+ECPA = FIXTURES_DIR / "ecpa" / "web"
 
 
 @pytest.fixture
@@ -16,29 +17,29 @@ def ecpa():
 
 
 def test_parse_xml(ecpa):
-    path = FIXTURES_DIR / "ecpa" / "web" / "works" / "input_ecpa" / "input_ecpa.xml"
-    authors_file = FIXTURES_DIR / "ecpa" / "web" / "resources" / "models" / "authwork_mdp.json"
+    path = ECPA / "works" / "input_ecpa" / "input_ecpa.xml"
+    authors_file = ECPA / "resources" / "models" / "authwork_mdp.json"
     authors = json.loads(authors_file.read_text())
-    lines_file = FIXTURES_DIR / "ecpa" / "web" / "works" / "input_ecpa" / "input_ecpa_l.json"
+    lines_file = ECPA / "works" / "input_ecpa" / "input_ecpa_l.json"
     lines_info = json.loads(lines_file.read_text())
     poem = get_poem_info(str(path), lines_info, authors)
     assert poem == ecpa
 
 
 @pytest.fixture
-def ecpa2():
+def ecpa_cov():
     path = FIXTURES_DIR / "ecpa2.json"
     return json.loads(path.read_text())
 
 
-def test_parse_xml2(ecpa2):
-    path = FIXTURES_DIR / "ecpa" / "web" / "works" / "input_ecpa2" / "input_ecpa2.xml"
-    authors_file = FIXTURES_DIR / "ecpa" / "web" / "resources" / "models" / "authwork_mdp.json"
+def test_parse_xml_cov(ecpa_cov):
+    path = ECPA / "works" / "input_ecpa2" / "input_ecpa2.xml"
+    authors_file = ECPA / "resources" / "models" / "authwork_mdp.json"
     authors = json.loads(authors_file.read_text())
-    lines_file = FIXTURES_DIR / "ecpa" / "web" / "works" / "input_ecpa2" / "input_ecpa2_l.json"
+    lines_file = ECPA / "works" / "input_ecpa2" / "input_ecpa2_l.json"
     lines_info = json.loads(lines_file.read_text())
     poem = get_poem_info(str(path), lines_info, authors)
-    assert poem == ecpa2
+    assert poem == ecpa_cov
 
 
 @patch('averell.readers.ecpa.get_poem_info')
