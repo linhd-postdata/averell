@@ -25,13 +25,6 @@ def get_poem_info(xml_file, lines_info, authors):
     root = tree.getroot()
     manually_checked = False
     metadata = root.attrib
-    met = metadata.get("met")
-    if met:
-        met = met.split()
-    real = metadata.get("real")
-    if real:
-        manually_checked = True
-        met = real.split()
     title = root.find(f".//{NS}head[@type='main']")
     poem_id = metadata.get(f"{XML_NS}id")
     poem_info = authors[1].get(poem_id)
@@ -73,6 +66,10 @@ def get_poem_info(xml_file, lines_info, authors):
             line_dict = {}
             line_id = line.attrib.get(f"{XML_NS}id")
             line_info = lines_info.get(line_id)
+            line_length = ""
+            met = ""
+            foot = ""
+            metre = ""
             if line_info:
                 if n == 0:
                     stanza_type = line_info.get("stanzas", "").get("id", "")
@@ -87,12 +84,12 @@ def get_poem_info(xml_file, lines_info, authors):
                     met = real.strip("/")
                     foot = line_info.get("realfoot").get("id")
                     metre = line_info.get("realfootnum").get("id")
-                line_dict.update({
-                    "metrical_pattern": met,
-                    "line_length": line_length,
-                    "foot": foot,
-                    "metre": metre,
-                })
+            line_dict.update({
+                "metrical_pattern": met,
+                "line_length": line_length,
+                "foot": foot,
+                "metre": metre,
+            })
             word_list = []
             token_list = []
             for token in line:
