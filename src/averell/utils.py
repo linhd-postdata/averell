@@ -15,6 +15,7 @@ with open(BASE_DIR / 'corpora.yaml', 'r') as config_file:
 DEFAULT_OUTPUT_FOLDER = Path.cwd() / "corpora"
 
 TEI_NAMESPACE = "{http://www.tei-c.org/ns/1.0}"
+XML_NS = "{http://www.w3.org/XML/1998/namespace}"
 
 
 def progress_bar(t):
