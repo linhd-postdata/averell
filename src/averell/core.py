@@ -3,6 +3,8 @@ import logging
 import os
 from pathlib import Path
 
+from slugify import slugify
+
 from .utils import CORPORA_SOURCES
 from .utils import download_corpora
 from .utils import filter_corpus_features
@@ -31,12 +33,13 @@ def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
                 CORPORA_SOURCES[index]["properties"]["reader"]), "get_features")
             features = get_features(Path(output_folder) / folder_name)
             for poem in features:
-                author = poem["author"].replace(" ", "")[:30]
+                # max_length=30 to avoid "too long file name" error
+                author = slugify(poem["author"], max_length=30)
                 author_path = gen_path / "parser" / author
                 if not author_path.exists():
                     os.makedirs(author_path)
                 write_json(poem, str(
-                    author_path / poem["poem_title"].replace(" ", "_")[:30]))
+                    author_path / slugify(poem["poem_title"], max_length=30)))
             corpora_features.append(features)
             logging.info(f"Downloaded {CORPORA_SOURCES[index]['name']} corpus")
     except IndexError:
