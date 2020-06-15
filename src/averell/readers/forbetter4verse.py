@@ -18,16 +18,23 @@ def parse_xml(xml_file):
     tree = etree.parse(xml_file)
     root = tree.getroot()
     nsmap = root.nsmap
-    if not any(ns == NS for ns in nsmap.values()):
-        # no TEI declaration in input file
+    tei_url = NS.replace("{", "").replace("}", "")
+    if not any(ns == tei_url for ns in nsmap.values()):
+        # no TEI declaration in input file, cannot parse file
         return
     manually_checked = False
     title = root.find(f".//{NS}title").text
-    author = root.find(f".//{NS}author").text
-    year = int(root.find(f".//{NS}date").text)
+    author = root.find(f".//{NS}author")
+    author_text = "unknown"
+    if author is not None:
+        author_text = author.text
+    date = root.find(f".//{NS}date")
+    year = None
+    if date is not None:
+        year = root.find(f".//{NS}date").text
     poem.update({
         "poem_title": title,
-        "author": author,
+        "author": author_text,
         "year": year
     })
     line_group_list = root.findall(f".//{NS}lg")
@@ -84,8 +91,9 @@ def get_features(path):
     xml_folders = [path / "poems", path / "poems2"]
     feature_list = []
     for folder in xml_folders:
+        # exclude example xml files
         for filename in folder.glob("[!Poet - ]*.xml"):
-            # exclude example xml files
             result = parse_xml(str(filename))
-            feature_list.append(result)
+            if result is not None:
+                feature_list.append(result)
     return feature_list

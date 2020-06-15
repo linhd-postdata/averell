@@ -88,3 +88,15 @@
         - stanza
         - line
         - word
+- name: For Better For Verse
+  properties:
+    folder_name: for_better_for_verse-master
+    license: Unlicensed
+    reader: averell.readers.forbetter4verse
+    url: https://github.com/waynegraham/for_better_for_verse/archive/master.zip
+    size: 39.5M
+    doc_quantity: 103
+    word_quantity: 41749
+    granularity:
+        - stanza
+        - line
