@@ -40,6 +40,7 @@ def parse_xml(xml_file):
             line_text = "".join(line.itertext()).strip().split("\n")[0].strip()
             line_list.append({
                 "line_number": line_number + 1,
+                "n": line.get("n"),
                 "line_text": line_text,
                 "metrical_pattern": line.attrib["met"]
             })
