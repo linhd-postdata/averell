@@ -264,7 +264,7 @@ def write_json(poem_dict, filename):
     """
     file_path = Path(filename)
     if os.path.exists(f"{filename}.json"):
-        file_count = len(list(file_path.parent.glob(f"{file_path.stem}*")))
+        file_count = len(list(file_path.parent.glob(f"{file_path.stem}*.json")))
         filename = f"{filename}{file_count + 1}"
     with open(filename + ".json", 'w', encoding='utf-8') as f:
         json.dump(poem_dict, f, ensure_ascii=False, indent=4)
