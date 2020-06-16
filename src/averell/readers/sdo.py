@@ -32,24 +32,27 @@ def parse_xml(xml_file):
         "manually_checked": manually_checked,
         "author": author
     })
+    line_number = 0
     for stanza_number, line_group in enumerate(line_group_list):
         line_list = []
         stanza_text = []
         for line in line_group:
-            line_text = "".join(line.itertext())
+            line_text = "".join(line.itertext()).strip().split("\n")[0].strip()
             line_list.append({
-                "line_number": str(line.attrib["n"]),
+                "line_number": line_number + 1,
+                "n": line.get("n"),
                 "line_text": line_text,
                 "metrical_pattern": line.attrib["met"]
             })
             stanza_text.append(line_text)
+            line_number += 1
         stanza_list.append({
-            "stanza_number": str(stanza_number + 1),
+            "stanza_number": stanza_number + 1,
             "stanza_type": line_group.attrib["type"],
             "lines": line_list,
             "stanza_text": "\n".join(stanza_text),
         })
-        poem.update({"stanzas": stanza_list})
+    poem.update({"stanzas": stanza_list})
     return poem
 
 

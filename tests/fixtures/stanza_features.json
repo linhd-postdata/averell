@@ -1,6 +1,6 @@
 [
     {
-        "stanza_number": "1",
+        "stanza_number": 1,
         "manually_checked": true,
         "poem_title": "-XX-",
         "author": "Garcilaso de La Vega",
@@ -8,7 +8,7 @@
         "stanza_type": "cuarteto"
     },
     {
-        "stanza_number": "2",
+        "stanza_number": 2,
         "manually_checked": true,
         "poem_title": "-XX-",
         "author": "Garcilaso de La Vega",
