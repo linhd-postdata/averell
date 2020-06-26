@@ -52,6 +52,8 @@ def parse_xml(xml_file):
             metre = None
             real = line.get("real")
             if real is not None:
+                # "manually_checked" is a poem feature, so if one line
+                # has real attrib the poem will be manually_checked=True
                 manually_checked = True
                 met = real
             seg_list = [re.sub(r"[\n ]+", " ", seg.xpath("string()")) for seg in
