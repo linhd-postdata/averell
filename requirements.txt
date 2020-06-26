@@ -1,4 +1,5 @@
 Click>=7.0
+lxml>=4.5.1
 python-slugify>=4.0.0
 pyyaml>=5
 requests>=2.21.0
