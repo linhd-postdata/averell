@@ -3,11 +3,11 @@ from unittest import mock
 from unittest.mock import patch
 
 import pytest
-from tests.test_utils import TESTS_DIR
 
 from averell.readers.plsdo import CommentedTreeBuilder
 from averell.readers.plsdo import get_features
 from averell.readers.plsdo import parse_xml
+from tests.test_utils import TESTS_DIR
 
 
 @pytest.fixture
