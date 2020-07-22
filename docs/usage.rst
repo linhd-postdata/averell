@@ -25,7 +25,7 @@ Visualization example of one of the available corpora:
 
 Download desired corpora into :file:`mycorpora` folder::
 
-    averell download 2 3 --output my_corpora
+    averell download 2 3 --corpora-folder my_corpora
 
 Example of poem in TEI format obtained from one of the corpora:
 
@@ -145,7 +145,7 @@ Generated example JSON file from input XML/TEI poem into
 
 Now we can combine and join these corpora through "granularity" selection::
 
-    averell export 2 3 --granularity line
+    averell export 2 3 --granularity line --corpora-folder my_corpora
 
 It produces an single JSON file with information about all the lines in
 those corpora. Example of **two** random lines in the file :file:`mycorpora/corpus_2_3.json`:

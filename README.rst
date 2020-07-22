@@ -35,6 +35,36 @@ Each corpus in the catalog must specify the parser to produce the expected data 
 
 * Free software: Apache Software License 2.0
 
+Available corpora (version 1.02)
+
+.. code-block:: text
+
+      id  name                size      docs    words  granularity    license
+    ----  ------------------  ------  ------  -------  -------------  -----------
+       1  Disco V2            22M       4088   381539  stanza         CC-BY
+                                                       line
+       2  Disco V3            28M       4080   377978  stanza         CC-BY
+                                                       line
+       3  Sonetos Siglo       6.8M      5078   466012  stanza         CC-BY-NC
+          de Oro                                       line           4.0
+       4  ADSO 100            128K       100     9208  stanza         CC-BY-NC
+          poems corpus                                 line           4.0
+       5  Poesía Lírica       3.8M       475   299402  stanza         CC-BY-NC
+          Castellana Siglo                             line           4.0
+          de Oro                                       word
+                                                       syllable
+       6  Gongocorpus         9.2M       481    99079  stanza         CC-BY-NC-ND
+                                                       line           3.0
+                                                       word           FR
+                                                       syllable
+       7  Eighteenth Century  2400M     3084  2063668  stanza         CC
+          Poetry Archive                               line           BY-SA
+                                                       word           4.0
+       8  For Better          39.5M      103    41749  stanza         Unlicensed
+          For Verse                                    line
+
+
+
 Documentation
 =============
 
@@ -81,7 +111,7 @@ Visualization example of one of the available corpora:
 
 Download desired corpora into "mycorpora" folder::
 
-    averell download 2 3 --output my_corpora
+    averell download 2 3 --corpora-folder my_corpora
 
 Example of poem in TEI format obtained from one of the corpora:
 
@@ -201,7 +231,7 @@ my_corpora/{corpus}/averell/parser/{author_name}/{poem_name}.json
 
 Now we can combine and join these corpora through "granularity" selection::
 
-    averell export 2 3 --granularity line
+    averell export 2 3 --granularity line --corpora-folder my_corpora
 
 It produces an single JSON file with information about all the lines in
 those corpora. Example of **two** random lines in the file mycorpora/corpus_2_3.json:
