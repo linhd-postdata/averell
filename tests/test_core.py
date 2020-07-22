@@ -3,10 +3,10 @@ import logging
 from unittest import mock
 
 import pytest
-from tests.test_utils import FIXTURES_DIR
 
 from averell.core import export_corpora
 from averell.core import get_corpora
+from tests.test_utils import FIXTURES_DIR
 
 
 def test_get_corpora_index_not_in_range(caplog):

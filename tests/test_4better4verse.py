@@ -2,10 +2,10 @@ import json
 from unittest.mock import patch
 
 import pytest
-from tests.test_utils import FIXTURES_DIR
 
 from averell.readers.forbetter4verse import get_features
 from averell.readers.forbetter4verse import parse_xml
+from tests.test_utils import FIXTURES_DIR
 
 poems = FIXTURES_DIR / "poems"
 

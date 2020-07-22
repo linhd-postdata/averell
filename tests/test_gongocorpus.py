@@ -2,10 +2,10 @@ import json
 from unittest.mock import patch
 
 import pytest
-from tests.test_utils import TESTS_DIR
 
 from averell.readers.gongocorpus import get_features
 from averell.readers.gongocorpus import parse_json
+from tests.test_utils import TESTS_DIR
 
 
 @pytest.fixture

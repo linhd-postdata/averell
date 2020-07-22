@@ -2,10 +2,10 @@ import json
 from unittest.mock import patch
 
 import pytest
-from tests.test_utils import FIXTURES_DIR
 
 from averell.readers.ecpa import get_features
 from averell.readers.ecpa import get_poem_info
+from tests.test_utils import FIXTURES_DIR
 
 ECPA = FIXTURES_DIR / "ecpa" / "web"
 
