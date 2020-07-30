@@ -100,3 +100,15 @@
     granularity:
         - stanza
         - line
+- name: Métrique en Ligne
+  properties:
+    folder_name: metrique-en-ligne-master
+    license: Unlicensed
+    reader: averell.readers.metriqueenligne
+    url: https://github.com/linhd-postdata/metrique-en-ligne/archive/master.zip
+    size: 183M
+    doc_quantity: 5081
+    word_quantity: 1850222
+    granularity:
+        - stanza
+        - line
