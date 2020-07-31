@@ -32,13 +32,15 @@ def download(ids, corpora_folder):
 @click.option('--granularity', help='Granularity')
 @click.option('--corpora-folder', default="./corpora",
               help='Local folder where the corpora are located')
+@click.option('--filename', default="",
+              help='Result filename')
 @click.argument('ids', nargs=-1, type=click.INT)
-def export(ids, granularity, corpora_folder):
+def export(ids, granularity, corpora_folder, filename):
     """
     Parse the corpus with IDs with the GRANULARITY into CORPORA-FOLDER
     """
     click.echo(f"Using corpora folder: '{corpora_folder}'")
-    export_corpora(ids, granularity, corpora_folder)
+    export_corpora(ids, granularity, corpora_folder, filename)
 
 
 @main.command(name="list")
