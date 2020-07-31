@@ -56,7 +56,7 @@ def export_corpora(corpus_ids, granularity, corpora_folder, filename):
     :param corpus_ids: IDs of the corpora that will be exported
     :param granularity: Level of parsing granularity
     :param corpora_folder: Local folder where the corpora is located
-    :param filename: Name of the result file
+    :param filename: Name of the output file
     :return: Python dict with the chosen granularity for all of the selected
         corpora
     """
