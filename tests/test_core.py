@@ -29,22 +29,22 @@ def corpus_features():
 
 
 def test_export_corpora_folder_not_exists(caplog):
-    assert [] == export_corpora([2, 3], "line", "kgalsjlkjsadfhk")
+    assert [] == export_corpora([2, 3], "line", "kgalsjlkjsadfhk", "line")
     assert "Corpora folder not found" in caplog.text
 
 
 def test_export_corpora_granularity_none(caplog):
-    assert [] == export_corpora([2, 3], None, FIXTURES_DIR)
+    assert [] == export_corpora([2, 3], None, FIXTURES_DIR, "foo")
     assert "No GRANULARITY selected" in caplog.text
 
 
 def test_export_corpora_no_ids(caplog):
-    assert [] == export_corpora([], "line", FIXTURES_DIR)
+    assert [] == export_corpora([], "line", FIXTURES_DIR, "foo")
     assert "No CORPUS ID selected" in caplog.text
 
 
 def test_export_corpora_id_not_in_list(caplog):
-    assert [] == export_corpora([500000], "line", FIXTURES_DIR)
+    assert [] == export_corpora([500000], "line", FIXTURES_DIR, "foo")
     assert "ID not in corpora list" in caplog.text
 
 
@@ -76,12 +76,12 @@ _corpora_sources = [
 
 @mock.patch('averell.core.CORPORA_SOURCES', _corpora_sources)
 def test_export_corpora_id_not_downloaded(caplog):
-    assert [] == export_corpora([2], "stanza", FIXTURES_DIR)
+    assert [] == export_corpora([2], "stanza", FIXTURES_DIR, "foo")
     assert f'"testing2" not found in "{FIXTURES_DIR}" folder' in caplog.text
 
 
 @mock.patch('averell.core.CORPORA_SOURCES', _corpora_sources)
 def test_export_corpora_granularity_not_in_list(caplog):
     granularity = "kfajdgah"
-    assert [] == export_corpora([1], granularity, FIXTURES_DIR)
+    assert [] == export_corpora([1], granularity, FIXTURES_DIR, "foo")
     assert f"'{granularity}' granularity not found on 'testing' properties" in caplog.text

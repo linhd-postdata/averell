@@ -48,7 +48,7 @@ def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
         return corpora_features
 
 
-def export_corpora(corpus_ids, granularity, corpora_folder):
+def export_corpora(corpus_ids, granularity, corpora_folder, filename):
     """
     Generates a single JSON file with the chosen granularity for all of the
         selected corpora
@@ -56,6 +56,7 @@ def export_corpora(corpus_ids, granularity, corpora_folder):
     :param corpus_ids: IDs of the corpora that will be exported
     :param granularity: Level of parsing granularity
     :param corpora_folder: Local folder where the corpora is located
+    :param filename: Name of the result file
     :return: Python dict with the chosen granularity for all of the selected
         corpora
     """
@@ -93,8 +94,11 @@ def export_corpora(corpus_ids, granularity, corpora_folder):
             else:
                 logging.error("No GRANULARITY selected")
         if corpora_features:
+            export_filename = filename
+            if not filename:
+                export_filename = granularity
             write_json(corpora_features,
-                       str(Path(corpora_folder) / granularity))
+                       str(Path(corpora_folder) / export_filename))
     else:
         logging.error("Corpora folder not found")
     return corpora_features
