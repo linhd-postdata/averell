@@ -91,7 +91,7 @@
 - name: For Better For Verse
   properties:
     folder_name: for_better_for_verse-master
-    license: Unlicensed
+    license: Unknown
     reader: averell.readers.forbetter4verse
     url: https://github.com/waynegraham/for_better_for_verse/archive/master.zip
     size: 39.5M
@@ -103,7 +103,7 @@
 - name: Métrique en Ligne
   properties:
     folder_name: metrique-en-ligne-master
-    license: Unlicensed
+    license: Unknown
     reader: averell.readers.metriqueenligne
     url: https://github.com/linhd-postdata/metrique-en-ligne/archive/master.zip
     size: 183M
