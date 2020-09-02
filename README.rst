@@ -62,6 +62,8 @@ Available corpora (version 1.02)
                                                        word           4.0
        8  For Better          39.5M      103    41749  stanza         Unlicensed
           For Verse                                    line
+       9  Métrique en         183M      5081  1850222  stanza         Unlicensed
+          Ligne                                        line
 
 
 
