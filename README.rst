@@ -35,7 +35,7 @@ Each corpus in the catalog must specify the parser to produce the expected data 
 
 * Free software: Apache Software License 2.0
 
-Available corpora (version 1.02)
+Available corpora (version 1.0.2)
 
 .. code-block:: text
 
@@ -60,8 +60,10 @@ Available corpora (version 1.02)
        7  Eighteenth Century  2400M     3084  2063668  stanza         CC
           Poetry Archive                               line           BY-SA
                                                        word           4.0
-       8  For Better          39.5M      103    41749  stanza         Unlicensed
+       8  For Better          39.5M      103    41749  stanza         Unknown
           For Verse                                    line
+       9  Métrique en         183M      5081  1850222  stanza         Unknown
+          Ligne                                        line
 
 
 
