@@ -7,16 +7,21 @@ Changelog
 ------------------
 
 * Added export 'filename' option
-* Added two new readers:
-   * For better for verse
-   * Métrique en ligne
+* Added two new readers: 
+
+  * For better for verse
+  
+  * Métrique en ligne
 
 1.0.2 (2020-06-23)
 ------------------
 
 * Added two new readers:
-   * ECPA corpus
-   * Gongocorpus
+
+  * ECPA corpus
+   
+  * Gongocorpus
+   
 * Minor bug fixes
 
 1.0.1 (2020-05-18)
