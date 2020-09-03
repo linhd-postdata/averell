@@ -3,6 +3,27 @@ Changelog
 =========
 
 
+1.0.3 (2020-09-03)
+------------------
+
+* Added export 'filename' option
+* Added two new readers: 
+
+  * For better for verse
+  
+  * Métrique en ligne
+
+1.0.2 (2020-06-23)
+------------------
+
+* Added two new readers:
+
+  * ECPA corpus
+   
+  * Gongocorpus
+   
+* Minor bug fixes
+
 1.0.1 (2020-05-18)
 ------------------
 
