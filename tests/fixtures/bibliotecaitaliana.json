@@ -1,0 +1,4707 @@
+[
+    {
+        "poem_title": "Rime disperse - II",
+        "author": "Iacopo Sannazaro",
+        "manually_checked": false,
+        "stanzas": [
+            {
+                "stanza_number": 1,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 1,
+                        "line_text": "Spargi di lauri, palme e mirti foglie,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Spargi"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "lauri,"
+                            },
+                            {
+                                "word_text": "palme"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "mirti"
+                            },
+                            {
+                                "word_text": "foglie,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 2,
+                        "line_text": "viator, ché per qui intorno il spirto erra",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "viator,"
+                            },
+                            {
+                                "word_text": "ché"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "qui"
+                            },
+                            {
+                                "word_text": "intorno"
+                            },
+                            {
+                                "word_text": "il"
+                            },
+                            {
+                                "word_text": "spirto"
+                            },
+                            {
+                                "word_text": "erra"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 3,
+                        "line_text": "di quel repente fólgore di guerra",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "quel"
+                            },
+                            {
+                                "word_text": "repente"
+                            },
+                            {
+                                "word_text": "fólgore"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "guerra"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 4,
+                        "line_text": "che già de tutto el mondo adusse spoglie.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "già"
+                            },
+                            {
+                                "word_text": "de"
+                            },
+                            {
+                                "word_text": "tutto"
+                            },
+                            {
+                                "word_text": "el"
+                            },
+                            {
+                                "word_text": "mondo"
+                            },
+                            {
+                                "word_text": "adusse"
+                            },
+                            {
+                                "word_text": "spoglie."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Spargi di lauri, palme e mirti foglie,\nviator, ché per qui intorno il spirto erra\ndi quel repente fólgore di guerra\nche già de tutto el mondo adusse spoglie."
+            },
+            {
+                "stanza_number": 2,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 5,
+                        "line_text": "Questa urna angusta il ciner sacro accoglie,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Questa"
+                            },
+                            {
+                                "word_text": "urna"
+                            },
+                            {
+                                "word_text": "angusta"
+                            },
+                            {
+                                "word_text": "il"
+                            },
+                            {
+                                "word_text": "ciner"
+                            },
+                            {
+                                "word_text": "sacro"
+                            },
+                            {
+                                "word_text": "accoglie,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 6,
+                        "line_text": "ma el nome, qual in tomba non si serra,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ma"
+                            },
+                            {
+                                "word_text": "el"
+                            },
+                            {
+                                "word_text": "nome,"
+                            },
+                            {
+                                "word_text": "qual"
+                            },
+                            {
+                                "word_text": "in"
+                            },
+                            {
+                                "word_text": "tomba"
+                            },
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "si"
+                            },
+                            {
+                                "word_text": "serra,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 7,
+                        "line_text": "tiene insepolto il ciel, l' acqua e la terra,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "tiene"
+                            },
+                            {
+                                "word_text": "insepolto"
+                            },
+                            {
+                                "word_text": "il"
+                            },
+                            {
+                                "word_text": "ciel,"
+                            },
+                            {
+                                "word_text": "l'"
+                            },
+                            {
+                                "word_text": "acqua"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "terra,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 8,
+                        "line_text": "secur da tempo e da sue ingorde voglie.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "secur"
+                            },
+                            {
+                                "word_text": "da"
+                            },
+                            {
+                                "word_text": "tempo"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "da"
+                            },
+                            {
+                                "word_text": "sue"
+                            },
+                            {
+                                "word_text": "ingorde"
+                            },
+                            {
+                                "word_text": "voglie."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Questa urna angusta il ciner sacro accoglie,\nma el nome, qual in tomba non si serra,\ntiene insepolto il ciel, l' acqua e la terra,\nsecur da tempo e da sue ingorde voglie."
+            },
+            {
+                "stanza_number": 3,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 9,
+                        "line_text": "Questi fu quel che con l' armata chioma",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Questi"
+                            },
+                            {
+                                "word_text": "fu"
+                            },
+                            {
+                                "word_text": "quel"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "con"
+                            },
+                            {
+                                "word_text": "l'"
+                            },
+                            {
+                                "word_text": "armata"
+                            },
+                            {
+                                "word_text": "chioma"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 10,
+                        "line_text": "prima constrinse il mondo sotto il giogo",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "prima"
+                            },
+                            {
+                                "word_text": "constrinse"
+                            },
+                            {
+                                "word_text": "il"
+                            },
+                            {
+                                "word_text": "mondo"
+                            },
+                            {
+                                "word_text": "sotto"
+                            },
+                            {
+                                "word_text": "il"
+                            },
+                            {
+                                "word_text": "giogo"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 11,
+                        "line_text": "de l' alto imperio de l' antiqua Roma.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "de"
+                            },
+                            {
+                                "word_text": "l'"
+                            },
+                            {
+                                "word_text": "alto"
+                            },
+                            {
+                                "word_text": "imperio"
+                            },
+                            {
+                                "word_text": "de"
+                            },
+                            {
+                                "word_text": "l'"
+                            },
+                            {
+                                "word_text": "antiqua"
+                            },
+                            {
+                                "word_text": "Roma."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Questi fu quel che con l' armata chioma\nprima constrinse il mondo sotto il giogo\nde l' alto imperio de l' antiqua Roma."
+            },
+            {
+                "stanza_number": 4,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 12,
+                        "line_text": "Oh felice sudor! poi che ogni luogo,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Oh"
+                            },
+                            {
+                                "word_text": "felice"
+                            },
+                            {
+                                "word_text": "sudor!"
+                            },
+                            {
+                                "word_text": "poi"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "ogni"
+                            },
+                            {
+                                "word_text": "luogo,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 13,
+                        "line_text": "qual vinse avinto in la terrena soma,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "qual"
+                            },
+                            {
+                                "word_text": "vinse"
+                            },
+                            {
+                                "word_text": "avinto"
+                            },
+                            {
+                                "word_text": "in"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "terrena"
+                            },
+                            {
+                                "word_text": "soma,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 14,
+                        "line_text": "occupa ancor dopo il funereo rogo!",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "occupa"
+                            },
+                            {
+                                "word_text": "ancor"
+                            },
+                            {
+                                "word_text": "dopo"
+                            },
+                            {
+                                "word_text": "il"
+                            },
+                            {
+                                "word_text": "funereo"
+                            },
+                            {
+                                "word_text": "rogo!"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Oh felice sudor! poi che ogni luogo,\nqual vinse avinto in la terrena soma,\noccupa ancor dopo il funereo rogo!"
+            }
+        ]
+    },
+    {
+        "poem_title": "Commedia - I",
+        "author": "Dante Alighieri",
+        "manually_checked": false,
+        "stanzas": [
+            {
+                "stanza_number": 1,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 1,
+                        "line_text": "Nel mezzo del cammin di nostra vita",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Nel"
+                            },
+                            {
+                                "word_text": "mezzo"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "cammin"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "nostra"
+                            },
+                            {
+                                "word_text": "vita"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 2,
+                        "line_text": "mi ritrovai per una selva oscura,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "ritrovai"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "una"
+                            },
+                            {
+                                "word_text": "selva"
+                            },
+                            {
+                                "word_text": "oscura,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 3,
+                        "line_text": "ché la diritta via era smarrita.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ché"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "diritta"
+                            },
+                            {
+                                "word_text": "via"
+                            },
+                            {
+                                "word_text": "era"
+                            },
+                            {
+                                "word_text": "smarrita."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Nel mezzo del cammin di nostra vita\nmi ritrovai per una selva oscura,\nché la diritta via era smarrita."
+            },
+            {
+                "stanza_number": 2,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 4,
+                        "line_text": "Ahi quanto a dir qual era è cosa dura",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Ahi"
+                            },
+                            {
+                                "word_text": "quanto"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "dir"
+                            },
+                            {
+                                "word_text": "qual"
+                            },
+                            {
+                                "word_text": "era"
+                            },
+                            {
+                                "word_text": "è"
+                            },
+                            {
+                                "word_text": "cosa"
+                            },
+                            {
+                                "word_text": "dura"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 5,
+                        "line_text": "esta selva selvaggia e aspra e forte",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "esta"
+                            },
+                            {
+                                "word_text": "selva"
+                            },
+                            {
+                                "word_text": "selvaggia"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "aspra"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "forte"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 6,
+                        "line_text": "che nel pensier rinova la paura!",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "nel"
+                            },
+                            {
+                                "word_text": "pensier"
+                            },
+                            {
+                                "word_text": "rinova"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "paura!"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Ahi quanto a dir qual era è cosa dura\nesta selva selvaggia e aspra e forte\nche nel pensier rinova la paura!"
+            },
+            {
+                "stanza_number": 3,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 7,
+                        "line_text": "Tant'è amara che poco è più morte;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Tant'è"
+                            },
+                            {
+                                "word_text": "amara"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "poco"
+                            },
+                            {
+                                "word_text": "è"
+                            },
+                            {
+                                "word_text": "più"
+                            },
+                            {
+                                "word_text": "morte;"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 8,
+                        "line_text": "ma per trattar del ben ch'i' vi trovai,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ma"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "trattar"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "ben"
+                            },
+                            {
+                                "word_text": "ch'i'"
+                            },
+                            {
+                                "word_text": "vi"
+                            },
+                            {
+                                "word_text": "trovai,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 9,
+                        "line_text": "dirò de l'altre cose ch'i' v'ho scorte.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "dirò"
+                            },
+                            {
+                                "word_text": "de"
+                            },
+                            {
+                                "word_text": "l'altre"
+                            },
+                            {
+                                "word_text": "cose"
+                            },
+                            {
+                                "word_text": "ch'i'"
+                            },
+                            {
+                                "word_text": "v'ho"
+                            },
+                            {
+                                "word_text": "scorte."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Tant'è amara che poco è più morte;\nma per trattar del ben ch'i' vi trovai,\ndirò de l'altre cose ch'i' v'ho scorte."
+            },
+            {
+                "stanza_number": 4,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 10,
+                        "line_text": "Io non so ben ridir com'i' v'intrai,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Io"
+                            },
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "so"
+                            },
+                            {
+                                "word_text": "ben"
+                            },
+                            {
+                                "word_text": "ridir"
+                            },
+                            {
+                                "word_text": "com'i'"
+                            },
+                            {
+                                "word_text": "v'intrai,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 11,
+                        "line_text": "tant'era pien di sonno a quel punto",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "tant'era"
+                            },
+                            {
+                                "word_text": "pien"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "sonno"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "quel"
+                            },
+                            {
+                                "word_text": "punto"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 12,
+                        "line_text": "che la verace via abbandonai.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "verace"
+                            },
+                            {
+                                "word_text": "via"
+                            },
+                            {
+                                "word_text": "abbandonai."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Io non so ben ridir com'i' v'intrai,\ntant'era pien di sonno a quel punto\nche la verace via abbandonai."
+            },
+            {
+                "stanza_number": 5,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 13,
+                        "line_text": "Ma poi ch'i' fui al piè d'un colle giunto,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Ma"
+                            },
+                            {
+                                "word_text": "poi"
+                            },
+                            {
+                                "word_text": "ch'i'"
+                            },
+                            {
+                                "word_text": "fui"
+                            },
+                            {
+                                "word_text": "al"
+                            },
+                            {
+                                "word_text": "piè"
+                            },
+                            {
+                                "word_text": "d'un"
+                            },
+                            {
+                                "word_text": "colle"
+                            },
+                            {
+                                "word_text": "giunto,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 14,
+                        "line_text": "là dove terminava quella valle",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "là"
+                            },
+                            {
+                                "word_text": "dove"
+                            },
+                            {
+                                "word_text": "terminava"
+                            },
+                            {
+                                "word_text": "quella"
+                            },
+                            {
+                                "word_text": "valle"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 15,
+                        "line_text": "che m'avea di paura il cor compunto,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "m'avea"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "paura"
+                            },
+                            {
+                                "word_text": "il"
+                            },
+                            {
+                                "word_text": "cor"
+                            },
+                            {
+                                "word_text": "compunto,"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Ma poi ch'i' fui al piè d'un colle giunto,\nlà dove terminava quella valle\nche m'avea di paura il cor compunto,"
+            },
+            {
+                "stanza_number": 6,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 16,
+                        "line_text": "guardai in alto, e vidi le sue spalle",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "guardai"
+                            },
+                            {
+                                "word_text": "in"
+                            },
+                            {
+                                "word_text": "alto,"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "vidi"
+                            },
+                            {
+                                "word_text": "le"
+                            },
+                            {
+                                "word_text": "sue"
+                            },
+                            {
+                                "word_text": "spalle"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 17,
+                        "line_text": "vestite già de' raggi del pianeta",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "vestite"
+                            },
+                            {
+                                "word_text": "già"
+                            },
+                            {
+                                "word_text": "de'"
+                            },
+                            {
+                                "word_text": "raggi"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "pianeta"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 18,
+                        "line_text": "che mena dritto altrui per ogne calle.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "mena"
+                            },
+                            {
+                                "word_text": "dritto"
+                            },
+                            {
+                                "word_text": "altrui"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "ogne"
+                            },
+                            {
+                                "word_text": "calle."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "guardai in alto, e vidi le sue spalle\nvestite già de' raggi del pianeta\nche mena dritto altrui per ogne calle."
+            },
+            {
+                "stanza_number": 7,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 19,
+                        "line_text": "Allor fu la paura un poco queta,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Allor"
+                            },
+                            {
+                                "word_text": "fu"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "paura"
+                            },
+                            {
+                                "word_text": "un"
+                            },
+                            {
+                                "word_text": "poco"
+                            },
+                            {
+                                "word_text": "queta,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 20,
+                        "line_text": "che nel lago del cor m'era durata",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "nel"
+                            },
+                            {
+                                "word_text": "lago"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "cor"
+                            },
+                            {
+                                "word_text": "m'era"
+                            },
+                            {
+                                "word_text": "durata"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 21,
+                        "line_text": "la notte ch'i' passai con tanta pieta.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "notte"
+                            },
+                            {
+                                "word_text": "ch'i'"
+                            },
+                            {
+                                "word_text": "passai"
+                            },
+                            {
+                                "word_text": "con"
+                            },
+                            {
+                                "word_text": "tanta"
+                            },
+                            {
+                                "word_text": "pieta."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Allor fu la paura un poco queta,\nche nel lago del cor m'era durata\nla notte ch'i' passai con tanta pieta."
+            },
+            {
+                "stanza_number": 8,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 22,
+                        "line_text": "E come quei che con lena affannata,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "E"
+                            },
+                            {
+                                "word_text": "come"
+                            },
+                            {
+                                "word_text": "quei"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "con"
+                            },
+                            {
+                                "word_text": "lena"
+                            },
+                            {
+                                "word_text": "affannata,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 23,
+                        "line_text": "uscito fuor del pelago a la riva,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "uscito"
+                            },
+                            {
+                                "word_text": "fuor"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "pelago"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "riva,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 24,
+                        "line_text": "si volge a l'acqua perigliosa e guata,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "si"
+                            },
+                            {
+                                "word_text": "volge"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "l'acqua"
+                            },
+                            {
+                                "word_text": "perigliosa"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "guata,"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "E come quei che con lena affannata,\nuscito fuor del pelago a la riva,\nsi volge a l'acqua perigliosa e guata,"
+            },
+            {
+                "stanza_number": 9,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 25,
+                        "line_text": "così l'animo mio, ch'ancor fuggiva,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "così"
+                            },
+                            {
+                                "word_text": "l'animo"
+                            },
+                            {
+                                "word_text": "mio,"
+                            },
+                            {
+                                "word_text": "ch'ancor"
+                            },
+                            {
+                                "word_text": "fuggiva,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 26,
+                        "line_text": "si volse a retro a rimirar lo passo",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "si"
+                            },
+                            {
+                                "word_text": "volse"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "retro"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "rimirar"
+                            },
+                            {
+                                "word_text": "lo"
+                            },
+                            {
+                                "word_text": "passo"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 27,
+                        "line_text": "che non lasciò già mai persona viva.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "lasciò"
+                            },
+                            {
+                                "word_text": "già"
+                            },
+                            {
+                                "word_text": "mai"
+                            },
+                            {
+                                "word_text": "persona"
+                            },
+                            {
+                                "word_text": "viva."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "così l'animo mio, ch'ancor fuggiva,\nsi volse a retro a rimirar lo passo\nche non lasciò già mai persona viva."
+            },
+            {
+                "stanza_number": 10,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 28,
+                        "line_text": "Poi ch'èi posato un poco il corpo lasso,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Poi"
+                            },
+                            {
+                                "word_text": "ch'èi"
+                            },
+                            {
+                                "word_text": "posato"
+                            },
+                            {
+                                "word_text": "un"
+                            },
+                            {
+                                "word_text": "poco"
+                            },
+                            {
+                                "word_text": "il"
+                            },
+                            {
+                                "word_text": "corpo"
+                            },
+                            {
+                                "word_text": "lasso,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 29,
+                        "line_text": "ripresi via per la piaggia diserta,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ripresi"
+                            },
+                            {
+                                "word_text": "via"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "piaggia"
+                            },
+                            {
+                                "word_text": "diserta,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 30,
+                        "line_text": "sì che 'l piè fermo sempre era 'l più basso.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "sì"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "piè"
+                            },
+                            {
+                                "word_text": "fermo"
+                            },
+                            {
+                                "word_text": "sempre"
+                            },
+                            {
+                                "word_text": "era"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "più"
+                            },
+                            {
+                                "word_text": "basso."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Poi ch'èi posato un poco il corpo lasso,\nripresi via per la piaggia diserta,\nsì che 'l piè fermo sempre era 'l più basso."
+            },
+            {
+                "stanza_number": 11,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 31,
+                        "line_text": "Ed ecco, quasi al cominciar de l'erta,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Ed"
+                            },
+                            {
+                                "word_text": "ecco,"
+                            },
+                            {
+                                "word_text": "quasi"
+                            },
+                            {
+                                "word_text": "al"
+                            },
+                            {
+                                "word_text": "cominciar"
+                            },
+                            {
+                                "word_text": "de"
+                            },
+                            {
+                                "word_text": "l'erta,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 32,
+                        "line_text": "una lonza leggera e presta molto,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "una"
+                            },
+                            {
+                                "word_text": "lonza"
+                            },
+                            {
+                                "word_text": "leggera"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "presta"
+                            },
+                            {
+                                "word_text": "molto,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 33,
+                        "line_text": "che di pel macolato era coverta;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "pel"
+                            },
+                            {
+                                "word_text": "macolato"
+                            },
+                            {
+                                "word_text": "era"
+                            },
+                            {
+                                "word_text": "coverta;"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Ed ecco, quasi al cominciar de l'erta,\nuna lonza leggera e presta molto,\nche di pel macolato era coverta;"
+            },
+            {
+                "stanza_number": 12,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 34,
+                        "line_text": "e non mi si partia dinanzi al volto,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "si"
+                            },
+                            {
+                                "word_text": "partia"
+                            },
+                            {
+                                "word_text": "dinanzi"
+                            },
+                            {
+                                "word_text": "al"
+                            },
+                            {
+                                "word_text": "volto,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 35,
+                        "line_text": "anzi 'mpediva tanto il mio cammino,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "anzi"
+                            },
+                            {
+                                "word_text": "'mpediva"
+                            },
+                            {
+                                "word_text": "tanto"
+                            },
+                            {
+                                "word_text": "il"
+                            },
+                            {
+                                "word_text": "mio"
+                            },
+                            {
+                                "word_text": "cammino,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 36,
+                        "line_text": "ch'i' fui per ritornar più volte vòlto.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ch'i'"
+                            },
+                            {
+                                "word_text": "fui"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "ritornar"
+                            },
+                            {
+                                "word_text": "più"
+                            },
+                            {
+                                "word_text": "volte"
+                            },
+                            {
+                                "word_text": "vòlto."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "e non mi si partia dinanzi al volto,\nanzi 'mpediva tanto il mio cammino,\nch'i' fui per ritornar più volte vòlto."
+            },
+            {
+                "stanza_number": 13,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 37,
+                        "line_text": "Temp'era dal principio del mattino,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Temp'era"
+                            },
+                            {
+                                "word_text": "dal"
+                            },
+                            {
+                                "word_text": "principio"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "mattino,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 38,
+                        "line_text": "e 'l sol montava 'n sù con quelle stelle",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "sol"
+                            },
+                            {
+                                "word_text": "montava"
+                            },
+                            {
+                                "word_text": "'n"
+                            },
+                            {
+                                "word_text": "sù"
+                            },
+                            {
+                                "word_text": "con"
+                            },
+                            {
+                                "word_text": "quelle"
+                            },
+                            {
+                                "word_text": "stelle"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 39,
+                        "line_text": "ch'eran con lui quando l'amor divino",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ch'eran"
+                            },
+                            {
+                                "word_text": "con"
+                            },
+                            {
+                                "word_text": "lui"
+                            },
+                            {
+                                "word_text": "quando"
+                            },
+                            {
+                                "word_text": "l'amor"
+                            },
+                            {
+                                "word_text": "divino"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Temp'era dal principio del mattino,\ne 'l sol montava 'n sù con quelle stelle\nch'eran con lui quando l'amor divino"
+            },
+            {
+                "stanza_number": 14,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 40,
+                        "line_text": "mosse di prima quelle cose belle;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "mosse"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "prima"
+                            },
+                            {
+                                "word_text": "quelle"
+                            },
+                            {
+                                "word_text": "cose"
+                            },
+                            {
+                                "word_text": "belle;"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 41,
+                        "line_text": "sì ch'a bene sperar m'era cagione",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "sì"
+                            },
+                            {
+                                "word_text": "ch'a"
+                            },
+                            {
+                                "word_text": "bene"
+                            },
+                            {
+                                "word_text": "sperar"
+                            },
+                            {
+                                "word_text": "m'era"
+                            },
+                            {
+                                "word_text": "cagione"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 42,
+                        "line_text": "di quella fiera a la gaetta pelle",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "quella"
+                            },
+                            {
+                                "word_text": "fiera"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "gaetta"
+                            },
+                            {
+                                "word_text": "pelle"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "mosse di prima quelle cose belle;\nsì ch'a bene sperar m'era cagione\ndi quella fiera a la gaetta pelle"
+            },
+            {
+                "stanza_number": 15,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 43,
+                        "line_text": "l'ora del tempo e la dolce stagione;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "l'ora"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "tempo"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "dolce"
+                            },
+                            {
+                                "word_text": "stagione;"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 44,
+                        "line_text": "ma non sì che paura non mi desse",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ma"
+                            },
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "sì"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "paura"
+                            },
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "desse"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 45,
+                        "line_text": "la vista che m'apparve d'un leone.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "vista"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "m'apparve"
+                            },
+                            {
+                                "word_text": "d'un"
+                            },
+                            {
+                                "word_text": "leone."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "l'ora del tempo e la dolce stagione;\nma non sì che paura non mi desse\nla vista che m'apparve d'un leone."
+            },
+            {
+                "stanza_number": 16,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 46,
+                        "line_text": "Questi parea che contra me venisse",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Questi"
+                            },
+                            {
+                                "word_text": "parea"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "contra"
+                            },
+                            {
+                                "word_text": "me"
+                            },
+                            {
+                                "word_text": "venisse"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 47,
+                        "line_text": "con la test'alta e con rabbiosa fame, ",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "con"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "test'alta"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "con"
+                            },
+                            {
+                                "word_text": "rabbiosa"
+                            },
+                            {
+                                "word_text": "fame,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 48,
+                        "line_text": "sì che parea che l'aere ne tremesse.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "sì"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "parea"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "l'aere"
+                            },
+                            {
+                                "word_text": "ne"
+                            },
+                            {
+                                "word_text": "tremesse."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Questi parea che contra me venisse\ncon la test'alta e con rabbiosa fame, \nsì che parea che l'aere ne tremesse."
+            },
+            {
+                "stanza_number": 17,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 49,
+                        "line_text": "Ed una lupa, che di tutte brame",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Ed"
+                            },
+                            {
+                                "word_text": "una"
+                            },
+                            {
+                                "word_text": "lupa,"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "tutte"
+                            },
+                            {
+                                "word_text": "brame"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 50,
+                        "line_text": "sembiava carca ne la sua magrezza,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "sembiava"
+                            },
+                            {
+                                "word_text": "carca"
+                            },
+                            {
+                                "word_text": "ne"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "sua"
+                            },
+                            {
+                                "word_text": "magrezza,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 51,
+                        "line_text": "e molte genti fé già viver grame,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "molte"
+                            },
+                            {
+                                "word_text": "genti"
+                            },
+                            {
+                                "word_text": "fé"
+                            },
+                            {
+                                "word_text": "già"
+                            },
+                            {
+                                "word_text": "viver"
+                            },
+                            {
+                                "word_text": "grame,"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Ed una lupa, che di tutte brame\nsembiava carca ne la sua magrezza,\ne molte genti fé già viver grame,"
+            },
+            {
+                "stanza_number": 18,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 52,
+                        "line_text": "questa mi porse tanto di gravezza",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "questa"
+                            },
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "porse"
+                            },
+                            {
+                                "word_text": "tanto"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "gravezza"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 53,
+                        "line_text": "con la paura ch'uscia di sua vista,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "con"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "paura"
+                            },
+                            {
+                                "word_text": "ch'uscia"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "sua"
+                            },
+                            {
+                                "word_text": "vista,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 54,
+                        "line_text": "ch'io perdei la speranza de l'altezza.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ch'io"
+                            },
+                            {
+                                "word_text": "perdei"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "speranza"
+                            },
+                            {
+                                "word_text": "de"
+                            },
+                            {
+                                "word_text": "l'altezza."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "questa mi porse tanto di gravezza\ncon la paura ch'uscia di sua vista,\nch'io perdei la speranza de l'altezza."
+            },
+            {
+                "stanza_number": 19,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 55,
+                        "line_text": "E qual è quei che volontieri acquista,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "E"
+                            },
+                            {
+                                "word_text": "qual"
+                            },
+                            {
+                                "word_text": "è"
+                            },
+                            {
+                                "word_text": "quei"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "volontieri"
+                            },
+                            {
+                                "word_text": "acquista,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 56,
+                        "line_text": "e giugne 'l tempo che perder lo face,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "giugne"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "tempo"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "perder"
+                            },
+                            {
+                                "word_text": "lo"
+                            },
+                            {
+                                "word_text": "face,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 57,
+                        "line_text": "che 'n tutti suoi pensier piange e s'attrista;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "'n"
+                            },
+                            {
+                                "word_text": "tutti"
+                            },
+                            {
+                                "word_text": "suoi"
+                            },
+                            {
+                                "word_text": "pensier"
+                            },
+                            {
+                                "word_text": "piange"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "s'attrista;"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "E qual è quei che volontieri acquista,\ne giugne 'l tempo che perder lo face,\nche 'n tutti suoi pensier piange e s'attrista;"
+            },
+            {
+                "stanza_number": 20,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 58,
+                        "line_text": "tal mi fece la bestia sanza pace,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "tal"
+                            },
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "fece"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "bestia"
+                            },
+                            {
+                                "word_text": "sanza"
+                            },
+                            {
+                                "word_text": "pace,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 59,
+                        "line_text": "che, venendomi 'ncontro, a poco a poco",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che,"
+                            },
+                            {
+                                "word_text": "venendomi"
+                            },
+                            {
+                                "word_text": "'ncontro,"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "poco"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "poco"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 60,
+                        "line_text": "mi ripigneva là dove 'l sol tace.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "ripigneva"
+                            },
+                            {
+                                "word_text": "là"
+                            },
+                            {
+                                "word_text": "dove"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "sol"
+                            },
+                            {
+                                "word_text": "tace."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "tal mi fece la bestia sanza pace,\nche, venendomi 'ncontro, a poco a poco\nmi ripigneva là dove 'l sol tace."
+            },
+            {
+                "stanza_number": 21,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 61,
+                        "line_text": "Mentre ch'i' rovinava in basso loco,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Mentre"
+                            },
+                            {
+                                "word_text": "ch'i'"
+                            },
+                            {
+                                "word_text": "rovinava"
+                            },
+                            {
+                                "word_text": "in"
+                            },
+                            {
+                                "word_text": "basso"
+                            },
+                            {
+                                "word_text": "loco,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 62,
+                        "line_text": "dinanzi a li occhi mi si fu offerto",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "dinanzi"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "li"
+                            },
+                            {
+                                "word_text": "occhi"
+                            },
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "si"
+                            },
+                            {
+                                "word_text": "fu"
+                            },
+                            {
+                                "word_text": "offerto"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 63,
+                        "line_text": "chi per lungo silenzio parea fioco.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "chi"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "lungo"
+                            },
+                            {
+                                "word_text": "silenzio"
+                            },
+                            {
+                                "word_text": "parea"
+                            },
+                            {
+                                "word_text": "fioco."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Mentre ch'i' rovinava in basso loco,\ndinanzi a li occhi mi si fu offerto\nchi per lungo silenzio parea fioco."
+            },
+            {
+                "stanza_number": 22,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 64,
+                        "line_text": "Quando vidi costui nel gran diserto,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Quando"
+                            },
+                            {
+                                "word_text": "vidi"
+                            },
+                            {
+                                "word_text": "costui"
+                            },
+                            {
+                                "word_text": "nel"
+                            },
+                            {
+                                "word_text": "gran"
+                            },
+                            {
+                                "word_text": "diserto,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 65,
+                        "line_text": "\"miserere di me\", gridai a lui,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "\"miserere"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "me\","
+                            },
+                            {
+                                "word_text": "gridai"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "lui,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 66,
+                        "line_text": "\"qual che tu sii, od ombra od omo certo!\".",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "\"qual"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "tu"
+                            },
+                            {
+                                "word_text": "sii,"
+                            },
+                            {
+                                "word_text": "od"
+                            },
+                            {
+                                "word_text": "ombra"
+                            },
+                            {
+                                "word_text": "od"
+                            },
+                            {
+                                "word_text": "omo"
+                            },
+                            {
+                                "word_text": "certo!\"."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Quando vidi costui nel gran diserto,\n\"miserere di me\", gridai a lui,\n\"qual che tu sii, od ombra od omo certo!\"."
+            },
+            {
+                "stanza_number": 23,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 67,
+                        "line_text": "Rispuosemi: \"Non omo, omo già fui,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Rispuosemi:"
+                            },
+                            {
+                                "word_text": "\"Non"
+                            },
+                            {
+                                "word_text": "omo,"
+                            },
+                            {
+                                "word_text": "omo"
+                            },
+                            {
+                                "word_text": "già"
+                            },
+                            {
+                                "word_text": "fui,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 68,
+                        "line_text": "e li parenti miei furon lombardi,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "li"
+                            },
+                            {
+                                "word_text": "parenti"
+                            },
+                            {
+                                "word_text": "miei"
+                            },
+                            {
+                                "word_text": "furon"
+                            },
+                            {
+                                "word_text": "lombardi,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 69,
+                        "line_text": "mantoani per patrïa ambedui.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "mantoani"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "patrïa"
+                            },
+                            {
+                                "word_text": "ambedui."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Rispuosemi: \"Non omo, omo già fui,\ne li parenti miei furon lombardi,\nmantoani per patrïa ambedui."
+            },
+            {
+                "stanza_number": 24,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 70,
+                        "line_text": "Nacqui sub Iulio, ancor che fosse tardi,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Nacqui"
+                            },
+                            {
+                                "word_text": "sub"
+                            },
+                            {
+                                "word_text": "Iulio,"
+                            },
+                            {
+                                "word_text": "ancor"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "fosse"
+                            },
+                            {
+                                "word_text": "tardi,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 71,
+                        "line_text": "e vissi a Roma sotto 'l buono Augusto",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "vissi"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "Roma"
+                            },
+                            {
+                                "word_text": "sotto"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "buono"
+                            },
+                            {
+                                "word_text": "Augusto"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 72,
+                        "line_text": " nel tempo de li dèi falsi e bugiardi.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "nel"
+                            },
+                            {
+                                "word_text": "tempo"
+                            },
+                            {
+                                "word_text": "de"
+                            },
+                            {
+                                "word_text": "li"
+                            },
+                            {
+                                "word_text": "dèi"
+                            },
+                            {
+                                "word_text": "falsi"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "bugiardi."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Nacqui sub Iulio, ancor che fosse tardi,\ne vissi a Roma sotto 'l buono Augusto\n nel tempo de li dèi falsi e bugiardi."
+            },
+            {
+                "stanza_number": 25,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 73,
+                        "line_text": "Poeta fui, e cantai di quel giusto",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Poeta"
+                            },
+                            {
+                                "word_text": "fui,"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "cantai"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "quel"
+                            },
+                            {
+                                "word_text": "giusto"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 74,
+                        "line_text": "figliuol d'Anchise che venne di Troia,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "figliuol"
+                            },
+                            {
+                                "word_text": "d'Anchise"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "venne"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "Troia,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 75,
+                        "line_text": "poi che 'l superbo Ilïón fu combusto.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "poi"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "superbo"
+                            },
+                            {
+                                "word_text": "Ilïón"
+                            },
+                            {
+                                "word_text": "fu"
+                            },
+                            {
+                                "word_text": "combusto."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Poeta fui, e cantai di quel giusto\nfigliuol d'Anchise che venne di Troia,\npoi che 'l superbo Ilïón fu combusto."
+            },
+            {
+                "stanza_number": 26,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 76,
+                        "line_text": "Ma tu perché ritorni a tanta noia?",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Ma"
+                            },
+                            {
+                                "word_text": "tu"
+                            },
+                            {
+                                "word_text": "perché"
+                            },
+                            {
+                                "word_text": "ritorni"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "tanta"
+                            },
+                            {
+                                "word_text": "noia?"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 77,
+                        "line_text": "perché non sali il dilettoso monte",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "perché"
+                            },
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "sali"
+                            },
+                            {
+                                "word_text": "il"
+                            },
+                            {
+                                "word_text": "dilettoso"
+                            },
+                            {
+                                "word_text": "monte"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 78,
+                        "line_text": "ch'è principio e cagion di tutta gioia?\".",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ch'è"
+                            },
+                            {
+                                "word_text": "principio"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "cagion"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "tutta"
+                            },
+                            {
+                                "word_text": "gioia?\"."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Ma tu perché ritorni a tanta noia?\nperché non sali il dilettoso monte\nch'è principio e cagion di tutta gioia?\"."
+            },
+            {
+                "stanza_number": 27,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 79,
+                        "line_text": "\"Or se' tu quel Virgilio e quella fonte",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "\"Or"
+                            },
+                            {
+                                "word_text": "se'"
+                            },
+                            {
+                                "word_text": "tu"
+                            },
+                            {
+                                "word_text": "quel"
+                            },
+                            {
+                                "word_text": "Virgilio"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "quella"
+                            },
+                            {
+                                "word_text": "fonte"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 80,
+                        "line_text": "che spandi di parlar sì largo fiume?\",",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "spandi"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "parlar"
+                            },
+                            {
+                                "word_text": "sì"
+                            },
+                            {
+                                "word_text": "largo"
+                            },
+                            {
+                                "word_text": "fiume?\","
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 81,
+                        "line_text": "rispuos'io lui con vergognosa fronte.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "rispuos'io"
+                            },
+                            {
+                                "word_text": "lui"
+                            },
+                            {
+                                "word_text": "con"
+                            },
+                            {
+                                "word_text": "vergognosa"
+                            },
+                            {
+                                "word_text": "fronte."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "\"Or se' tu quel Virgilio e quella fonte\nche spandi di parlar sì largo fiume?\",\nrispuos'io lui con vergognosa fronte."
+            },
+            {
+                "stanza_number": 28,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 82,
+                        "line_text": "\"O de li altri poeti onore e lume,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "\"O"
+                            },
+                            {
+                                "word_text": "de"
+                            },
+                            {
+                                "word_text": "li"
+                            },
+                            {
+                                "word_text": "altri"
+                            },
+                            {
+                                "word_text": "poeti"
+                            },
+                            {
+                                "word_text": "onore"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "lume,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 83,
+                        "line_text": "vagliami 'l lungo studio e 'l grande amore",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "vagliami"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "lungo"
+                            },
+                            {
+                                "word_text": "studio"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "grande"
+                            },
+                            {
+                                "word_text": "amore"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 84,
+                        "line_text": "che m'ha fatto cercar lo tuo volume.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "m'ha"
+                            },
+                            {
+                                "word_text": "fatto"
+                            },
+                            {
+                                "word_text": "cercar"
+                            },
+                            {
+                                "word_text": "lo"
+                            },
+                            {
+                                "word_text": "tuo"
+                            },
+                            {
+                                "word_text": "volume."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "\"O de li altri poeti onore e lume,\nvagliami 'l lungo studio e 'l grande amore\nche m'ha fatto cercar lo tuo volume."
+            },
+            {
+                "stanza_number": 29,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 85,
+                        "line_text": "Tu se' lo mio maestro e 'l mio autore,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Tu"
+                            },
+                            {
+                                "word_text": "se'"
+                            },
+                            {
+                                "word_text": "lo"
+                            },
+                            {
+                                "word_text": "mio"
+                            },
+                            {
+                                "word_text": "maestro"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "mio"
+                            },
+                            {
+                                "word_text": "autore,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 86,
+                        "line_text": "tu se' solo colui da cu' io tolsi",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "tu"
+                            },
+                            {
+                                "word_text": "se'"
+                            },
+                            {
+                                "word_text": "solo"
+                            },
+                            {
+                                "word_text": "colui"
+                            },
+                            {
+                                "word_text": "da"
+                            },
+                            {
+                                "word_text": "cu'"
+                            },
+                            {
+                                "word_text": "io"
+                            },
+                            {
+                                "word_text": "tolsi"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 87,
+                        "line_text": "lo bello stilo che m'ha fatto onore.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "lo"
+                            },
+                            {
+                                "word_text": "bello"
+                            },
+                            {
+                                "word_text": "stilo"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "m'ha"
+                            },
+                            {
+                                "word_text": "fatto"
+                            },
+                            {
+                                "word_text": "onore."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Tu se' lo mio maestro e 'l mio autore,\ntu se' solo colui da cu' io tolsi\nlo bello stilo che m'ha fatto onore."
+            },
+            {
+                "stanza_number": 30,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 88,
+                        "line_text": "Vedi la bestia per cu' io mi volsi;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Vedi"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "bestia"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "cu'"
+                            },
+                            {
+                                "word_text": "io"
+                            },
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "volsi;"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 89,
+                        "line_text": "aiutami da lei, famoso saggio,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "aiutami"
+                            },
+                            {
+                                "word_text": "da"
+                            },
+                            {
+                                "word_text": "lei,"
+                            },
+                            {
+                                "word_text": "famoso"
+                            },
+                            {
+                                "word_text": "saggio,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 90,
+                        "line_text": "ch'ella mi fa tremar le vene e i polsi\".",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ch'ella"
+                            },
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "fa"
+                            },
+                            {
+                                "word_text": "tremar"
+                            },
+                            {
+                                "word_text": "le"
+                            },
+                            {
+                                "word_text": "vene"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "i"
+                            },
+                            {
+                                "word_text": "polsi\"."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Vedi la bestia per cu' io mi volsi;\naiutami da lei, famoso saggio,\nch'ella mi fa tremar le vene e i polsi\"."
+            },
+            {
+                "stanza_number": 31,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 91,
+                        "line_text": "\"A te convien tenere altro vïaggio\",",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "\"A"
+                            },
+                            {
+                                "word_text": "te"
+                            },
+                            {
+                                "word_text": "convien"
+                            },
+                            {
+                                "word_text": "tenere"
+                            },
+                            {
+                                "word_text": "altro"
+                            },
+                            {
+                                "word_text": "vïaggio\","
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 92,
+                        "line_text": "rispuose, poi che lagrimar mi vide,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "rispuose,"
+                            },
+                            {
+                                "word_text": "poi"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "lagrimar"
+                            },
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "vide,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 93,
+                        "line_text": "\"se vuo' campar d'esto loco selvaggio;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "\"se"
+                            },
+                            {
+                                "word_text": "vuo'"
+                            },
+                            {
+                                "word_text": "campar"
+                            },
+                            {
+                                "word_text": "d'esto"
+                            },
+                            {
+                                "word_text": "loco"
+                            },
+                            {
+                                "word_text": "selvaggio;"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "\"A te convien tenere altro vïaggio\",\nrispuose, poi che lagrimar mi vide,\n\"se vuo' campar d'esto loco selvaggio;"
+            },
+            {
+                "stanza_number": 32,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 94,
+                        "line_text": "ché questa bestia, per la qual tu gride,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ché"
+                            },
+                            {
+                                "word_text": "questa"
+                            },
+                            {
+                                "word_text": "bestia,"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "qual"
+                            },
+                            {
+                                "word_text": "tu"
+                            },
+                            {
+                                "word_text": "gride,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 95,
+                        "line_text": "non lascia altrui passar per la sua via,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "lascia"
+                            },
+                            {
+                                "word_text": "altrui"
+                            },
+                            {
+                                "word_text": "passar"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "sua"
+                            },
+                            {
+                                "word_text": "via,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 96,
+                        "line_text": "ma tanto lo 'mpedisce che l'uccide;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ma"
+                            },
+                            {
+                                "word_text": "tanto"
+                            },
+                            {
+                                "word_text": "lo"
+                            },
+                            {
+                                "word_text": "'mpedisce"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "l'uccide;"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "ché questa bestia, per la qual tu gride,\nnon lascia altrui passar per la sua via,\nma tanto lo 'mpedisce che l'uccide;"
+            },
+            {
+                "stanza_number": 33,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 97,
+                        "line_text": "e ha natura sì malvagia e ria,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "ha"
+                            },
+                            {
+                                "word_text": "natura"
+                            },
+                            {
+                                "word_text": "sì"
+                            },
+                            {
+                                "word_text": "malvagia"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "ria,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 98,
+                        "line_text": "che mai non empie la bramosa voglia,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "mai"
+                            },
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "empie"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "bramosa"
+                            },
+                            {
+                                "word_text": "voglia,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 99,
+                        "line_text": "e dopo 'l pasto ha più fame che pria.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "dopo"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "pasto"
+                            },
+                            {
+                                "word_text": "ha"
+                            },
+                            {
+                                "word_text": "più"
+                            },
+                            {
+                                "word_text": "fame"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "pria."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "e ha natura sì malvagia e ria,\nche mai non empie la bramosa voglia,\ne dopo 'l pasto ha più fame che pria."
+            },
+            {
+                "stanza_number": 34,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 100,
+                        "line_text": "Molti son li animali a cui s'ammoglia,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Molti"
+                            },
+                            {
+                                "word_text": "son"
+                            },
+                            {
+                                "word_text": "li"
+                            },
+                            {
+                                "word_text": "animali"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "cui"
+                            },
+                            {
+                                "word_text": "s'ammoglia,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 101,
+                        "line_text": "e più saranno ancora, infin che 'l veltro",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "più"
+                            },
+                            {
+                                "word_text": "saranno"
+                            },
+                            {
+                                "word_text": "ancora,"
+                            },
+                            {
+                                "word_text": "infin"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "'l"
+                            },
+                            {
+                                "word_text": "veltro"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 102,
+                        "line_text": "verrà, che la farà morir con doglia.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "verrà,"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "farà"
+                            },
+                            {
+                                "word_text": "morir"
+                            },
+                            {
+                                "word_text": "con"
+                            },
+                            {
+                                "word_text": "doglia."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Molti son li animali a cui s'ammoglia,\ne più saranno ancora, infin che 'l veltro\nverrà, che la farà morir con doglia."
+            },
+            {
+                "stanza_number": 35,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 103,
+                        "line_text": "Questi non ciberà terra né peltro,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Questi"
+                            },
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "ciberà"
+                            },
+                            {
+                                "word_text": "terra"
+                            },
+                            {
+                                "word_text": "né"
+                            },
+                            {
+                                "word_text": "peltro,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 104,
+                        "line_text": "ma sapïenza, amore e virtute, ",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ma"
+                            },
+                            {
+                                "word_text": "sapïenza,"
+                            },
+                            {
+                                "word_text": "amore"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "virtute,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 105,
+                        "line_text": "e sua nazion sarà tra feltro e feltro.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "sua"
+                            },
+                            {
+                                "word_text": "nazion"
+                            },
+                            {
+                                "word_text": "sarà"
+                            },
+                            {
+                                "word_text": "tra"
+                            },
+                            {
+                                "word_text": "feltro"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "feltro."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Questi non ciberà terra né peltro,\nma sapïenza, amore e virtute, \ne sua nazion sarà tra feltro e feltro."
+            },
+            {
+                "stanza_number": 36,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 106,
+                        "line_text": "Di quella umile Italia fia salute",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Di"
+                            },
+                            {
+                                "word_text": "quella"
+                            },
+                            {
+                                "word_text": "umile"
+                            },
+                            {
+                                "word_text": "Italia"
+                            },
+                            {
+                                "word_text": "fia"
+                            },
+                            {
+                                "word_text": "salute"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 107,
+                        "line_text": "per cui morì la vergine Cammilla,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "cui"
+                            },
+                            {
+                                "word_text": "morì"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "vergine"
+                            },
+                            {
+                                "word_text": "Cammilla,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 108,
+                        "line_text": "Eurialo e Turno e Niso di ferute.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Eurialo"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "Turno"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "Niso"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "ferute."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Di quella umile Italia fia salute\nper cui morì la vergine Cammilla,\nEurialo e Turno e Niso di ferute."
+            },
+            {
+                "stanza_number": 37,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 109,
+                        "line_text": "Questi la caccerà per ogne villa,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Questi"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "caccerà"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "ogne"
+                            },
+                            {
+                                "word_text": "villa,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 110,
+                        "line_text": "fin che l'avrà rimessa ne lo 'nferno,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "fin"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "l'avrà"
+                            },
+                            {
+                                "word_text": "rimessa"
+                            },
+                            {
+                                "word_text": "ne"
+                            },
+                            {
+                                "word_text": "lo"
+                            },
+                            {
+                                "word_text": "'nferno,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 111,
+                        "line_text": "là onde 'nvidia prima dipartilla.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "là"
+                            },
+                            {
+                                "word_text": "onde"
+                            },
+                            {
+                                "word_text": "'nvidia"
+                            },
+                            {
+                                "word_text": "prima"
+                            },
+                            {
+                                "word_text": "dipartilla."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Questi la caccerà per ogne villa,\nfin che l'avrà rimessa ne lo 'nferno,\nlà onde 'nvidia prima dipartilla."
+            },
+            {
+                "stanza_number": 38,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 112,
+                        "line_text": "Ond'io per lo tuo me' penso e discerno",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Ond'io"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "lo"
+                            },
+                            {
+                                "word_text": "tuo"
+                            },
+                            {
+                                "word_text": "me'"
+                            },
+                            {
+                                "word_text": "penso"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "discerno"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 113,
+                        "line_text": "che tu mi segui, e io sarò tua guida,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "tu"
+                            },
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "segui,"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "io"
+                            },
+                            {
+                                "word_text": "sarò"
+                            },
+                            {
+                                "word_text": "tua"
+                            },
+                            {
+                                "word_text": "guida,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 114,
+                        "line_text": "e trarrotti di qui per loco etterno;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "trarrotti"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "qui"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "loco"
+                            },
+                            {
+                                "word_text": "etterno;"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Ond'io per lo tuo me' penso e discerno\nche tu mi segui, e io sarò tua guida,\ne trarrotti di qui per loco etterno;"
+            },
+            {
+                "stanza_number": 39,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 115,
+                        "line_text": "ove udirai le disperate strida,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ove"
+                            },
+                            {
+                                "word_text": "udirai"
+                            },
+                            {
+                                "word_text": "le"
+                            },
+                            {
+                                "word_text": "disperate"
+                            },
+                            {
+                                "word_text": "strida,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 116,
+                        "line_text": "vedrai li antichi spiriti dolenti,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "vedrai"
+                            },
+                            {
+                                "word_text": "li"
+                            },
+                            {
+                                "word_text": "antichi"
+                            },
+                            {
+                                "word_text": "spiriti"
+                            },
+                            {
+                                "word_text": "dolenti,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 117,
+                        "line_text": "ch'a la seconda morte ciascun grida;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ch'a"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "seconda"
+                            },
+                            {
+                                "word_text": "morte"
+                            },
+                            {
+                                "word_text": "ciascun"
+                            },
+                            {
+                                "word_text": "grida;"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "ove udirai le disperate strida,\nvedrai li antichi spiriti dolenti,\nch'a la seconda morte ciascun grida;"
+            },
+            {
+                "stanza_number": 40,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 118,
+                        "line_text": "e vederai color che son contenti",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "vederai"
+                            },
+                            {
+                                "word_text": "color"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "son"
+                            },
+                            {
+                                "word_text": "contenti"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 119,
+                        "line_text": "nel foco, perché speran di venire",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "nel"
+                            },
+                            {
+                                "word_text": "foco,"
+                            },
+                            {
+                                "word_text": "perché"
+                            },
+                            {
+                                "word_text": "speran"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "venire"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 120,
+                        "line_text": "quando che sia a le beate genti.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "quando"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "sia"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "le"
+                            },
+                            {
+                                "word_text": "beate"
+                            },
+                            {
+                                "word_text": "genti."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "e vederai color che son contenti\nnel foco, perché speran di venire\nquando che sia a le beate genti."
+            },
+            {
+                "stanza_number": 41,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 121,
+                        "line_text": "A le quai poi se tu vorrai salire,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "A"
+                            },
+                            {
+                                "word_text": "le"
+                            },
+                            {
+                                "word_text": "quai"
+                            },
+                            {
+                                "word_text": "poi"
+                            },
+                            {
+                                "word_text": "se"
+                            },
+                            {
+                                "word_text": "tu"
+                            },
+                            {
+                                "word_text": "vorrai"
+                            },
+                            {
+                                "word_text": "salire,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 122,
+                        "line_text": "anima fia a ciò più di me degna:",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "anima"
+                            },
+                            {
+                                "word_text": "fia"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "ciò"
+                            },
+                            {
+                                "word_text": "più"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "me"
+                            },
+                            {
+                                "word_text": "degna:"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 123,
+                        "line_text": "con lei ti lascerò nel mio partire;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "con"
+                            },
+                            {
+                                "word_text": "lei"
+                            },
+                            {
+                                "word_text": "ti"
+                            },
+                            {
+                                "word_text": "lascerò"
+                            },
+                            {
+                                "word_text": "nel"
+                            },
+                            {
+                                "word_text": "mio"
+                            },
+                            {
+                                "word_text": "partire;"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "A le quai poi se tu vorrai salire,\nanima fia a ciò più di me degna:\ncon lei ti lascerò nel mio partire;"
+            },
+            {
+                "stanza_number": 42,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 124,
+                        "line_text": "ché quello imperador che là sù regna,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "ché"
+                            },
+                            {
+                                "word_text": "quello"
+                            },
+                            {
+                                "word_text": "imperador"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "là"
+                            },
+                            {
+                                "word_text": "sù"
+                            },
+                            {
+                                "word_text": "regna,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 125,
+                        "line_text": "perch'i' fu' ribellante a la sua legge,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "perch'i'"
+                            },
+                            {
+                                "word_text": "fu'"
+                            },
+                            {
+                                "word_text": "ribellante"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "sua"
+                            },
+                            {
+                                "word_text": "legge,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 126,
+                        "line_text": "non vuol che 'n sua città per me si vegna.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "vuol"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "'n"
+                            },
+                            {
+                                "word_text": "sua"
+                            },
+                            {
+                                "word_text": "città"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "me"
+                            },
+                            {
+                                "word_text": "si"
+                            },
+                            {
+                                "word_text": "vegna."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "ché quello imperador che là sù regna,\nperch'i' fu' ribellante a la sua legge,\nnon vuol che 'n sua città per me si vegna."
+            },
+            {
+                "stanza_number": 43,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 127,
+                        "line_text": "In tutte parti impera e quivi regge;",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "In"
+                            },
+                            {
+                                "word_text": "tutte"
+                            },
+                            {
+                                "word_text": "parti"
+                            },
+                            {
+                                "word_text": "impera"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "quivi"
+                            },
+                            {
+                                "word_text": "regge;"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 128,
+                        "line_text": "quivi è la sua città e l'alto seggio:",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "quivi"
+                            },
+                            {
+                                "word_text": "è"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "sua"
+                            },
+                            {
+                                "word_text": "città"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "l'alto"
+                            },
+                            {
+                                "word_text": "seggio:"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 129,
+                        "line_text": "oh felice colui cu' ivi elegge!\".",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "oh"
+                            },
+                            {
+                                "word_text": "felice"
+                            },
+                            {
+                                "word_text": "colui"
+                            },
+                            {
+                                "word_text": "cu'"
+                            },
+                            {
+                                "word_text": "ivi"
+                            },
+                            {
+                                "word_text": "elegge!\"."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "In tutte parti impera e quivi regge;\nquivi è la sua città e l'alto seggio:\noh felice colui cu' ivi elegge!\"."
+            },
+            {
+                "stanza_number": 44,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 130,
+                        "line_text": "E io a lui: \"Poeta, io ti richeggio",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "E"
+                            },
+                            {
+                                "word_text": "io"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "lui:"
+                            },
+                            {
+                                "word_text": "\"Poeta,"
+                            },
+                            {
+                                "word_text": "io"
+                            },
+                            {
+                                "word_text": "ti"
+                            },
+                            {
+                                "word_text": "richeggio"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 131,
+                        "line_text": "per quello Dio che tu non conoscesti,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "quello"
+                            },
+                            {
+                                "word_text": "Dio"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "tu"
+                            },
+                            {
+                                "word_text": "non"
+                            },
+                            {
+                                "word_text": "conoscesti,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 132,
+                        "line_text": "acciò ch'io fugga questo male e peggio,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "acciò"
+                            },
+                            {
+                                "word_text": "ch'io"
+                            },
+                            {
+                                "word_text": "fugga"
+                            },
+                            {
+                                "word_text": "questo"
+                            },
+                            {
+                                "word_text": "male"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "peggio,"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "E io a lui: \"Poeta, io ti richeggio\nper quello Dio che tu non conoscesti,\nacciò ch'io fugga questo male e peggio,"
+            },
+            {
+                "stanza_number": 45,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 133,
+                        "line_text": "che tu mi meni là dov'or dicesti,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "tu"
+                            },
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "meni"
+                            },
+                            {
+                                "word_text": "là"
+                            },
+                            {
+                                "word_text": "dov'or"
+                            },
+                            {
+                                "word_text": "dicesti,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 134,
+                        "line_text": "sì ch'io veggia la porta di san Pietro",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "sì"
+                            },
+                            {
+                                "word_text": "ch'io"
+                            },
+                            {
+                                "word_text": "veggia"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "porta"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "san"
+                            },
+                            {
+                                "word_text": "Pietro"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 135,
+                        "line_text": "e color cui tu fai cotanto mesti\".",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "color"
+                            },
+                            {
+                                "word_text": "cui"
+                            },
+                            {
+                                "word_text": "tu"
+                            },
+                            {
+                                "word_text": "fai"
+                            },
+                            {
+                                "word_text": "cotanto"
+                            },
+                            {
+                                "word_text": "mesti\"."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "che tu mi meni là dov'or dicesti,\nsì ch'io veggia la porta di san Pietro\ne color cui tu fai cotanto mesti\"."
+            },
+            {
+                "stanza_number": 46,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 136,
+                        "line_text": "Allor si mosse, e io li tenni dietro.",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Allor"
+                            },
+                            {
+                                "word_text": "si"
+                            },
+                            {
+                                "word_text": "mosse,"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "io"
+                            },
+                            {
+                                "word_text": "li"
+                            },
+                            {
+                                "word_text": "tenni"
+                            },
+                            {
+                                "word_text": "dietro."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Allor si mosse, e io li tenni dietro."
+            }
+        ]
+    }
+]

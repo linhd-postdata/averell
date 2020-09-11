@@ -1,0 +1,570 @@
+[
+    {
+        "url": "https://github.com/linhd-postdata/biblioteca_italiana/blob/master/xml/bibit001597",
+        "author": "Iacopo Sannazaro",
+        "collection": "Rime disperse",
+        "title": "II",
+        "manually_checked": false,
+        "text": [
+            [
+                {
+                    "verse": "Spargi di lauri, palme e mirti foglie,"
+                },
+                {
+                    "verse": "viator, ché per qui intorno il spirto erra"
+                },
+                {
+                    "verse": "di quel repente fólgore di guerra"
+                },
+                {
+                    "verse": "che già de tutto el mondo adusse spoglie."
+                }
+            ],
+            [
+                {
+                    "verse": "Questa urna angusta il ciner sacro accoglie,"
+                },
+                {
+                    "verse": "ma el nome, qual in tomba non si serra,"
+                },
+                {
+                    "verse": "tiene insepolto il ciel, l' acqua e la terra,"
+                },
+                {
+                    "verse": "secur da tempo e da sue ingorde voglie."
+                }
+            ],
+            [
+                {
+                    "verse": "Questi fu quel che con l' armata chioma"
+                },
+                {
+                    "verse": "prima constrinse il mondo sotto il giogo"
+                },
+                {
+                    "verse": "de l' alto imperio de l' antiqua Roma."
+                }
+            ],
+            [
+                {
+                    "verse": "Oh felice sudor! poi che ogni luogo,"
+                },
+                {
+                    "verse": "qual vinse avinto in la terrena soma,"
+                },
+                {
+                    "verse": "occupa ancor dopo il funereo rogo!"
+                }
+            ]
+        ]
+    },
+    {
+        "url": "https://github.com/linhd-postdata/biblioteca_italiana/blob/master/xml/bibit000019",
+        "author": "Dante Alighieri",
+        "collection": "Commedia",
+        "title": "I",
+        "manually_checked": false,
+        "text": [
+            [
+                {
+                    "verse": "Nel mezzo del cammin di nostra vita"
+                },
+                {
+                    "verse": "mi ritrovai per una selva oscura,"
+                },
+                {
+                    "verse": "ché la diritta via era smarrita."
+                }
+            ],
+            [
+                {
+                    "verse": "Ahi quanto a dir qual era è cosa dura"
+                },
+                {
+                    "verse": "esta selva selvaggia e aspra e forte"
+                },
+                {
+                    "verse": "che nel pensier rinova la paura!"
+                }
+            ],
+            [
+                {
+                    "verse": "Tant'è amara che poco è più morte;"
+                },
+                {
+                    "verse": "ma per trattar del ben ch'i' vi trovai,"
+                },
+                {
+                    "verse": "dirò de l'altre cose ch'i' v'ho scorte."
+                }
+            ],
+            [
+                {
+                    "verse": "Io non so ben ridir com'i' v'intrai,"
+                },
+                {
+                    "verse": "tant'era pien di sonno a quel punto"
+                },
+                {
+                    "verse": "che la verace via abbandonai."
+                }
+            ],
+            [
+                {
+                    "verse": "Ma poi ch'i' fui al piè d'un colle giunto,"
+                },
+                {
+                    "verse": "là dove terminava quella valle"
+                },
+                {
+                    "verse": "che m'avea di paura il cor compunto,"
+                }
+            ],
+            [
+                {
+                    "verse": "guardai in alto, e vidi le sue spalle"
+                },
+                {
+                    "verse": "vestite già de' raggi del pianeta"
+                },
+                {
+                    "verse": "che mena dritto altrui per ogne calle."
+                }
+            ],
+            [
+                {
+                    "verse": "Allor fu la paura un poco queta,"
+                },
+                {
+                    "verse": "che nel lago del cor m'era durata"
+                },
+                {
+                    "verse": "la notte ch'i' passai con tanta pieta."
+                }
+            ],
+            [
+                {
+                    "verse": "E come quei che con lena affannata,"
+                },
+                {
+                    "verse": "uscito fuor del pelago a la riva,"
+                },
+                {
+                    "verse": "si volge a l'acqua perigliosa e guata,"
+                }
+            ],
+            [
+                {
+                    "verse": "così l'animo mio, ch'ancor fuggiva,"
+                },
+                {
+                    "verse": "si volse a retro a rimirar lo passo"
+                },
+                {
+                    "verse": "che non lasciò già mai persona viva."
+                }
+            ],
+            [
+                {
+                    "verse": "Poi ch'èi posato un poco il corpo lasso,"
+                },
+                {
+                    "verse": "ripresi via per la piaggia diserta,"
+                },
+                {
+                    "verse": "sì che 'l piè fermo sempre era 'l più basso."
+                }
+            ],
+            [
+                {
+                    "verse": "Ed ecco, quasi al cominciar de l'erta,"
+                },
+                {
+                    "verse": "una lonza leggera e presta molto,"
+                },
+                {
+                    "verse": "che di pel macolato era coverta;"
+                }
+            ],
+            [
+                {
+                    "verse": "e non mi si partia dinanzi al volto,"
+                },
+                {
+                    "verse": "anzi 'mpediva tanto il mio cammino,"
+                },
+                {
+                    "verse": "ch'i' fui per ritornar più volte vòlto."
+                }
+            ],
+            [
+                {
+                    "verse": "Temp'era dal principio del mattino,"
+                },
+                {
+                    "verse": "e 'l sol montava 'n sù con quelle stelle"
+                },
+                {
+                    "verse": "ch'eran con lui quando l'amor divino"
+                }
+            ],
+            [
+                {
+                    "verse": "mosse di prima quelle cose belle;"
+                },
+                {
+                    "verse": "sì ch'a bene sperar m'era cagione"
+                },
+                {
+                    "verse": "di quella fiera a la gaetta pelle"
+                }
+            ],
+            [
+                {
+                    "verse": "l'ora del tempo e la dolce stagione;"
+                },
+                {
+                    "verse": "ma non sì che paura non mi desse"
+                },
+                {
+                    "verse": "la vista che m'apparve d'un leone."
+                }
+            ],
+            [
+                {
+                    "verse": "Questi parea che contra me venisse"
+                },
+                {
+                    "verse": "con la test'alta e con rabbiosa fame, "
+                },
+                {
+                    "verse": "sì che parea che l'aere ne tremesse."
+                }
+            ],
+            [
+                {
+                    "verse": "Ed una lupa, che di tutte brame"
+                },
+                {
+                    "verse": "sembiava carca ne la sua magrezza,"
+                },
+                {
+                    "verse": "e molte genti fé già viver grame,"
+                }
+            ],
+            [
+                {
+                    "verse": "questa mi porse tanto di gravezza"
+                },
+                {
+                    "verse": "con la paura ch'uscia di sua vista,"
+                },
+                {
+                    "verse": "ch'io perdei la speranza de l'altezza."
+                }
+            ],
+            [
+                {
+                    "verse": "E qual è quei che volontieri acquista,"
+                },
+                {
+                    "verse": "e giugne 'l tempo che perder lo face,"
+                },
+                {
+                    "verse": "che 'n tutti suoi pensier piange e s'attrista;"
+                }
+            ],
+            [
+                {
+                    "verse": "tal mi fece la bestia sanza pace,"
+                },
+                {
+                    "verse": "che, venendomi 'ncontro, a poco a poco"
+                },
+                {
+                    "verse": "mi ripigneva là dove 'l sol tace."
+                }
+            ],
+            [
+                {
+                    "verse": "Mentre ch'i' rovinava in basso loco,"
+                },
+                {
+                    "verse": "dinanzi a li occhi mi si fu offerto"
+                },
+                {
+                    "verse": "chi per lungo silenzio parea fioco."
+                }
+            ],
+            [
+                {
+                    "verse": "Quando vidi costui nel gran diserto,"
+                },
+                {
+                    "verse": "\"miserere di me\", gridai a lui,"
+                },
+                {
+                    "verse": "\"qual che tu sii, od ombra od omo certo!\"."
+                }
+            ],
+            [
+                {
+                    "verse": "Rispuosemi: \"Non omo, omo già fui,"
+                },
+                {
+                    "verse": "e li parenti miei furon lombardi,"
+                },
+                {
+                    "verse": "mantoani per patrïa ambedui."
+                }
+            ],
+            [
+                {
+                    "verse": "Nacqui sub Iulio, ancor che fosse tardi,"
+                },
+                {
+                    "verse": "e vissi a Roma sotto 'l buono Augusto"
+                },
+                {
+                    "verse": " nel tempo de li dèi falsi e bugiardi."
+                }
+            ],
+            [
+                {
+                    "verse": "Poeta fui, e cantai di quel giusto"
+                },
+                {
+                    "verse": "figliuol d'Anchise che venne di Troia,"
+                },
+                {
+                    "verse": "poi che 'l superbo Ilïón fu combusto."
+                }
+            ],
+            [
+                {
+                    "verse": "Ma tu perché ritorni a tanta noia?"
+                },
+                {
+                    "verse": "perché non sali il dilettoso monte"
+                },
+                {
+                    "verse": "ch'è principio e cagion di tutta gioia?\"."
+                }
+            ],
+            [
+                {
+                    "verse": "\"Or se' tu quel Virgilio e quella fonte"
+                },
+                {
+                    "verse": "che spandi di parlar sì largo fiume?\","
+                },
+                {
+                    "verse": "rispuos'io lui con vergognosa fronte."
+                }
+            ],
+            [
+                {
+                    "verse": "\"O de li altri poeti onore e lume,"
+                },
+                {
+                    "verse": "vagliami 'l lungo studio e 'l grande amore"
+                },
+                {
+                    "verse": "che m'ha fatto cercar lo tuo volume."
+                }
+            ],
+            [
+                {
+                    "verse": "Tu se' lo mio maestro e 'l mio autore,"
+                },
+                {
+                    "verse": "tu se' solo colui da cu' io tolsi"
+                },
+                {
+                    "verse": "lo bello stilo che m'ha fatto onore."
+                }
+            ],
+            [
+                {
+                    "verse": "Vedi la bestia per cu' io mi volsi;"
+                },
+                {
+                    "verse": "aiutami da lei, famoso saggio,"
+                },
+                {
+                    "verse": "ch'ella mi fa tremar le vene e i polsi\"."
+                }
+            ],
+            [
+                {
+                    "verse": "\"A te convien tenere altro vïaggio\","
+                },
+                {
+                    "verse": "rispuose, poi che lagrimar mi vide,"
+                },
+                {
+                    "verse": "\"se vuo' campar d'esto loco selvaggio;"
+                }
+            ],
+            [
+                {
+                    "verse": "ché questa bestia, per la qual tu gride,"
+                },
+                {
+                    "verse": "non lascia altrui passar per la sua via,"
+                },
+                {
+                    "verse": "ma tanto lo 'mpedisce che l'uccide;"
+                }
+            ],
+            [
+                {
+                    "verse": "e ha natura sì malvagia e ria,"
+                },
+                {
+                    "verse": "che mai non empie la bramosa voglia,"
+                },
+                {
+                    "verse": "e dopo 'l pasto ha più fame che pria."
+                }
+            ],
+            [
+                {
+                    "verse": "Molti son li animali a cui s'ammoglia,"
+                },
+                {
+                    "verse": "e più saranno ancora, infin che 'l veltro"
+                },
+                {
+                    "verse": "verrà, che la farà morir con doglia."
+                }
+            ],
+            [
+                {
+                    "verse": "Questi non ciberà terra né peltro,"
+                },
+                {
+                    "verse": "ma sapïenza, amore e virtute, "
+                },
+                {
+                    "verse": "e sua nazion sarà tra feltro e feltro."
+                }
+            ],
+            [
+                {
+                    "verse": "Di quella umile Italia fia salute"
+                },
+                {
+                    "verse": "per cui morì la vergine Cammilla,"
+                },
+                {
+                    "verse": "Eurialo e Turno e Niso di ferute."
+                }
+            ],
+            [
+                {
+                    "verse": "Questi la caccerà per ogne villa,"
+                },
+                {
+                    "verse": "fin che l'avrà rimessa ne lo 'nferno,"
+                },
+                {
+                    "verse": "là onde 'nvidia prima dipartilla."
+                }
+            ],
+            [
+                {
+                    "verse": "Ond'io per lo tuo me' penso e discerno"
+                },
+                {
+                    "verse": "che tu mi segui, e io sarò tua guida,"
+                },
+                {
+                    "verse": "e trarrotti di qui per loco etterno;"
+                }
+            ],
+            [
+                {
+                    "verse": "ove udirai le disperate strida,"
+                },
+                {
+                    "verse": "vedrai li antichi spiriti dolenti,"
+                },
+                {
+                    "verse": "ch'a la seconda morte ciascun grida;"
+                }
+            ],
+            [
+                {
+                    "verse": "e vederai color che son contenti"
+                },
+                {
+                    "verse": "nel foco, perché speran di venire"
+                },
+                {
+                    "verse": "quando che sia a le beate genti."
+                }
+            ],
+            [
+                {
+                    "verse": "A le quai poi se tu vorrai salire,"
+                },
+                {
+                    "verse": "anima fia a ciò più di me degna:"
+                },
+                {
+                    "verse": "con lei ti lascerò nel mio partire;"
+                }
+            ],
+            [
+                {
+                    "verse": "ché quello imperador che là sù regna,"
+                },
+                {
+                    "verse": "perch'i' fu' ribellante a la sua legge,"
+                },
+                {
+                    "verse": "non vuol che 'n sua città per me si vegna."
+                }
+            ],
+            [
+                {
+                    "verse": "In tutte parti impera e quivi regge;"
+                },
+                {
+                    "verse": "quivi è la sua città e l'alto seggio:"
+                },
+                {
+                    "verse": "oh felice colui cu' ivi elegge!\"."
+                }
+            ],
+            [
+                {
+                    "verse": "E io a lui: \"Poeta, io ti richeggio"
+                },
+                {
+                    "verse": "per quello Dio che tu non conoscesti,"
+                },
+                {
+                    "verse": "acciò ch'io fugga questo male e peggio,"
+                }
+            ],
+            [
+                {
+                    "verse": "che tu mi meni là dov'or dicesti,"
+                },
+                {
+                    "verse": "sì ch'io veggia la porta di san Pietro"
+                },
+                {
+                    "verse": "e color cui tu fai cotanto mesti\"."
+                }
+            ],
+            [
+                {
+                    "verse": "Allor si mosse, e io li tenni dietro."
+                }
+            ]
+        ]
+    }
+]
