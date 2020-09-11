@@ -1,75 +1,93 @@
 [
     {
-        "url": "https://github.com/linhd-postdata/biblioteca_italiana/blob/master/xml/bibit001597",
-        "author": "Iacopo Sannazaro",
-        "collection": "Rime disperse",
-        "title": "II",
-        "manually_checked": false,
+        "url": "https://github.com/linhd-postdata/biblioteca_italiana/blob/master/xml/bibit000019",
+        "author": "Dante Alighieri",
+        "collection": "Commedia",
+        "title": "I",
+        "manually_checked": true,
         "text": [
             [
                 {
-                    "verse": "Spargi di lauri, palme e mirti foglie,"
+                    "verse": "Nel mezzo del cammin di nostra vita",
+                    "indexed_metrical_pattern": "2 6 8 10",
+                    "metrical_pattern": "-+---+-+-+-"
                 },
                 {
-                    "verse": "viator, ché per qui intorno il spirto erra"
+                    "verse": "mi ritrovai per una selva oscura,",
+                    "indexed_metrical_pattern": "4 8 10",
+                    "metrical_pattern": "---+---+-+-"
                 },
                 {
-                    "verse": "di quel repente fólgore di guerra"
-                },
-                {
-                    "verse": "che già de tutto el mondo adusse spoglie."
+                    "verse": "ché la diritta via era smarrita.",
+                    "indexed_metrical_pattern": "4 6 7 10",
+                    "metrical_pattern": "---+-++--+-"
                 }
             ],
             [
                 {
-                    "verse": "Questa urna angusta il ciner sacro accoglie,"
+                    "verse": "Ahi quanto a dir qual era è cosa dura",
+                    "indexed_metrical_pattern": "2 4 6 8 10",
+                    "metrical_pattern": "-+-+-+-+-+-"
                 },
                 {
-                    "verse": "ma el nome, qual in tomba non si serra,"
+                    "verse": "esta selva selvaggia e aspra e forte",
+                    "indexed_metrical_pattern": "1 3 6 8 10",
+                    "metrical_pattern": "+-+--+-+-+-"
                 },
                 {
-                    "verse": "tiene insepolto il ciel, l' acqua e la terra,"
+                    "verse": "che nel pensier rinova la paura!",
+                    "indexed_metrical_pattern": "4 6 10",
+                    "metrical_pattern": "---+-+---+-"
+                }
+            ],
+            [
+                {
+                    "verse": "Tant'è amara che poco è più morte;",
+                    "indexed_metrical_pattern": "2 4 7 9 10",
+                    "metrical_pattern": "-+-+--+-++-"
                 },
                 {
-                    "verse": "secur da tempo e da sue ingorde voglie."
+                    "verse": "ma per trattar del ben ch'i' vi trovai,",
+                    "indexed_metrical_pattern": "4 6 10",
+                    "metrical_pattern": "---+-+---+-"
+                },
+                {
+                    "verse": "dirò de l'altre cose ch'i' v'ho scorte.",
+                    "indexed_metrical_pattern": "2 4 6 10",
+                    "metrical_pattern": "-+-+-+---+-"
                 }
             ]
         ]
     },
     {
-        "url": "https://github.com/linhd-postdata/biblioteca_italiana/blob/master/xml/bibit000019",
-        "author": "Dante Alighieri",
-        "collection": "Commedia",
-        "title": "I",
+        "url": "https://github.com/linhd-postdata/biblioteca_italiana/blob/master/xml/bibit001365",
+        "author": "Antonio Bonciani",
+        "collection": "Poesie",
+        "title": 8,
         "manually_checked": false,
         "text": [
             [
                 {
-                    "verse": "Nel mezzo del cammin di nostra vita"
+                    "verse": "Non ebbe tal disio in terra Appollo"
                 },
                 {
-                    "verse": "mi ritrovai per una selva oscura,"
+                    "verse": "di poter giugner Danne, che 'n alloro"
                 },
                 {
-                    "verse": "ché la diritta via era smarrita."
+                    "verse": "si convertì germinante rampollo,"
                 }
             ],
             [
                 {
-                    "verse": "Ahi quanto a dir qual era è cosa dura"
+                    "verse": "né di trovare alla fonte del moro"
                 },
                 {
-                    "verse": "esta selva selvaggia e aspra e forte"
+                    "verse": "Pirramo Tisbe el diputato giorno,"
                 },
                 {
-                    "verse": "che nel pensier rinova la paura!"
+                    "verse": "com'io di veder te, signor decoro,"
                 }
-            ],
-            [
-                {
-                    "verse": "Allor si mosse, e io li tenni dietro."
-                }
-            ]
+            ]       
         ]
     }
 ]

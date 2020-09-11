@@ -22,12 +22,16 @@ def parse_json(json_file) -> dict:
         for stanza_number, stanza in enumerate(work["text"]):
             line_list = []
             for line in stanza:
-                word_list = [{"word_text": word} for word in line["verse"].split()]
+                metrical_pattern = line.get("metrical_pattern")
+                line_length = len(
+                    metrical_pattern) if metrical_pattern is not None else None
+                word_list = [{"word_text": word} for word in
+                             line["verse"].split()]
                 line_list.append({
                     "line_number": line_number + 1,
                     "line_text": line["verse"],
-                    "metrical_pattern": None,
-                    "line_length": None,
+                    "metrical_pattern": metrical_pattern,
+                    "line_length": line_length,
                     "words": word_list,
                 })
                 line_number += 1

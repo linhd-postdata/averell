@@ -1,279 +1,8 @@
 [
     {
-        "poem_title": "Rime disperse - II",
-        "author": "Iacopo Sannazaro",
-        "manually_checked": false,
-        "stanzas": [
-            {
-                "stanza_number": 1,
-                "stanza_type": null,
-                "lines": [
-                    {
-                        "line_number": 1,
-                        "line_text": "Spargi di lauri, palme e mirti foglie,",
-                        "metrical_pattern": null,
-                        "line_length": null,
-                        "words": [
-                            {
-                                "word_text": "Spargi"
-                            },
-                            {
-                                "word_text": "di"
-                            },
-                            {
-                                "word_text": "lauri,"
-                            },
-                            {
-                                "word_text": "palme"
-                            },
-                            {
-                                "word_text": "e"
-                            },
-                            {
-                                "word_text": "mirti"
-                            },
-                            {
-                                "word_text": "foglie,"
-                            }
-                        ]
-                    },
-                    {
-                        "line_number": 2,
-                        "line_text": "viator, ché per qui intorno il spirto erra",
-                        "metrical_pattern": null,
-                        "line_length": null,
-                        "words": [
-                            {
-                                "word_text": "viator,"
-                            },
-                            {
-                                "word_text": "ché"
-                            },
-                            {
-                                "word_text": "per"
-                            },
-                            {
-                                "word_text": "qui"
-                            },
-                            {
-                                "word_text": "intorno"
-                            },
-                            {
-                                "word_text": "il"
-                            },
-                            {
-                                "word_text": "spirto"
-                            },
-                            {
-                                "word_text": "erra"
-                            }
-                        ]
-                    },
-                    {
-                        "line_number": 3,
-                        "line_text": "di quel repente fólgore di guerra",
-                        "metrical_pattern": null,
-                        "line_length": null,
-                        "words": [
-                            {
-                                "word_text": "di"
-                            },
-                            {
-                                "word_text": "quel"
-                            },
-                            {
-                                "word_text": "repente"
-                            },
-                            {
-                                "word_text": "fólgore"
-                            },
-                            {
-                                "word_text": "di"
-                            },
-                            {
-                                "word_text": "guerra"
-                            }
-                        ]
-                    },
-                    {
-                        "line_number": 4,
-                        "line_text": "che già de tutto el mondo adusse spoglie.",
-                        "metrical_pattern": null,
-                        "line_length": null,
-                        "words": [
-                            {
-                                "word_text": "che"
-                            },
-                            {
-                                "word_text": "già"
-                            },
-                            {
-                                "word_text": "de"
-                            },
-                            {
-                                "word_text": "tutto"
-                            },
-                            {
-                                "word_text": "el"
-                            },
-                            {
-                                "word_text": "mondo"
-                            },
-                            {
-                                "word_text": "adusse"
-                            },
-                            {
-                                "word_text": "spoglie."
-                            }
-                        ]
-                    }
-                ],
-                "stanza_text": "Spargi di lauri, palme e mirti foglie,\nviator, ché per qui intorno il spirto erra\ndi quel repente fólgore di guerra\nche già de tutto el mondo adusse spoglie."
-            },
-            {
-                "stanza_number": 2,
-                "stanza_type": null,
-                "lines": [
-                    {
-                        "line_number": 5,
-                        "line_text": "Questa urna angusta il ciner sacro accoglie,",
-                        "metrical_pattern": null,
-                        "line_length": null,
-                        "words": [
-                            {
-                                "word_text": "Questa"
-                            },
-                            {
-                                "word_text": "urna"
-                            },
-                            {
-                                "word_text": "angusta"
-                            },
-                            {
-                                "word_text": "il"
-                            },
-                            {
-                                "word_text": "ciner"
-                            },
-                            {
-                                "word_text": "sacro"
-                            },
-                            {
-                                "word_text": "accoglie,"
-                            }
-                        ]
-                    },
-                    {
-                        "line_number": 6,
-                        "line_text": "ma el nome, qual in tomba non si serra,",
-                        "metrical_pattern": null,
-                        "line_length": null,
-                        "words": [
-                            {
-                                "word_text": "ma"
-                            },
-                            {
-                                "word_text": "el"
-                            },
-                            {
-                                "word_text": "nome,"
-                            },
-                            {
-                                "word_text": "qual"
-                            },
-                            {
-                                "word_text": "in"
-                            },
-                            {
-                                "word_text": "tomba"
-                            },
-                            {
-                                "word_text": "non"
-                            },
-                            {
-                                "word_text": "si"
-                            },
-                            {
-                                "word_text": "serra,"
-                            }
-                        ]
-                    },
-                    {
-                        "line_number": 7,
-                        "line_text": "tiene insepolto il ciel, l' acqua e la terra,",
-                        "metrical_pattern": null,
-                        "line_length": null,
-                        "words": [
-                            {
-                                "word_text": "tiene"
-                            },
-                            {
-                                "word_text": "insepolto"
-                            },
-                            {
-                                "word_text": "il"
-                            },
-                            {
-                                "word_text": "ciel,"
-                            },
-                            {
-                                "word_text": "l'"
-                            },
-                            {
-                                "word_text": "acqua"
-                            },
-                            {
-                                "word_text": "e"
-                            },
-                            {
-                                "word_text": "la"
-                            },
-                            {
-                                "word_text": "terra,"
-                            }
-                        ]
-                    },
-                    {
-                        "line_number": 8,
-                        "line_text": "secur da tempo e da sue ingorde voglie.",
-                        "metrical_pattern": null,
-                        "line_length": null,
-                        "words": [
-                            {
-                                "word_text": "secur"
-                            },
-                            {
-                                "word_text": "da"
-                            },
-                            {
-                                "word_text": "tempo"
-                            },
-                            {
-                                "word_text": "e"
-                            },
-                            {
-                                "word_text": "da"
-                            },
-                            {
-                                "word_text": "sue"
-                            },
-                            {
-                                "word_text": "ingorde"
-                            },
-                            {
-                                "word_text": "voglie."
-                            }
-                        ]
-                    }
-                ],
-                "stanza_text": "Questa urna angusta il ciner sacro accoglie,\nma el nome, qual in tomba non si serra,\ntiene insepolto il ciel, l' acqua e la terra,\nsecur da tempo e da sue ingorde voglie."
-            }
-        ]
-    },
-    {
         "poem_title": "Commedia - I",
         "author": "Dante Alighieri",
-        "manually_checked": false,
+        "manually_checked": true,
         "stanzas": [
             {
                 "stanza_number": 1,
@@ -282,8 +11,8 @@
                     {
                         "line_number": 1,
                         "line_text": "Nel mezzo del cammin di nostra vita",
-                        "metrical_pattern": null,
-                        "line_length": null,
+                        "metrical_pattern": "-+---+-+-+-",
+                        "line_length": 11,
                         "words": [
                             {
                                 "word_text": "Nel"
@@ -311,8 +40,8 @@
                     {
                         "line_number": 2,
                         "line_text": "mi ritrovai per una selva oscura,",
-                        "metrical_pattern": null,
-                        "line_length": null,
+                        "metrical_pattern": "---+---+-+-",
+                        "line_length": 11,
                         "words": [
                             {
                                 "word_text": "mi"
@@ -337,8 +66,8 @@
                     {
                         "line_number": 3,
                         "line_text": "ché la diritta via era smarrita.",
-                        "metrical_pattern": null,
-                        "line_length": null,
+                        "metrical_pattern": "---+-++--+-",
+                        "line_length": 11,
                         "words": [
                             {
                                 "word_text": "ché"
@@ -370,8 +99,8 @@
                     {
                         "line_number": 4,
                         "line_text": "Ahi quanto a dir qual era è cosa dura",
-                        "metrical_pattern": null,
-                        "line_length": null,
+                        "metrical_pattern": "-+-+-+-+-+-",
+                        "line_length": 11,
                         "words": [
                             {
                                 "word_text": "Ahi"
@@ -405,8 +134,8 @@
                     {
                         "line_number": 5,
                         "line_text": "esta selva selvaggia e aspra e forte",
-                        "metrical_pattern": null,
-                        "line_length": null,
+                        "metrical_pattern": "+-+--+-+-+-",
+                        "line_length": 11,
                         "words": [
                             {
                                 "word_text": "esta"
@@ -434,8 +163,8 @@
                     {
                         "line_number": 6,
                         "line_text": "che nel pensier rinova la paura!",
-                        "metrical_pattern": null,
-                        "line_length": null,
+                        "metrical_pattern": "---+-+---+-",
+                        "line_length": 11,
                         "words": [
                             {
                                 "word_text": "che"
@@ -466,38 +195,273 @@
                 "lines": [
                     {
                         "line_number": 7,
-                        "line_text": "Allor si mosse, e io li tenni dietro.",
-                        "metrical_pattern": null,
-                        "line_length": null,
+                        "line_text": "Tant'è amara che poco è più morte;",
+                        "metrical_pattern": "-+-+--+-++-",
+                        "line_length": 11,
                         "words": [
                             {
-                                "word_text": "Allor"
+                                "word_text": "Tant'è"
                             },
                             {
-                                "word_text": "si"
+                                "word_text": "amara"
                             },
                             {
-                                "word_text": "mosse,"
+                                "word_text": "che"
                             },
                             {
-                                "word_text": "e"
+                                "word_text": "poco"
                             },
                             {
-                                "word_text": "io"
+                                "word_text": "è"
                             },
                             {
-                                "word_text": "li"
+                                "word_text": "più"
                             },
                             {
-                                "word_text": "tenni"
+                                "word_text": "morte;"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 8,
+                        "line_text": "ma per trattar del ben ch'i' vi trovai,",
+                        "metrical_pattern": "---+-+---+-",
+                        "line_length": 11,
+                        "words": [
+                            {
+                                "word_text": "ma"
                             },
                             {
-                                "word_text": "dietro."
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "trattar"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "ben"
+                            },
+                            {
+                                "word_text": "ch'i'"
+                            },
+                            {
+                                "word_text": "vi"
+                            },
+                            {
+                                "word_text": "trovai,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 9,
+                        "line_text": "dirò de l'altre cose ch'i' v'ho scorte.",
+                        "metrical_pattern": "-+-+-+---+-",
+                        "line_length": 11,
+                        "words": [
+                            {
+                                "word_text": "dirò"
+                            },
+                            {
+                                "word_text": "de"
+                            },
+                            {
+                                "word_text": "l'altre"
+                            },
+                            {
+                                "word_text": "cose"
+                            },
+                            {
+                                "word_text": "ch'i'"
+                            },
+                            {
+                                "word_text": "v'ho"
+                            },
+                            {
+                                "word_text": "scorte."
                             }
                         ]
                     }
                 ],
-                "stanza_text": "Allor si mosse, e io li tenni dietro."
+                "stanza_text": "Tant'è amara che poco è più morte;\nma per trattar del ben ch'i' vi trovai,\ndirò de l'altre cose ch'i' v'ho scorte."
+            }
+        ]
+    },
+    {
+        "poem_title": "Poesie - 8",
+        "author": "Antonio Bonciani",
+        "manually_checked": false,
+        "stanzas": [
+            {
+                "stanza_number": 1,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 1,
+                        "line_text": "Non ebbe tal disio in terra Appollo",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Non"
+                            },
+                            {
+                                "word_text": "ebbe"
+                            },
+                            {
+                                "word_text": "tal"
+                            },
+                            {
+                                "word_text": "disio"
+                            },
+                            {
+                                "word_text": "in"
+                            },
+                            {
+                                "word_text": "terra"
+                            },
+                            {
+                                "word_text": "Appollo"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 2,
+                        "line_text": "di poter giugner Danne, che 'n alloro",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "poter"
+                            },
+                            {
+                                "word_text": "giugner"
+                            },
+                            {
+                                "word_text": "Danne,"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "'n"
+                            },
+                            {
+                                "word_text": "alloro"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 3,
+                        "line_text": "si convertì germinante rampollo,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "si"
+                            },
+                            {
+                                "word_text": "convertì"
+                            },
+                            {
+                                "word_text": "germinante"
+                            },
+                            {
+                                "word_text": "rampollo,"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Non ebbe tal disio in terra Appollo\ndi poter giugner Danne, che 'n alloro\nsi convertì germinante rampollo,"
+            },
+            {
+                "stanza_number": 2,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 4,
+                        "line_text": "né di trovare alla fonte del moro",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "né"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "trovare"
+                            },
+                            {
+                                "word_text": "alla"
+                            },
+                            {
+                                "word_text": "fonte"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "moro"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 5,
+                        "line_text": "Pirramo Tisbe el diputato giorno,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Pirramo"
+                            },
+                            {
+                                "word_text": "Tisbe"
+                            },
+                            {
+                                "word_text": "el"
+                            },
+                            {
+                                "word_text": "diputato"
+                            },
+                            {
+                                "word_text": "giorno,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 6,
+                        "line_text": "com'io di veder te, signor decoro,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "com'io"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "veder"
+                            },
+                            {
+                                "word_text": "te,"
+                            },
+                            {
+                                "word_text": "signor"
+                            },
+                            {
+                                "word_text": "decoro,"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "né di trovare alla fonte del moro\nPirramo Tisbe el diputato giorno,\ncom'io di veder te, signor decoro,"
             }
         ]
     }
