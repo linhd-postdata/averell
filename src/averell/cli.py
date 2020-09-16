@@ -48,7 +48,7 @@ def list_command():
     """Show the CORPORA info
     """
     table = get_main_corpora_info()
-    click.echo(tabulate(table, headers="keys", numalign="right"))
+    click.echo(str(tabulate(table, headers="keys", numalign="right")))
 
 
 if __name__ == '__main__':

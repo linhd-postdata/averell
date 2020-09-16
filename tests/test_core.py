@@ -54,7 +54,7 @@ _corpora_sources = [
          {
              'license': 'CC-BY',
              'size': '22M',
-             'languge': 'es',
+             'language': 'es',
              'doc_quantity': 4088,
              'word_quantity': 381539,
              'granularity': ['stanza'],
@@ -66,7 +66,7 @@ _corpora_sources = [
          {
              'license': 'CC-BY',
              'size': '22M',
-             'languge': 'fr',
+             'language': 'fr',
              'doc_quantity': 4088,
              'word_quantity': 381539,
              'granularity': ['stanza'],
