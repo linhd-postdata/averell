@@ -1,10 +1,10 @@
-- name: Disco V2
+- name: Disco V2.1
   properties:
-    annotation_type:
-    folder_name: disco-master
+    slug: disco2.1
     license: CC-BY
+    language: es
     reader: averell.readers.disco
-    url: https://github.com/pruizf/disco/archive/master.zip
+    url: https://github.com/pruizf/disco/archive/v2.1.zip
     size: 22M
     doc_quantity: 4088
     word_quantity: 381539
@@ -13,8 +13,9 @@
         - line
 - name: Disco V3
   properties:
-    folder_name: disco-3
+    slug: disco3
     license: CC-BY
+    language: es
     reader: averell.readers.disco3
     url: https://github.com/pruizf/disco/archive/v3.zip
     size: 28M
@@ -25,8 +26,9 @@
         - line
 - name: Sonetos Siglo de Oro
   properties:
-    folder_name: CorpusSonetosSigloDeOro-master
+    slug: adso
     license: CC-BY-NC 4.0
+    language: es
     reader: averell.readers.sdo
     url: https://github.com/bncolorado/CorpusSonetosSigloDeOro/archive/master.zip
     size: 6.8M
@@ -37,8 +39,9 @@
         - line
 - name: ADSO 100 poems corpus
   properties:
-    folder_name: gold
+    slug: adso100
     license: CC-BY-NC 4.0
+    language: es
     reader: averell.readers.sdo
     url: https://github.com/linhd-postdata/adsoScansionSystem/releases/download/1.0.0/ADSO_gold_standard_100poems.zip
     size: 128K
@@ -49,8 +52,9 @@
         - line
 - name: Poesía Lírica Castellana Siglo de Oro
   properties:
-    folder_name: CorpusGeneralPoesiaLiricaCastellanaDelSigloDeOro-master
+    slug: plc
     license: CC-BY-NC 4.0
+    language: es
     reader: averell.readers.plsdo
     url: https://github.com/bncolorado/CorpusGeneralPoesiaLiricaCastellanaDelSigloDeOro/archive/master.zip
     size: 3.8M
@@ -63,8 +67,9 @@
         - syllable
 - name: Gongocorpus
   properties:
-    folder_name: gongocorpus-master
+    slug: gongo
     license: CC-BY-NC-ND 3.0 FR
+    language: es
     reader: averell.readers.gongocorpus
     url: https://github.com/linhd-postdata/gongocorpus/archive/master.zip
     size: 9.2M
@@ -77,8 +82,9 @@
         - syllable
 - name: Eighteenth Century Poetry Archive
   properties:
-    folder_name: ECPA-master
+    slug: ecpa
     license: CC BY-SA 4.0
+    language: en
     reader: averell.readers.ecpa
     url: https://github.com/alhuber1502/ECPA/archive/master.zip
     size: 2400M
@@ -90,8 +96,9 @@
         - word
 - name: For Better For Verse
   properties:
-    folder_name: for_better_for_verse-master
+    slug: 4b4v
     license: Unknown
+    language: en
     reader: averell.readers.forbetter4verse
     url: https://github.com/waynegraham/for_better_for_verse/archive/master.zip
     size: 39.5M
@@ -102,8 +109,9 @@
         - line
 - name: Métrique en Ligne
   properties:
-    folder_name: metrique-en-ligne-master
+    slug: mel
     license: Unknown
+    language: fr
     reader: averell.readers.metriqueenligne
     url: https://github.com/linhd-postdata/metrique-en-ligne/archive/master.zip
     size: 183M
