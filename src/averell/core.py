@@ -67,7 +67,6 @@ def export_corpora(corpus_ids, granularity, corpora_folder, filename):
             logging.error("No CORPUS ID selected")
         else:
             if granularity is not None:
-
                 for index in corpus_ids:
                     corpus_id = index - 1
                     try:
