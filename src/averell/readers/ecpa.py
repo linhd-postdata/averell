@@ -128,9 +128,12 @@ def get_features(path):
     :return: List of poem dicts
     :rtype: list
     """
-    authors_file = path / "web" / "resources" / "models" / "authwork_mdp.json"
+    authors_file = (
+        path / "ECPA-master" / "web" / "resources"
+        / "models" / "authwork_mdp.json"
+    )
     authors = json.loads(authors_file.read_text())
-    xml_files = path / "web" / "works"
+    xml_files = path / "ECPA-master" / "web" / "works"
     feature_list = []
     for filename in xml_files.rglob("*/*.xml"):
         folder = filename.parent

@@ -7,7 +7,7 @@ from averell.readers.ecpa import get_features
 from averell.readers.ecpa import get_poem_info
 from tests.test_utils import FIXTURES_DIR
 
-ECPA = FIXTURES_DIR / "ecpa" / "web"
+ECPA = FIXTURES_DIR / "ecpa" / "ECPA-master" / "web"
 
 
 @pytest.fixture

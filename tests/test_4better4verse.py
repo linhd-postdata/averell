@@ -25,4 +25,4 @@ def test_parse_xml(forbetter4verse):
 @patch('averell.readers.forbetter4verse.parse_xml')
 def test_get_features(mock_poem_info):
     mock_poem_info.return_value = {}
-    assert [{}] == get_features(FIXTURES_DIR)
+    assert [] == get_features(FIXTURES_DIR)

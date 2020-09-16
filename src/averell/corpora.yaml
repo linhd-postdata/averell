@@ -1,6 +1,6 @@
 - name: Disco V2.1
   properties:
-    slug: disco2.1
+    slug: disco2_1
     license: CC-BY
     language: es
     reader: averell.readers.disco

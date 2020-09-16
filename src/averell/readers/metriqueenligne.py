@@ -58,6 +58,6 @@ def get_features(path):
     :param path: Corpus Path
     :return: List of poem dicts
     """
-    corpus_file = path / "metrique_en_ligne.json"
+    corpus_file = path / "metrique-en-ligne-master" / "metrique_en_ligne.json"
     result = list(parse_json(corpus_file))
     return result

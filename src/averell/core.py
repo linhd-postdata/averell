@@ -48,7 +48,9 @@ def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
         return corpora_features
 
 
-def export_corpora(corpus_ids, granularity, corpora_folder, filename):
+def export_corpora(
+    corpus_ids, granularity, corpora_folder, filename, no_download=False
+):
     """
     Generates a single JSON file with the chosen granularity for all of the
         selected corpora
@@ -57,18 +59,18 @@ def export_corpora(corpus_ids, granularity, corpora_folder, filename):
     :param granularity: Level of parsing granularity
     :param corpora_folder: Local folder where the corpora is located
     :param filename: Name of the output file
+    :param no_download: Whether to download or not a corpora when missing
     :return: Python dict with the chosen granularity for all of the selected
         corpora
     """
     corpora_features = []
     slugs = []
-    if Path(corpora_folder).exists():
+    if Path(corpora_folder).exists() or not no_download:
         if not corpus_ids:
             logging.error("No CORPUS ID selected")
         else:
             if granularity is not None:
-                for index in corpus_ids:
-                    corpus_id = index - 1
+                for corpus_id in corpus_ids:
                     try:
                         corpus = CORPORA_SOURCES[corpus_id]
                     except IndexError:
@@ -78,10 +80,13 @@ def export_corpora(corpus_ids, granularity, corpora_folder, filename):
                         slugs.append(corpus_folder)
                         corpus_name = corpus["name"]
                         if not (Path(corpora_folder) / corpus_folder).exists():
-                            logging.error(
-                                f'"{corpus_name} ({corpus_folder})" not found '
-                                f'in "{corpora_folder}" folder')
-                            continue
+                            if not no_download:
+                                get_corpora([corpus_id], corpora_folder)
+                            else:
+                                logging.error(
+                                    f'"{corpus_name} ({corpus_folder})" not '
+                                    f'found in "{corpora_folder}" folder')
+                                continue
                         granularities_list = corpus["properties"]["granularity"]
                         if granularity not in granularities_list:
                             logging.error(

@@ -25,4 +25,4 @@ def test_parse_xml(gongocorpus):
 def test_get_features(mock_parse_json):
     path = TESTS_DIR / "fixtures" / "test"
     mock_parse_json.return_value = {}
-    assert [{}] == get_features(path)
+    assert [] == get_features(path)
