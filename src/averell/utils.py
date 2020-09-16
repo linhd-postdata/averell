@@ -99,7 +99,7 @@ def download_corpora(corpus_indices=None,
             else:
                 url = CORPORA_SOURCES[index]["properties"]["url"]
                 filename = download_corpus(url, f"{folder_name}.zip")
-                folder_list.append(uncompress_corpus(filename, output_folder))
+                folder_list.append(uncompress_corpus(filename, folder_path))
     else:
         logging.error("No corpus selected. Nothing will be downloaded")
     return folder_list

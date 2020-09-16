@@ -120,3 +120,17 @@
     granularity:
         - stanza
         - line
+- name: Biblioteca Italiana
+  properties:
+    slug: bibit
+    license: Unknown
+    language: it
+    reader: averell.readers.bibliotecaitaliana
+    url: https://github.com/linhd-postdata/biblioteca_italiana/archive/master.zip
+    size: 242M
+    doc_quantity: 25341
+    word_quantity: 7121246
+    granularity:
+        - stanza
+        - line
+        - word

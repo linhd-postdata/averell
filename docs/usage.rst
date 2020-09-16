@@ -17,10 +17,10 @@ Visualization example of one of the available corpora:
 
 .. code-block:: text
 
-      id  name              size      docs    words  granularity    license
-    ----  ----------------  ------  ------  -------  -------------  ---------
-       1  Disco V2          22M       4088   381539  stanza         CC-BY
-                                                     line
+      id  name                 lang    size      docs    words  granularity    license
+    ----  -------------------  ------  ------  ------  -------  -------------  -----------
+       1  Disco V2.1           es      22M       4088   381539  stanza         CC-BY
+                                                                line
 
 
 Download desired corpora into :file:`mycorpora` folder::
@@ -145,10 +145,10 @@ Generated example JSON file from input XML/TEI poem into
 
 Now we can combine and join these corpora through "granularity" selection::
 
-    averell export 2 3 --granularity line --corpora-folder my_corpora
+    averell export 2 3 --granularity line --corpora-folder my_corpora --filename export_1
 
 It produces an single JSON file with information about all the lines in
-those corpora. Example of **two** random lines in the file :file:`mycorpora/corpus_2_3.json`:
+those corpora. Example of **two** random lines in the file :file:`my_corpora/export_1.json`:
 
 .. code-block:: JSON
 
