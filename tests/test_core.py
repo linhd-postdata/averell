@@ -54,10 +54,11 @@ _corpora_sources = [
          {
              'license': 'CC-BY',
              'size': '22M',
+             'languge': 'es',
              'doc_quantity': 4088,
              'word_quantity': 381539,
              'granularity': ['stanza'],
-             'folder_name': 'averell'
+             'slug': 'averell'
          }
      },
     {'name': 'testing2',
@@ -65,10 +66,11 @@ _corpora_sources = [
          {
              'license': 'CC-BY',
              'size': '22M',
+             'languge': 'fr',
              'doc_quantity': 4088,
              'word_quantity': 381539,
              'granularity': ['stanza'],
-             'folder_name': 'not-folder'
+             'slug': 'no-slug'
          }
      }
 ]
@@ -77,7 +79,8 @@ _corpora_sources = [
 @mock.patch('averell.core.CORPORA_SOURCES', _corpora_sources)
 def test_export_corpora_id_not_downloaded(caplog):
     assert [] == export_corpora([2], "stanza", FIXTURES_DIR, "foo")
-    assert f'"testing2" not found in "{FIXTURES_DIR}" folder' in caplog.text
+    message = f'"testing2 (no-slug)" not found in "{FIXTURES_DIR}" folder'
+    assert message in caplog.text
 
 
 @mock.patch('averell.core.CORPORA_SOURCES', _corpora_sources)

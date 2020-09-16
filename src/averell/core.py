@@ -27,7 +27,7 @@ def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
     try:
         download_corpora(corpus_indices, output_folder)
         for index in corpus_indices:
-            folder_name = CORPORA_SOURCES[index]["properties"]['folder_name']
+            folder_name = CORPORA_SOURCES[index]["properties"]['slug']
             gen_path = Path(output_folder) / folder_name / "averell"
             get_features = getattr(importlib.import_module(
                 CORPORA_SOURCES[index]["properties"]["reader"]), "get_features")
@@ -61,11 +61,13 @@ def export_corpora(corpus_ids, granularity, corpora_folder, filename):
         corpora
     """
     corpora_features = []
+    slugs = []
     if Path(corpora_folder).exists():
         if not corpus_ids:
             logging.error("No CORPUS ID selected")
         else:
             if granularity is not None:
+
                 for index in corpus_ids:
                     corpus_id = index - 1
                     try:
@@ -73,11 +75,13 @@ def export_corpora(corpus_ids, granularity, corpora_folder, filename):
                     except IndexError:
                         logging.error("ID not in corpora list")
                     else:
-                        corpus_folder = corpus["properties"]["folder_name"]
+                        corpus_folder = corpus["properties"]["slug"]
+                        slugs.append(corpus_folder)
                         corpus_name = corpus["name"]
                         if not (Path(corpora_folder) / corpus_folder).exists():
-                            logging.error(f'"{corpus_name}" not found in '
-                                          f'"{corpora_folder}" folder')
+                            logging.error(
+                                f'"{corpus_name} ({corpus_folder})" not found '
+                                f'in "{corpora_folder}" folder')
                             continue
                         granularities_list = corpus["properties"]["granularity"]
                         if granularity not in granularities_list:
@@ -94,11 +98,12 @@ def export_corpora(corpus_ids, granularity, corpora_folder, filename):
             else:
                 logging.error("No GRANULARITY selected")
         if corpora_features:
-            export_filename = filename
-            if not filename:
-                export_filename = granularity
-            write_json(corpora_features,
-                       str(Path(corpora_folder) / export_filename))
+            if filename:
+                export_filename = filename
+            else:
+                export_filename = "_".join(slugs)
+                export_filename = f"{export_filename}_{granularity}s"
+            write_json(corpora_features, export_filename)
     else:
         logging.error("Corpora folder not found")
     return corpora_features

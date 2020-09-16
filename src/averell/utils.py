@@ -43,7 +43,7 @@ def progress_bar(t):
     return update_to
 
 
-def download_corpus(url):
+def download_corpus(url, filename=None):
     """Function to download the corpus zip file from external source
 
     :param url: string
@@ -51,11 +51,11 @@ def download_corpus(url):
     :return: string
         Local filename of the corpus
     """
-    filename = url.split('/')[-1]
+    if filename is None:
+        filename = url.split('/')[-1]
     with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1,
-              desc=filename) as t:
-        filename, *_ = urllib.request.urlretrieve(url,
-                                                  reporthook=progress_bar(t))
+              desc=filename) as pb:
+        urllib.request.urlretrieve(url, filename, reporthook=progress_bar(pb))
     return filename
 
 
@@ -90,8 +90,7 @@ def download_corpora(corpus_indices=None,
         for index in tqdm(corpus_indices):
             if index < 0:
                 raise IndexError
-            folder_name = CORPORA_SOURCES[index]["properties"][
-                "folder_name"]
+            folder_name = CORPORA_SOURCES[index]["properties"]["slug"]
             folder_path = Path(output_folder) / folder_name
             if folder_path.exists():
                 logging.info(f'Corpus {CORPORA_SOURCES[index]["name"]}'
@@ -99,9 +98,8 @@ def download_corpora(corpus_indices=None,
                 continue
             else:
                 url = CORPORA_SOURCES[index]["properties"]["url"]
-                filename = download_corpus(url)
-                folder_list.append(uncompress_corpus(
-                    filename, output_folder))
+                filename = download_corpus(url, f"{folder_name}.zip")
+                folder_list.append(uncompress_corpus(filename, output_folder))
     else:
         logging.error("No corpus selected. Nothing will be downloaded")
     return folder_list
@@ -262,6 +260,8 @@ def write_json(poem_dict, filename):
     :param filename: string
         JSON filename that will be written with the poem data
     """
+    if filename.endswith(".json"):
+        filename, *_ = filename.rsplit(".json", 1)
     file_path = Path(filename)
     if os.path.exists(f"{filename}.json"):
         file_count = len(list(file_path.parent.glob(f"{file_path.stem}*.json")))
@@ -314,6 +314,7 @@ def get_main_corpora_info():
         table.append({
             "id": corpus_id,
             "name": pretty_string(corpus_info["name"], 2),
+            "lang": props["language"],
             "size": props["size"],
             "docs": props["doc_quantity"],
             "words": props["word_quantity"],
