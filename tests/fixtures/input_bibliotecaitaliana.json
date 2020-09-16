@@ -1,0 +1,93 @@
+[
+    {
+        "url": "https://github.com/linhd-postdata/biblioteca_italiana/blob/master/xml/bibit000019",
+        "author": "Dante Alighieri",
+        "collection": "Commedia",
+        "title": "I",
+        "manually_checked": true,
+        "text": [
+            [
+                {
+                    "verse": "Nel mezzo del cammin di nostra vita",
+                    "indexed_metrical_pattern": "2 6 8 10",
+                    "metrical_pattern": "-+---+-+-+-"
+                },
+                {
+                    "verse": "mi ritrovai per una selva oscura,",
+                    "indexed_metrical_pattern": "4 8 10",
+                    "metrical_pattern": "---+---+-+-"
+                },
+                {
+                    "verse": "ché la diritta via era smarrita.",
+                    "indexed_metrical_pattern": "4 6 7 10",
+                    "metrical_pattern": "---+-++--+-"
+                }
+            ],
+            [
+                {
+                    "verse": "Ahi quanto a dir qual era è cosa dura",
+                    "indexed_metrical_pattern": "2 4 6 8 10",
+                    "metrical_pattern": "-+-+-+-+-+-"
+                },
+                {
+                    "verse": "esta selva selvaggia e aspra e forte",
+                    "indexed_metrical_pattern": "1 3 6 8 10",
+                    "metrical_pattern": "+-+--+-+-+-"
+                },
+                {
+                    "verse": "che nel pensier rinova la paura!",
+                    "indexed_metrical_pattern": "4 6 10",
+                    "metrical_pattern": "---+-+---+-"
+                }
+            ],
+            [
+                {
+                    "verse": "Tant'è amara che poco è più morte;",
+                    "indexed_metrical_pattern": "2 4 7 9 10",
+                    "metrical_pattern": "-+-+--+-++-"
+                },
+                {
+                    "verse": "ma per trattar del ben ch'i' vi trovai,",
+                    "indexed_metrical_pattern": "4 6 10",
+                    "metrical_pattern": "---+-+---+-"
+                },
+                {
+                    "verse": "dirò de l'altre cose ch'i' v'ho scorte.",
+                    "indexed_metrical_pattern": "2 4 6 10",
+                    "metrical_pattern": "-+-+-+---+-"
+                }
+            ]
+        ]
+    },
+    {
+        "url": "https://github.com/linhd-postdata/biblioteca_italiana/blob/master/xml/bibit001365",
+        "author": "Antonio Bonciani",
+        "collection": "Poesie",
+        "title": 8,
+        "manually_checked": false,
+        "text": [
+            [
+                {
+                    "verse": "Non ebbe tal disio in terra Appollo"
+                },
+                {
+                    "verse": "di poter giugner Danne, che 'n alloro"
+                },
+                {
+                    "verse": "si convertì germinante rampollo,"
+                }
+            ],
+            [
+                {
+                    "verse": "né di trovare alla fonte del moro"
+                },
+                {
+                    "verse": "Pirramo Tisbe el diputato giorno,"
+                },
+                {
+                    "verse": "com'io di veder te, signor decoro,"
+                }
+            ]       
+        ]
+    }
+]

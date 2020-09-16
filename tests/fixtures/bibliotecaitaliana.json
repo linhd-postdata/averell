@@ -1,0 +1,468 @@
+[
+    {
+        "poem_title": "Commedia - I",
+        "author": "Dante Alighieri",
+        "manually_checked": true,
+        "stanzas": [
+            {
+                "stanza_number": 1,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 1,
+                        "line_text": "Nel mezzo del cammin di nostra vita",
+                        "metrical_pattern": "-+---+-+-+-",
+                        "line_length": 11,
+                        "words": [
+                            {
+                                "word_text": "Nel"
+                            },
+                            {
+                                "word_text": "mezzo"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "cammin"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "nostra"
+                            },
+                            {
+                                "word_text": "vita"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 2,
+                        "line_text": "mi ritrovai per una selva oscura,",
+                        "metrical_pattern": "---+---+-+-",
+                        "line_length": 11,
+                        "words": [
+                            {
+                                "word_text": "mi"
+                            },
+                            {
+                                "word_text": "ritrovai"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "una"
+                            },
+                            {
+                                "word_text": "selva"
+                            },
+                            {
+                                "word_text": "oscura,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 3,
+                        "line_text": "ché la diritta via era smarrita.",
+                        "metrical_pattern": "---+-++--+-",
+                        "line_length": 11,
+                        "words": [
+                            {
+                                "word_text": "ché"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "diritta"
+                            },
+                            {
+                                "word_text": "via"
+                            },
+                            {
+                                "word_text": "era"
+                            },
+                            {
+                                "word_text": "smarrita."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Nel mezzo del cammin di nostra vita\nmi ritrovai per una selva oscura,\nché la diritta via era smarrita."
+            },
+            {
+                "stanza_number": 2,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 4,
+                        "line_text": "Ahi quanto a dir qual era è cosa dura",
+                        "metrical_pattern": "-+-+-+-+-+-",
+                        "line_length": 11,
+                        "words": [
+                            {
+                                "word_text": "Ahi"
+                            },
+                            {
+                                "word_text": "quanto"
+                            },
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "dir"
+                            },
+                            {
+                                "word_text": "qual"
+                            },
+                            {
+                                "word_text": "era"
+                            },
+                            {
+                                "word_text": "è"
+                            },
+                            {
+                                "word_text": "cosa"
+                            },
+                            {
+                                "word_text": "dura"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 5,
+                        "line_text": "esta selva selvaggia e aspra e forte",
+                        "metrical_pattern": "+-+--+-+-+-",
+                        "line_length": 11,
+                        "words": [
+                            {
+                                "word_text": "esta"
+                            },
+                            {
+                                "word_text": "selva"
+                            },
+                            {
+                                "word_text": "selvaggia"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "aspra"
+                            },
+                            {
+                                "word_text": "e"
+                            },
+                            {
+                                "word_text": "forte"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 6,
+                        "line_text": "che nel pensier rinova la paura!",
+                        "metrical_pattern": "---+-+---+-",
+                        "line_length": 11,
+                        "words": [
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "nel"
+                            },
+                            {
+                                "word_text": "pensier"
+                            },
+                            {
+                                "word_text": "rinova"
+                            },
+                            {
+                                "word_text": "la"
+                            },
+                            {
+                                "word_text": "paura!"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Ahi quanto a dir qual era è cosa dura\nesta selva selvaggia e aspra e forte\nche nel pensier rinova la paura!"
+            },
+            {
+                "stanza_number": 3,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 7,
+                        "line_text": "Tant'è amara che poco è più morte;",
+                        "metrical_pattern": "-+-+--+-++-",
+                        "line_length": 11,
+                        "words": [
+                            {
+                                "word_text": "Tant'è"
+                            },
+                            {
+                                "word_text": "amara"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "poco"
+                            },
+                            {
+                                "word_text": "è"
+                            },
+                            {
+                                "word_text": "più"
+                            },
+                            {
+                                "word_text": "morte;"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 8,
+                        "line_text": "ma per trattar del ben ch'i' vi trovai,",
+                        "metrical_pattern": "---+-+---+-",
+                        "line_length": 11,
+                        "words": [
+                            {
+                                "word_text": "ma"
+                            },
+                            {
+                                "word_text": "per"
+                            },
+                            {
+                                "word_text": "trattar"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "ben"
+                            },
+                            {
+                                "word_text": "ch'i'"
+                            },
+                            {
+                                "word_text": "vi"
+                            },
+                            {
+                                "word_text": "trovai,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 9,
+                        "line_text": "dirò de l'altre cose ch'i' v'ho scorte.",
+                        "metrical_pattern": "-+-+-+---+-",
+                        "line_length": 11,
+                        "words": [
+                            {
+                                "word_text": "dirò"
+                            },
+                            {
+                                "word_text": "de"
+                            },
+                            {
+                                "word_text": "l'altre"
+                            },
+                            {
+                                "word_text": "cose"
+                            },
+                            {
+                                "word_text": "ch'i'"
+                            },
+                            {
+                                "word_text": "v'ho"
+                            },
+                            {
+                                "word_text": "scorte."
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Tant'è amara che poco è più morte;\nma per trattar del ben ch'i' vi trovai,\ndirò de l'altre cose ch'i' v'ho scorte."
+            }
+        ]
+    },
+    {
+        "poem_title": "Poesie - 8",
+        "author": "Antonio Bonciani",
+        "manually_checked": false,
+        "stanzas": [
+            {
+                "stanza_number": 1,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 1,
+                        "line_text": "Non ebbe tal disio in terra Appollo",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Non"
+                            },
+                            {
+                                "word_text": "ebbe"
+                            },
+                            {
+                                "word_text": "tal"
+                            },
+                            {
+                                "word_text": "disio"
+                            },
+                            {
+                                "word_text": "in"
+                            },
+                            {
+                                "word_text": "terra"
+                            },
+                            {
+                                "word_text": "Appollo"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 2,
+                        "line_text": "di poter giugner Danne, che 'n alloro",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "poter"
+                            },
+                            {
+                                "word_text": "giugner"
+                            },
+                            {
+                                "word_text": "Danne,"
+                            },
+                            {
+                                "word_text": "che"
+                            },
+                            {
+                                "word_text": "'n"
+                            },
+                            {
+                                "word_text": "alloro"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 3,
+                        "line_text": "si convertì germinante rampollo,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "si"
+                            },
+                            {
+                                "word_text": "convertì"
+                            },
+                            {
+                                "word_text": "germinante"
+                            },
+                            {
+                                "word_text": "rampollo,"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Non ebbe tal disio in terra Appollo\ndi poter giugner Danne, che 'n alloro\nsi convertì germinante rampollo,"
+            },
+            {
+                "stanza_number": 2,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 4,
+                        "line_text": "né di trovare alla fonte del moro",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "né"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "trovare"
+                            },
+                            {
+                                "word_text": "alla"
+                            },
+                            {
+                                "word_text": "fonte"
+                            },
+                            {
+                                "word_text": "del"
+                            },
+                            {
+                                "word_text": "moro"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 5,
+                        "line_text": "Pirramo Tisbe el diputato giorno,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "Pirramo"
+                            },
+                            {
+                                "word_text": "Tisbe"
+                            },
+                            {
+                                "word_text": "el"
+                            },
+                            {
+                                "word_text": "diputato"
+                            },
+                            {
+                                "word_text": "giorno,"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 6,
+                        "line_text": "com'io di veder te, signor decoro,",
+                        "metrical_pattern": null,
+                        "line_length": null,
+                        "words": [
+                            {
+                                "word_text": "com'io"
+                            },
+                            {
+                                "word_text": "di"
+                            },
+                            {
+                                "word_text": "veder"
+                            },
+                            {
+                                "word_text": "te,"
+                            },
+                            {
+                                "word_text": "signor"
+                            },
+                            {
+                                "word_text": "decoro,"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "né di trovare alla fonte del moro\nPirramo Tisbe el diputato giorno,\ncom'io di veder te, signor decoro,"
+            }
+        ]
+    }
+]
