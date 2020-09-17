@@ -90,7 +90,10 @@ def get_features(path):
     :return: List of poem dicts
     :rtype: list
     """
-    xml_folders = [path / "poems", path / "poems2"]
+    xml_folders = [
+        path / "for_better_for_verse-master" / "poems",
+        path / "for_better_for_verse-master" / "poems2"
+    ]
     feature_list = []
     for folder in xml_folders:
         # exclude example xml files

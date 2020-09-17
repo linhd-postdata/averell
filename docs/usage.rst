@@ -20,7 +20,7 @@ Visualization example of one of the available corpora:
       id  name                 lang    size      docs    words  granularity    license
     ----  -------------------  ------  ------  ------  -------  -------------  -----------
        1  Disco V2.1           es      22M       4088   381539  stanza         CC-BY
-                                                                line
+          (disco2_1)                                            line
 
 
 Download desired corpora into :file:`mycorpora` folder::

@@ -9,12 +9,40 @@ from averell.utils import download_corpora
 from averell.utils import download_corpus
 from averell.utils import filter_corpus_features
 from averell.utils import filter_features
+from averell.utils import get_ids
 from averell.utils import get_line_features
 from averell.utils import get_stanza_features
 from averell.utils import get_syllable_features
 from averell.utils import get_word_features
 from averell.utils import pretty_string
 from averell.utils import read_features
+
+_corpora_sources = [
+    {'name': 'testing',
+     'properties':
+         {
+             'license': 'CC-BY',
+             'size': '22M',
+             'language': 'es',
+             'doc_quantity': 4088,
+             'word_quantity': 381539,
+             'granularity': ['stanza'],
+             'slug': 't1'
+         }
+     },
+    {'name': 'testing2',
+     'properties':
+         {
+             'license': 'CC-BY',
+             'size': '22M',
+             'language': 'fr',
+             'doc_quantity': 4088,
+             'word_quantity': 381539,
+             'granularity': ['stanza'],
+             'slug': 't2'
+         }
+     }
+]
 
 TESTS_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
 FIXTURES_DIR = TESTS_DIR / "fixtures"
@@ -162,3 +190,10 @@ def test_read_features(corpora_features):
 def test_pretty_string():
     output = "This is\na split\nstring"
     assert output == pretty_string("This is a split string", 2)
+
+
+@patch('averell.utils.CORPORA_SOURCES', _corpora_sources)
+def test_get_ids():
+    assert get_ids(["all"]) == [0, 1]
+    assert get_ids(["1", "t2"]) == [0, 1]
+    assert get_ids(["es"]) == [0]

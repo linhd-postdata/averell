@@ -311,9 +311,12 @@ def get_main_corpora_info():
     for corpus_info in CORPORA_SOURCES:
         corpus_id = CORPORA_SOURCES.index(corpus_info) + 1
         props = corpus_info["properties"]
+        corpus_name = pretty_string(
+            f"{corpus_info['name']} ({props['slug']})", 2
+        )
         table.append({
             "id": corpus_id,
-            "name": pretty_string(corpus_info["name"], 2),
+            "name": corpus_name,
             "lang": props["language"],
             "size": props["size"],
             "docs": props["doc_quantity"],
@@ -322,3 +325,25 @@ def get_main_corpora_info():
             "license": pretty_string(props["license"], 1),
         })
     return table
+
+
+def get_ids(values):
+    """Transform numeric identifiers, corpora shortcodes (slugs),
+    and two-letter ISO language codes, into their corresponding numeric
+    identifier as per the order in CORPORA_SOURCES.
+
+    :return: List of indices in CORPORA_SOURCES
+    :rtype: list
+    """
+    if "all" in values:
+        ids = list(range(len(CORPORA_SOURCES)))
+    else:
+        ids = []
+        for index, corpus_info in enumerate(CORPORA_SOURCES):
+            corpus_id = index + 1
+            props = corpus_info["properties"]
+            if (str(corpus_id) in values
+                    or props["slug"] in values
+                    or props["language"] in values):
+                ids.append(index)
+    return ids
