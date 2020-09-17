@@ -1,5 +1,6 @@
 import json
 import logging
+import tempfile
 from unittest import mock
 
 import pytest
@@ -20,7 +21,7 @@ def test_get_corpora_index_not_in_range(caplog):
 @mock.patch('averell.core.download_corpora')
 def test_get_corpora(mock_download_corpora, caplog):
     mock_download_corpora.return_value = ["disco3.zip"]
-    assert [[]] == get_corpora([1])
+    assert [[]] == get_corpora([1], output_folder=tempfile.mkdtemp())
     with caplog.at_level(logging.INFO):
         assert "Downloaded Disco V3 corpus" in caplog.text
 

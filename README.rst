@@ -35,38 +35,43 @@ Each corpus in the catalog must specify the parser to produce the expected data 
 
 * Free software: Apache Software License 2.0
 
-Available corpora (version 1.0.2)
 
-.. code-block:: text
+Available corpora (version 1.0.4)
+=================================
 
-      id  name                 lang    size      docs    words  granularity    license
-    ----  -------------------  ------  ------  ------  -------  -------------  -----------
-       1  Disco V2.1           es      22M       4088   381539  stanza         CC-BY
-                                                                line
-       2  Disco V3             es      28M       4080   377978  stanza         CC-BY
-                                                                line
-       3  Sonetos Siglo        es      6.8M      5078   466012  stanza         CC-BY-NC
-          de Oro                                                line           4.0
-       4  ADSO 100             es      128K       100     9208  stanza         CC-BY-NC
-          poems corpus                                          line           4.0
-       5  Poesía Lírica        es      3.8M       475   299402  stanza         CC-BY-NC
-          Castellana Siglo                                      line           4.0
-          de Oro                                                word
-                                                                syllable
-       6  Gongocorpus          es      9.2M       481    99079  stanza         CC-BY-NC-ND
-                                                                line           3.0
-                                                                word           FR
-                                                                syllable
-       7  Eighteenth Century   en      2400M     3084  2063668  stanza         CC
-          Poetry Archive                                        line           BY-SA
-                                                                word           4.0
-       8  For Better           en      39.5M      103    41749  stanza         Unknown
-          For Verse                                             line
-       9  Métrique en          fr      183M      5081  1850222  stanza         Unknown
-          Ligne                                                 line
-      10  Biblioteca Italiana  it      242M     25341  7121246  stanza         Unknown
-                                                                line
-                                                                word
+====  ===================  ======  ======  ======  =======  =============  ===========
+  id  name                 lang    size      docs    words  granularity    license
+====  ===================  ======  ======  ======  =======  =============  ===========
+   1  Disco V2.1           es      22M       4088   381539  stanza         CC-BY
+      (disco2_1)                                            line
+   2  Disco V3             es      28M       4080   377978  stanza         CC-BY
+      (disco3)                                              line
+   3  Sonetos Siglo        es      6.8M      5078   466012  stanza         CC-BY-NC
+      de Oro                                                line           4.0
+      (adso)
+   4  ADSO 100             es      128K       100     9208  stanza         CC-BY-NC
+      poems corpus                                          line           4.0
+      (adso100)
+   5  Poesía Lírica        es      3.8M       475   299402  stanza         CC-BY-NC
+      Castellana Siglo                                      line           4.0
+      de Oro                                                word
+      (plc)                                                 syllable
+   6  Gongocorpus (gongo)  es      9.2M       481    99079  stanza         CC-BY-NC-ND
+                                                            line           3.0
+                                                            word           FR
+                                                            syllable
+   7  Eighteenth Century   en      2400M     3084  2063668  stanza         CC
+      Poetry Archive                                        line           BY-SA
+      (ecpa)                                                word           4.0
+   8  For Better           en      39.5M      103    41749  stanza         Unknown
+      For Verse                                             line
+      (4b4v)
+   9  Métrique en          fr      183M      5081  1850222  stanza         Unknown
+      Ligne (mel)                                           line
+  10  Biblioteca Italiana  it      242M     25341  7121246  stanza         Unknown
+      (bibit)                                               line
+                                                            word
+====  ===================  ======  ======  ======  =======  =============  ===========
 
 
 Documentation
@@ -112,6 +117,8 @@ Visualization example of one of the available corpora:
        1  Disco V2.1           es      22M       4088   381539  stanza         CC-BY
                                                                 line
 
+download
+--------
 
 Download desired corpora into "mycorpora" folder::
 
@@ -233,6 +240,9 @@ my_corpora/{corpus}/averell/parser/{author_name}/{poem_name}.json
         ]
     }
 
+export
+------
+
 Now we can combine and join these corpora through "granularity" selection::
 
     averell export 2 3 --granularity line --corpora-folder my_corpora --filename export_1
@@ -265,28 +275,25 @@ those corpora. Example of **two** random lines in the file mycorpora/export_1.js
         "stanza_type": "terceto"
     }
 
+By default, ``export`` will download corpora if needed. To avoid this behaviour, the flag ``--no-download`` can be passed in.
 
-Development
-===========
+Exported corpora can be easily loaded into Pandas
 
-To run the all tests run::
+.. code-block:: bash
 
-    tox
+    averell export adso100 --filename adso100.json
 
-Note, to combine the coverage data from all the tox environments run:
+.. code-block:: python
 
-.. list-table::
-    :widths: 10 90
-    :stub-columns: 1
+    import pandas as pd
 
-    - - Windows
-      - ::
+    adso100 = pd.read_json(open("adso100.json"))
 
-            set PYTEST_ADDOPTS=--cov-append
-            tox
 
-    - - Other
-      - ::
+A note on IDS
+-------------
 
-            PYTEST_ADDOPTS=--cov-append tox
+IDS can be numeric identifiers in the ``averell list`` output, corpus shortcodes (shown between parenthesis), the speciall literal ``all`` to refer to all corpora, or two-letter ISO language codes to refer to avaliable corpora in a specific language.
+
+For example, the command ``averell export 1 bibit fr`` will export DISCO V2.1, the Biblioteca Italiana poetry corpus, and all corpora tagged with the French languge tag in a single file spliting poems line by line.
 

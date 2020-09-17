@@ -12,7 +12,7 @@ from .utils import get_main_corpora_info
 @click.group()
 def main():
     """
-    Simple CLI for querying corpora on Github
+    Averell is a simple CLI for managing poetic corpora
     """
 
 
@@ -67,11 +67,19 @@ def export(ids, granularity, corpora_folder, filename, no_download):
 
 
 @main.command(name="list")
-def list_command():
+@click.option('--rst', default=False, is_flag=True, type=click.BOOL,
+              help='Prints the corpora list in reStructuredText format')
+def list_command(rst):
     """Show the CORPORA info
     """
     table = get_main_corpora_info()
-    click.echo(tabulate(table, headers="keys", numalign="right"))
+    if not rst:
+        table_format = "simple"
+    else:
+        table_format = "rst"
+    click.echo(tabulate(
+        table, headers="keys", numalign="right", tablefmt=table_format
+    ))
 
 
 if __name__ == '__main__':
