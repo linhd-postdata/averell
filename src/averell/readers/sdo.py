@@ -23,12 +23,14 @@ def parse_xml(xml_file):
     author = root.find(f".//{NS}author").text
     line_group_list = root.findall(f".//*{NS}lg")
     manually_checked = 'manual' in analysis_description
-    if title is not None:
-        poem.update({"poem_title": title})
-    else:
-        poem.update(
-            {"poem_title": os.path.splitext(os.path.basename(xml_file))[0]})
+    if title is None:
+        title = os.path.splitext(os.path.basename(xml_file))[0]
+    name = xml_file.split("/")[-4]
+    if "adso100" in xml_file:
+        name = xml_file.split("/")[-3]
     poem.update({
+        "poem_title": title,
+        "name": name,
         "manually_checked": manually_checked,
         "author": author
     })

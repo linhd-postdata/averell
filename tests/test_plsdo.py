@@ -9,6 +9,8 @@ from averell.readers.plsdo import get_features
 from averell.readers.plsdo import parse_xml
 from tests.test_utils import TESTS_DIR
 
+PLC_PATH = TESTS_DIR / "fixtures" / "plc"
+
 
 @pytest.fixture
 def plsdo():
@@ -17,7 +19,8 @@ def plsdo():
 
 
 def test_parse_xml(plsdo):
-    path = TESTS_DIR / "fixtures" / "input_plsdo.xml"
+    path = (PLC_PATH / "CorpusGeneralPoesiaLiricaCastellanaDelSigloDeOro-master"
+            / "author" / "input_plsdo.xml")
     poem = parse_xml(str(path))
     assert poem == plsdo
 
@@ -29,8 +32,7 @@ def test_commented_tree_builder_class():
     assert True
 
 
-@patch('averell.readers.plsdo.parse_xml')
+@patch('averell.readers.plsdo.parse_xml', return_value={})
 def test_get_features(mock_parse_xml):
-    path = TESTS_DIR / "fixtures" / "test"
-    mock_parse_xml.return_value = {}
-    assert [{}] == get_features(path)
+    assert [{}] == get_features(PLC_PATH)
+    assert mock_parse_xml.called

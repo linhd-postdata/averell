@@ -42,8 +42,8 @@ def test_parse_xml_cov(ecpa_cov):
     assert poem == ecpa_cov
 
 
-@patch('averell.readers.ecpa.get_poem_info')
+@patch('averell.readers.ecpa.get_poem_info', return_value={})
 def test_get_features(mock_poem_info):
     path = FIXTURES_DIR / "ecpa"
-    mock_poem_info.return_value = {}
     assert [{}, {}] == get_features(path)
+    assert mock_poem_info.called

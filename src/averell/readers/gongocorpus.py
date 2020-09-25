@@ -69,7 +69,8 @@ def parse_json(json_file):
         "authorship": authorship,
         "year": year,
         "manually_checked": manually_checked,
-        "stanzas": stanza_list
+        "stanzas": stanza_list,
+        "name": str(json_file).split("/")[-5],
     })
     return poem
 

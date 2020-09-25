@@ -33,6 +33,7 @@ def parse_xml(xml_file):
         "manually_checked": manually_checked,
         "poem_title": title,
         "author": author,
+        "name": xml_file.split("/")[-5],
     })
     if alt_title is not None:
         alt_title = re.sub(r"[\n ]+", " ", "".join(alt_title.itertext()))
@@ -48,7 +49,7 @@ def parse_xml(xml_file):
             line_list.append({
                 "line_number": line_number,
                 "line_text": line_text,
-                "metrical_pattern": line.get("met", "None")
+                "metrical_pattern": line.get("met")
             })
             stanza_text.append(line_text)
             line_number += 1

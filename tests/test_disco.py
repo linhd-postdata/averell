@@ -7,6 +7,8 @@ from averell.readers.disco import get_features
 from averell.readers.disco import parse_xml
 from tests.test_utils import TESTS_DIR
 
+DISCO_PATH = (TESTS_DIR / "fixtures" / "disco2_1")
+
 
 @pytest.fixture
 def disco():
@@ -15,13 +17,13 @@ def disco():
 
 
 def test_parse_xml(disco):
-    path = TESTS_DIR / "fixtures" / "input_disco.xml"
+    path = (DISCO_PATH / "tei" / "19th" /
+            "per-sonnet" / "input_disco.xml")
     poem = parse_xml(str(path))
     assert poem == disco
 
 
-@patch('averell.readers.disco.parse_xml')
+@patch('averell.readers.disco.parse_xml', return_value={})
 def test_get_features(mock_parse_xml):
-    path = TESTS_DIR / "fixtures" / "test"
-    mock_parse_xml.return_value = {}
-    assert [{}] == get_features(path)
+    assert [{}] == get_features(DISCO_PATH)
+    assert mock_parse_xml.called

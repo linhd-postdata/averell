@@ -113,16 +113,20 @@ def get_stanza_features(poem_features):
     :return: dict list
         Stanzas dict list
     """
+    manually_checked = poem_features['manually_checked']
+    author = poem_features['author']
+    name = poem_features['name']
     stanza_list = []
     for stanza_index, key in enumerate(poem_features["stanzas"]):
         stanza_features = poem_features['stanzas'][stanza_index]
         dic_final = {
             'stanza_number': stanza_features['stanza_number'],
-            'manually_checked': poem_features['manually_checked'],
+            'manually_checked': manually_checked,
             'poem_title': poem_features['poem_title'],
-            'author': poem_features['author'],
+            'author': author,
             'stanza_text': stanza_features['stanza_text'],
-            'stanza_type': stanza_features['stanza_type']
+            'stanza_type': stanza_features['stanza_type'],
+            'name': name,
         }
         stanza_list.append(dic_final)
     return stanza_list

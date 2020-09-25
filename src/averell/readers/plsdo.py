@@ -75,7 +75,8 @@ def parse_xml(xml_file):
         "poem_title": title,
         "author": author,
         "manually_checked": manually_checked,
-        "stanzas": stanza_list
+        "stanzas": stanza_list,
+        "name": xml_file.split("/")[-4],
     })
     return poem
 

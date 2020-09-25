@@ -46,7 +46,8 @@ def parse_json(json_file) -> dict:
             "poem_title": title,
             "author": author,
             "manually_checked": manually_checked,
-            "stanzas": stanza_list
+            "stanzas": stanza_list,
+            "name": str(json_file).split("/")[-2],
         })
         yield poem
 

@@ -116,7 +116,8 @@ def get_poem_info(xml_file, lines_info, authors):
         })
     poem.update({
         "manually_checked": manually_checked,
-        "stanzas": stanza_list
+        "stanzas": stanza_list,
+        "name": str(xml_file).split("/")[-6],
     })
     return poem
 

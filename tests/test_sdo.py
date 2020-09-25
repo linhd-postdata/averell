@@ -7,6 +7,8 @@ from averell.readers.sdo import get_features
 from averell.readers.sdo import parse_xml
 from tests.test_utils import TESTS_DIR
 
+SDO_PATH = TESTS_DIR / "fixtures" / "adso"
+
 
 @pytest.fixture
 def sdo():
@@ -15,13 +17,13 @@ def sdo():
 
 
 def test_parse_xml(sdo):
-    path = TESTS_DIR / "fixtures" / "input_sdo.xml"
+    path = (SDO_PATH / "CorpusSonetosSigloDeOro-master" / "authorname" /
+            "input_sdo.xml")
     poem = parse_xml(str(path))
     assert poem == sdo
 
 
-@patch('averell.readers.sdo.parse_xml')
+@patch('averell.readers.sdo.parse_xml', return_value={})
 def test_get_features(mock_parse_xml):
-    path = TESTS_DIR / "fixtures" / "test"
-    mock_parse_xml.return_value = {}
-    assert [{}] == get_features(path)
+    assert [{}] == get_features(SDO_PATH)
+    assert mock_parse_xml.called

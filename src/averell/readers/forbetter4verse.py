@@ -78,7 +78,8 @@ def parse_xml(xml_file):
         })
     poem.update({
         "manually_checked": manually_checked,
-        "stanzas": stanza_list
+        "stanzas": stanza_list,
+        "name": str(xml_file).split("/")[-4],
     })
     return poem
 

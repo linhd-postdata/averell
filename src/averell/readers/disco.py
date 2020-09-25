@@ -27,12 +27,12 @@ def parse_xml(xml_file):
     manually_checked = 'manual' in analysis_description
     alt_title = root.find(
         f".//*{NS}bibl/{NS}title[@property='dc:alternative']").text
-
     poem.update({
         "manually_checked": manually_checked,
         "poem_title": title,
         "author": author,
         "poem_alt_title": alt_title,
+        "name": xml_file.split("/")[-5],
     })
     for stanza_number, line_group in enumerate(line_group_list):
         line_list = []
@@ -42,7 +42,7 @@ def parse_xml(xml_file):
             line_list.append({
                 "line_number": str(line.attrib["n"]),
                 "line_text": line_text,
-                "metrical_pattern": line.get("met", "None")
+                "metrical_pattern": line.get("met")
             })
             stanza_text.append(line_text)
         stanza_list.append({
