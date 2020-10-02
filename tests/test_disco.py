@@ -17,9 +17,9 @@ def disco():
 
 
 def test_parse_xml(disco):
-    path = (DISCO_PATH / "tei" / "19th" /
+    path = (DISCO_PATH / "disco-2.1" / "tei" / "19th" /
             "per-sonnet" / "input_disco.xml")
-    poem = parse_xml(str(path))
+    poem = parse_xml(path)
     assert poem == disco
 
 

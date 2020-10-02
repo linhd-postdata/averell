@@ -19,7 +19,7 @@ def sdo():
 def test_parse_xml(sdo):
     path = (SDO_PATH / "CorpusSonetosSigloDeOro-master" / "authorname" /
             "input_sdo.xml")
-    poem = parse_xml(str(path))
+    poem = parse_xml(path)
     assert poem == sdo
 
 

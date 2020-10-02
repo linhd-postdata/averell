@@ -25,9 +25,9 @@ def parse_xml(xml_file):
     manually_checked = 'manual' in analysis_description
     if title is None:
         title = os.path.splitext(os.path.basename(xml_file))[0]
-    name = xml_file.split("/")[-4]
-    if "adso100" in xml_file:
-        name = xml_file.split("/")[-3]
+    name = xml_file.parts[-4]
+    if "adso100" in str(xml_file):
+        name = xml_file.parts[-3]
     poem.update({
         "poem_title": title,
         "name": name,
@@ -66,6 +66,6 @@ def get_features(path):
     """
     feature_list = []
     for filename in path.rglob('*.xml'):
-        result = parse_xml(str(filename))
+        result = parse_xml(filename)
         feature_list.append(result)
     return feature_list

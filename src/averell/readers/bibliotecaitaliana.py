@@ -12,6 +12,7 @@ def parse_json(json_file) -> dict:
     :return: Dict with the data obtained from the poem
     """
     corpus = json.loads(json_file.read_text())
+    name = json_file.parts[-2]
     for work in corpus:
         poem = {}
         title = f"{work['collection']} - {work['title']}"
@@ -47,7 +48,7 @@ def parse_json(json_file) -> dict:
             "author": author,
             "manually_checked": manually_checked,
             "stanzas": stanza_list,
-            "name": str(json_file).split("/")[-2],
+            "name": name,
         })
         yield poem
 
@@ -58,7 +59,9 @@ def get_features(path) -> list:
     :param path: Corpus Path
     :return: List of poem dicts
     """
-    uncompress_corpus(path / "biblioteca_italiana-master" / "biblitaliana.zip", path)
+    corpus_zip = path / "biblioteca_italiana-master" / "biblitaliana.zip"
+    if corpus_zip.exists():
+        uncompress_corpus(corpus_zip, path)
     corpus_file = path / "biblitaliana.json"
     result = list(parse_json(corpus_file))
     return result

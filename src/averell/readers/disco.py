@@ -16,7 +16,7 @@ def parse_xml(xml_file):
     """
     tree = ETree.parse(xml_file)
     root = tree.getroot()
-
+    name = xml_file.parts[-6]
     poem = {}
     stanza_list = []
 
@@ -32,7 +32,7 @@ def parse_xml(xml_file):
         "poem_title": title,
         "author": author,
         "poem_alt_title": alt_title,
-        "name": xml_file.split("/")[-5],
+        "name": name,
     })
     for stanza_number, line_group in enumerate(line_group_list):
         line_list = []
@@ -64,6 +64,6 @@ def get_features(path):
     xml_files = Path("*") / "per-sonnet" / "*.xml"
     feature_list = []
     for filename in (Path(path)).rglob(str(xml_files)):
-        result = parse_xml(str(filename))
+        result = parse_xml(filename)
         feature_list.append(result)
     return feature_list

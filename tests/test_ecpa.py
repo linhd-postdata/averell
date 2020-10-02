@@ -22,7 +22,7 @@ def test_parse_xml(ecpa):
     authors = json.loads(authors_file.read_text())
     lines_file = ECPA / "works" / "input_ecpa" / "input_ecpa_l.json"
     lines_info = json.loads(lines_file.read_text())
-    poem = get_poem_info(str(path), lines_info, authors)
+    poem = get_poem_info(path, lines_info, authors)
     assert poem == ecpa
 
 
@@ -38,7 +38,7 @@ def test_parse_xml_cov(ecpa_cov):
     authors = json.loads(authors_file.read_text())
     lines_file = ECPA / "works" / "input_ecpa2" / "input_ecpa2_l.json"
     lines_info = json.loads(lines_file.read_text())
-    poem = get_poem_info(str(path), lines_info, authors)
+    poem = get_poem_info(path, lines_info, authors)
     assert poem == ecpa_cov
 
 

@@ -15,7 +15,8 @@ def parse_xml(xml_file):
     :rtype: dict
     """
     poem = {}
-    tree = etree.parse(xml_file)
+    tree = etree.parse(str(xml_file))
+    name = xml_file.parts[-4]
     root = tree.getroot()
     nsmap = root.nsmap
     tei_url = NS.replace("{", "").replace("}", "")
@@ -79,7 +80,7 @@ def parse_xml(xml_file):
     poem.update({
         "manually_checked": manually_checked,
         "stanzas": stanza_list,
-        "name": str(xml_file).split("/")[-4],
+        "name": name,
     })
     return poem
 
@@ -98,8 +99,8 @@ def get_features(path):
     feature_list = []
     for folder in xml_folders:
         # exclude example xml files
-        for filename in folder.glob("[!Poet - ]*.xml"):
-            result = parse_xml(str(filename))
+        for filename in folder.rglob("[!Poet - ]*.xml"):
+            result = parse_xml(filename)
             if result is not None:
                 feature_list.append(result)
     return feature_list

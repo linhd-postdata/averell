@@ -19,7 +19,7 @@ def forbetter4verse():
 def test_parse_xml(forbetter4verse):
     path = (FORB4V_PATH / "for_better_for_verse-master" / "poems" /
             "input_4better4verse.xml")
-    poem = parse_xml(str(path))
+    poem = parse_xml(path)
     assert poem == forbetter4verse
 
 

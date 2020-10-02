@@ -21,7 +21,7 @@ def plsdo():
 def test_parse_xml(plsdo):
     path = (PLC_PATH / "CorpusGeneralPoesiaLiricaCastellanaDelSigloDeOro-master"
             / "author" / "input_plsdo.xml")
-    poem = parse_xml(str(path))
+    poem = parse_xml(path)
     assert poem == plsdo
 
 

@@ -21,7 +21,8 @@ def get_poem_info(xml_file, lines_info, authors):
     :rtype: dict
     """
     poem = {}
-    tree = ETree.parse(xml_file)
+    name = xml_file.parts[-6]
+    tree = ETree.parse(str(xml_file))
     root = tree.getroot()
     manually_checked = False
     metadata = root.attrib
@@ -117,7 +118,7 @@ def get_poem_info(xml_file, lines_info, authors):
     poem.update({
         "manually_checked": manually_checked,
         "stanzas": stanza_list,
-        "name": str(xml_file).split("/")[-6],
+        "name": name,
     })
     return poem
 
@@ -141,6 +142,6 @@ def get_features(path):
         lines_file = f"{filename.parts[-2]}_l.json"
         lines_path = folder / lines_file
         lines_info = json.loads(lines_path.read_text())
-        result = get_poem_info(str(filename), lines_info, authors)
+        result = get_poem_info(filename, lines_info, authors)
         feature_list.append(result)
     return feature_list
