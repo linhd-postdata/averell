@@ -21,7 +21,7 @@ def get_poem_info(xml_file, lines_info, authors):
     :rtype: dict
     """
     poem = {}
-    name = xml_file.parts[-6]
+    corpus_name = xml_file.parts[-6]
     tree = ETree.parse(str(xml_file))
     root = tree.getroot()
     manually_checked = False
@@ -118,7 +118,7 @@ def get_poem_info(xml_file, lines_info, authors):
     poem.update({
         "manually_checked": manually_checked,
         "stanzas": stanza_list,
-        "name": name,
+        "corpus": corpus_name,
     })
     return poem
 

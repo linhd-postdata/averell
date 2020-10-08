@@ -114,9 +114,9 @@ def test_download_corpora():
     assert True
 
 
-def test_get_stanza_features(stanza_features):
-    features = json.loads((FIXTURES_DIR / "sdo.json").read_text())
-    assert get_stanza_features(features) == stanza_features
+def test_get_stanza_features(stanza_features, sdo):
+    # features = json.loads((FIXTURES_DIR / "sdo.json").read_text())
+    assert get_stanza_features(sdo) == stanza_features
 
 
 def test_get_line_features(line_features):

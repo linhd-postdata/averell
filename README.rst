@@ -36,7 +36,7 @@ Each corpus in the catalog must specify the parser to produce the expected data 
 * Free software: Apache Software License 2.0
 
 
-Available corpora (version 1.0.4)
+Available corpora (version 1.1.0)
 =================================
 
 ====  ===================  ======  ======  ======  =======  =============  ===========

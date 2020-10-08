@@ -287,7 +287,7 @@
                 "stanza_text": "Tant'è amara che poco è più morte;\nma per trattar del ben ch'i' vi trovai,\ndirò de l'altre cose ch'i' v'ho scorte."
             }
         ],
-        "name": "bibit"
+        "corpus": "bibit"
     },
     {
         "poem_title": "Poesie - 8",
@@ -465,6 +465,6 @@
                 "stanza_text": "né di trovare alla fonte del moro\nPirramo Tisbe el diputato giorno,\ncom'io di veder te, signor decoro,"
             }
         ],
-        "name": "bibit"
+        "corpus": "bibit"
     }
 ]

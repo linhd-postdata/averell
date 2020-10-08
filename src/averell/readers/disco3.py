@@ -19,7 +19,7 @@ def parse_xml(xml_file):
     """
     tree = ETree.parse(xml_file)
     root = tree.getroot()
-    name = xml_file.parts[-6]
+    corpus_name = xml_file.parts[-6]
     poem = {}
     stanza_list = []
 
@@ -33,7 +33,7 @@ def parse_xml(xml_file):
         "manually_checked": manually_checked,
         "poem_title": title,
         "author": author,
-        "name": name,
+        "corpus": corpus_name,
     })
     if alt_title is not None:
         alt_title = re.sub(r"[\n ]+", " ", "".join(alt_title.itertext()))

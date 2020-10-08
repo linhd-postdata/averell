@@ -115,7 +115,7 @@ def get_stanza_features(poem_features):
     """
     manually_checked = poem_features['manually_checked']
     author = poem_features['author']
-    name = poem_features['name']
+    corpus_name = poem_features['corpus']
     stanza_list = []
     for stanza_index, key in enumerate(poem_features["stanzas"]):
         stanza_features = poem_features['stanzas'][stanza_index]
@@ -126,7 +126,7 @@ def get_stanza_features(poem_features):
             'author': author,
             'stanza_text': stanza_features['stanza_text'],
             'stanza_type': stanza_features['stanza_type'],
-            'name': name,
+            'corpus': corpus_name,
         }
         stanza_list.append(dic_final)
     return stanza_list

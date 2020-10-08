@@ -16,7 +16,7 @@ def parse_xml(xml_file):
     """
     poem = {}
     tree = etree.parse(str(xml_file))
-    name = xml_file.parts[-4]
+    corpus_name = xml_file.parts[-4]
     root = tree.getroot()
     nsmap = root.nsmap
     tei_url = NS.replace("{", "").replace("}", "")
@@ -80,7 +80,7 @@ def parse_xml(xml_file):
     poem.update({
         "manually_checked": manually_checked,
         "stanzas": stanza_list,
-        "name": name,
+        "corpus": corpus_name,
     })
     return poem
 

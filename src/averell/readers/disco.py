@@ -16,7 +16,7 @@ def parse_xml(xml_file):
     """
     tree = ETree.parse(xml_file)
     root = tree.getroot()
-    name = xml_file.parts[-6]
+    corpus_name = xml_file.parts[-6]
     poem = {}
     stanza_list = []
 
@@ -32,7 +32,7 @@ def parse_xml(xml_file):
         "poem_title": title,
         "author": author,
         "poem_alt_title": alt_title,
-        "name": name,
+        "corpus": corpus_name,
     })
     for stanza_number, line_group in enumerate(line_group_list):
         line_list = []
