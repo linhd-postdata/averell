@@ -23,12 +23,14 @@ def parse_xml(xml_file):
     author = root.find(f".//{NS}author").text
     line_group_list = root.findall(f".//*{NS}lg")
     manually_checked = 'manual' in analysis_description
-    if title is not None:
-        poem.update({"poem_title": title})
-    else:
-        poem.update(
-            {"poem_title": os.path.splitext(os.path.basename(xml_file))[0]})
+    if title is None:
+        title = os.path.splitext(os.path.basename(xml_file))[0]
+    corpus_name = xml_file.parts[-4]
+    if "adso100" in str(xml_file):
+        corpus_name = xml_file.parts[-3]
     poem.update({
+        "poem_title": title,
+        "corpus": corpus_name,
         "manually_checked": manually_checked,
         "author": author
     })
@@ -64,6 +66,6 @@ def get_features(path):
     """
     feature_list = []
     for filename in path.rglob('*.xml'):
-        result = parse_xml(str(filename))
+        result = parse_xml(filename)
         feature_list.append(result)
     return feature_list

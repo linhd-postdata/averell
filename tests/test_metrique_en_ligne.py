@@ -7,6 +7,8 @@ from averell.readers.metriqueenligne import get_features
 from averell.readers.metriqueenligne import parse_json
 from tests.test_utils import TESTS_DIR
 
+MEL_PATH = TESTS_DIR / "fixtures" / "mel"
+
 
 @pytest.fixture
 def metriqueenligne():
@@ -15,13 +17,13 @@ def metriqueenligne():
 
 
 def test_parse_json(metriqueenligne):
-    path = TESTS_DIR / "fixtures" / "input_metrique_en_ligne.json"
+    path = (MEL_PATH / "metrique-en-ligne-master" /
+            "input_metrique_en_ligne.json")
     result = parse_json(path)
     assert list(result) == metriqueenligne
 
 
-@patch('averell.readers.metriqueenligne.parse_json')
+@patch('averell.readers.metriqueenligne.parse_json', return_value={})
 def test_get_features(mock_parse_json):
-    path = TESTS_DIR / "fixtures" / "test"
-    mock_parse_json.return_value = {}
-    assert [] == get_features(path)
+    assert [] == get_features(MEL_PATH)
+    assert mock_parse_json.called

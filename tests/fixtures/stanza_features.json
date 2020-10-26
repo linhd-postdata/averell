@@ -5,7 +5,8 @@
         "poem_title": "-XX-",
         "author": "Garcilaso de La Vega",
         "stanza_text": "Con tal fuerza y vigor son concertados\npara mi perdición los duros vientos,\nque cortaron mis tiernos pensamientos\nluego que sobre mí fueron mostrados.",
-        "stanza_type": "cuarteto"
+        "stanza_type": "cuarteto",
+        "corpus": "adso"
     },
     {
         "stanza_number": 2,
@@ -13,6 +14,7 @@
         "poem_title": "-XX-",
         "author": "Garcilaso de La Vega",
         "stanza_text": "El mal es que me quedan los cuidados\nen salvo de estos acontecimientos,\nque son duros, y tienen fundamentos",
-        "stanza_type": "terceto"
+        "stanza_type": "terceto",
+        "corpus": "adso"
     }
 ]

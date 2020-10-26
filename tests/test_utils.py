@@ -16,6 +16,7 @@ from averell.utils import get_syllable_features
 from averell.utils import get_word_features
 from averell.utils import pretty_string
 from averell.utils import read_features
+from averell.utils import write_json
 
 _corpora_sources = [
     {'name': 'testing',
@@ -113,9 +114,8 @@ def test_download_corpora():
     assert True
 
 
-def test_get_stanza_features(stanza_features):
-    features = json.loads((FIXTURES_DIR / "sdo.json").read_text())
-    assert get_stanza_features(features) == stanza_features
+def test_get_stanza_features(stanza_features, sdo):
+    assert get_stanza_features(sdo) == stanza_features
 
 
 def test_get_line_features(line_features):
@@ -161,25 +161,16 @@ def test_filter_features_granularity_syllable(plsdo, syllable_features):
 
 
 @pytest.fixture
-def corpus_line():
-    return json.loads((FIXTURES_DIR / "corpus_line.json").read_text())
-
-
-@pytest.fixture
-def corpus_features():
-    return json.loads((FIXTURES_DIR / "corpus_features.json").read_text())
-
-
-def test_filter_corpus_features(corpus_line, corpus_features):
-    granularity = "line"
-    features = corpus_features
-    output = filter_corpus_features(features, 2, granularity)
-    assert output == corpus_line
-
-
-@pytest.fixture
 def corpora_features():
     return json.loads((FIXTURES_DIR / "corpora_features.json").read_text())
+
+
+@patch("averell.utils.filter_features", return_value=[])
+def test_filter_corpus_features(mock_filter, corpora_features):
+    granularity = "line"
+    output = filter_corpus_features(corpora_features, 1, granularity)
+    assert output == []
+    assert mock_filter.called
 
 
 def test_read_features(corpora_features):
@@ -197,3 +188,11 @@ def test_get_ids():
     assert get_ids(["all"]) == [0, 1]
     assert get_ids(["1", "t2"]) == [0, 1]
     assert get_ids(["es"]) == [0]
+
+
+@patch("builtins.open")
+@patch("json.dump", return_value=True)
+def test_write_json(mock_open, mock_dump, sdo):
+    write_json(sdo, "sdo.json")
+    assert mock_open.called
+    assert mock_dump.called

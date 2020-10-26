@@ -11,6 +11,7 @@ def parse_json(json_file):
     :rtype: dict
     """
     corpus = json.loads(json_file.read_text())
+    corpus_name = json_file.parts[-3]
     for work in corpus:
         poem = {}
         title = work["title"]
@@ -47,7 +48,8 @@ def parse_json(json_file):
             "structure": structure,
             "year": year,
             "manually_checked": manually_checked,
-            "stanzas": stanza_list
+            "stanzas": stanza_list,
+            "corpus": corpus_name,
         })
         yield poem
 

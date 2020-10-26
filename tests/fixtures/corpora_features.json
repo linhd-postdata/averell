@@ -102,7 +102,8 @@
                 ],
                 "stanza_text": "Como árbitro absoluto de sus lides,\n¿de dónde? de qué tu valor te abona\npor Maza fuerte del invicto Alcides."
             }
-        ]
+        ],
+        "corpus": "disco3"
     },
 	{
         "poem_title": "De La elección por la virtud ",
@@ -207,7 +208,8 @@
                 ],
                 "stanza_text": "Cantad, amigos, la firmeza mía;\nque es la música imagen de la gloria,\ny mientras dura, mi tormento olvido."
             }
-        ]
+        ],
+        "corpus": "disco3"
     },
     {
         "poem_title": "De La villana de la Sagra ",
@@ -312,7 +314,7 @@
                 ],
                 "stanza_text": "Adiós juegos, amores, travesura;\nque aunque mozo, desde hoy he de ser viejo,\nsi me ayudan el tiempo y la ventura."
             }
-        ]
+        ],
+        "corpus": "disco3"
     }
-    
 ]

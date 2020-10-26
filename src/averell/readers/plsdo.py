@@ -23,8 +23,9 @@ def parse_xml(xml_file):
     """
     custom_xmlparser = ETree.XMLParser(target=CommentedTreeBuilder())
     poem = {}
-    tree = ETree.parse(xml_file, parser=custom_xmlparser)
+    tree = ETree.parse(str(xml_file), parser=custom_xmlparser)
     root = tree.getroot()
+    corpus_name = xml_file.parts[-4]
     stanza_list = []
     analysis_description = "".join(
         root.find(f".//*{NS}metDecl/{NS}p").itertext())
@@ -75,7 +76,8 @@ def parse_xml(xml_file):
         "poem_title": title,
         "author": author,
         "manually_checked": manually_checked,
-        "stanzas": stanza_list
+        "stanzas": stanza_list,
+        "corpus": corpus_name,
     })
     return poem
 
@@ -88,6 +90,6 @@ def get_features(path):
     """
     feature_list = []
     for filename in path.rglob('*.xml'):
-        result = parse_xml(str(filename))
+        result = parse_xml(filename)
         feature_list.append(result)
     return feature_list
