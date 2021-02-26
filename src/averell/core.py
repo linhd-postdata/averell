@@ -65,6 +65,7 @@ def export_corpora(
     """
     corpora_features = []
     slugs = []
+    export_filename = filename
     if Path(corpora_folder).exists() or not no_download:
         if not corpus_ids:
             logging.error("No CORPUS ID selected")
@@ -101,13 +102,13 @@ def export_corpora(
                         corpora_features.extend(filtered_features)
             else:
                 logging.error("No GRANULARITY selected")
+
+        if not export_filename:
+            export_filename = "_".join(slugs)
+            export_filename = f"{export_filename}_{granularity}s"
+
         if corpora_features:
-            if filename:
-                export_filename = filename
-            else:
-                export_filename = "_".join(slugs)
-                export_filename = f"{export_filename}_{granularity}s"
             write_json(corpora_features, export_filename)
     else:
         logging.error("Corpora folder not found")
-    return corpora_features
+    return corpora_features, export_filename
