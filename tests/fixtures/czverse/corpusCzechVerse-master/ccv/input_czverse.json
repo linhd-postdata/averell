@@ -1,0 +1,119 @@
+[
+  {
+    "p_author": {
+      "identity": "Albert, Eduard"
+    },
+    "biblio": {
+      "p_title": "JAROSLAVU VRCHLICK\u00c9MU",
+      "year": "1900"
+    },
+    "book_id": "0001",
+    "poem_id": "0001-0000-0000-0001-0000",
+    "body": [
+      [
+        {
+          "text": "Tv\u00e1 lo\u010f jde po vysok\u00e9m mo\u0159i,",
+          "words": [
+            {
+              "token": "Tv\u00e1"
+            },
+            {
+              "token": "lo\u010f"
+            },
+            {
+              "token": "jde"
+            },
+            {
+              "token": "po"
+            },
+            {
+              "token": "vysok\u00e9m"
+            },
+            {
+              "token": "mo\u0159i"
+            }
+          ],
+          "rhyme": 1,
+          "stress": "011100010"
+        },
+        {
+          "text": "v n\u011b br\u00e1zdu jako st\u0159\u00edbro reje,",
+          "words": [
+            {
+              "token": "v"
+            },
+            {
+              "token": "n\u011b"
+            },
+            {
+              "token": "br\u00e1zdu"
+            },
+            {
+              "token": "jako"
+            },
+            {
+              "token": "st\u0159\u00edbro"
+            },
+            {
+              "token": "reje"
+            }
+          ],
+          "rhyme": 2,
+          "stress": "010101010"
+        }
+      ],
+      [
+        {
+          "text": "Tv\u00e1 lana svi\u0161t\u00ed, plachty dun\u00ed",
+          "words": [
+            {
+              "token": "Tv\u00e1"
+            },
+            {
+              "token": "lana"
+            },
+            {
+              "token": "svi\u0161t\u00ed"
+            },
+            {
+              "token": "plachty"
+            },
+            {
+              "token": "dun\u00ed"
+            }
+          ],
+          "rhyme": 3,
+          "stress": "010101010"
+        },
+        {
+          "text": "a t\u0159epe vlajka. V no\u010dn\u00ed chv\u00edli",
+          "words": [
+            {
+              "token": "a"
+            },
+            {
+              "token": "t\u0159epe"
+            },
+            {
+              "token": "vlajka"
+            },
+            {
+              "token": "V"
+            },
+            {
+              "token": "no\u010dn\u00ed"
+            },
+            {
+              "token": "chv\u00edli"
+            }
+          ],
+          "rhyme": 4,
+          "stress": "010101010"
+        }
+      ]
+    ],
+    "results": {
+      "poem": null
+    }
+  }
+]
