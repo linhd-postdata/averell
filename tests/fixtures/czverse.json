@@ -1,0 +1,130 @@
+[
+    {
+        "poem_title": "JAROSLAVU VRCHLICKÉMU",
+        "author": "Albert, Eduard",
+        "manually_checked": true,
+        "stanzas": [
+            {
+                "stanza_number": 1,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 1,
+                        "line_text": "Tvá loď jde po vysokém moři,",
+                        "metrical_pattern": "011100010",
+                        "line_length": 9,
+                        "rhyme": 1,
+                        "words": [
+                            {
+                                "word_text": "Tvá"
+                            },
+                            {
+                                "word_text": "loď"
+                            },
+                            {
+                                "word_text": "jde"
+                            },
+                            {
+                                "word_text": "po"
+                            },
+                            {
+                                "word_text": "vysokém"
+                            },
+                            {
+                                "word_text": "moři"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 2,
+                        "line_text": "v ně brázdu jako stříbro reje,",
+                        "metrical_pattern": "010101010",
+                        "line_length": 9,
+                        "rhyme": 2,
+                        "words": [
+                            {
+                                "word_text": "v"
+                            },
+                            {
+                                "word_text": "ně"
+                            },
+                            {
+                                "word_text": "brázdu"
+                            },
+                            {
+                                "word_text": "jako"
+                            },
+                            {
+                                "word_text": "stříbro"
+                            },
+                            {
+                                "word_text": "reje"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Tvá loď jde po vysokém moři,\nv ně brázdu jako stříbro reje,"
+            },
+            {
+                "stanza_number": 2,
+                "stanza_type": null,
+                "lines": [
+                    {
+                        "line_number": 3,
+                        "line_text": "Tvá lana sviští, plachty duní",
+                        "metrical_pattern": "010101010",
+                        "line_length": 9,
+                        "rhyme": 3,
+                        "words": [
+                            {
+                                "word_text": "Tvá"
+                            },
+                            {
+                                "word_text": "lana"
+                            },
+                            {
+                                "word_text": "sviští"
+                            },
+                            {
+                                "word_text": "plachty"
+                            },
+                            {
+                                "word_text": "duní"
+                            }
+                        ]
+                    },
+                    {
+                        "line_number": 4,
+                        "line_text": "a třepe vlajka. V noční chvíli",
+                        "metrical_pattern": "010101010",
+                        "line_length": 9,
+                        "rhyme": 4,
+                        "words": [
+                            {
+                                "word_text": "a"
+                            },
+                            {
+                                "word_text": "třepe"
+                            },
+                            {
+                                "word_text": "vlajka"
+                            },
+                            {
+                                "word_text": "V"
+                            },
+                            {
+                                "word_text": "noční"
+                            },
+                            {
+                                "word_text": "chvíli"
+                            }
+                        ]
+                    }
+                ],
+                "stanza_text": "Tvá lana sviští, plachty duní\na třepe vlajka. V noční chvíli"
+            }
+        ],
+        "corpus": "czverse",
+        "year": "1900"
+    }
+]

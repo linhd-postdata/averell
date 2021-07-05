@@ -39,39 +39,42 @@ Each corpus in the catalog must specify the parser to produce the expected data 
 Available corpora (version 1.1.0)
 =================================
 
-====  ===================  ======  ======  ======  =======  =============  ===========
-  id  name                 lang    size      docs    words  granularity    license
-====  ===================  ======  ======  ======  =======  =============  ===========
-   1  Disco V2.1           es      22M       4088   381539  stanza         CC-BY
-      (disco2_1)                                            line
-   2  Disco V3             es      28M       4080   377978  stanza         CC-BY
-      (disco3)                                              line
-   3  Sonetos Siglo        es      6.8M      5078   466012  stanza         CC-BY-NC
-      de Oro                                                line           4.0
+====  ===================  ======  ======  ======  ========  =============  ===========
+  id  name                 lang    size      docs     words  granularity    license
+====  ===================  ======  ======  ======  ========  =============  ===========
+   1  Disco V2.1           es      22M       4088    381539  stanza         CC-BY
+      (disco2_1)                                             line
+   2  Disco V3             es      28M       4080    377978  stanza         CC-BY
+      (disco3)                                               line
+   3  Sonetos Siglo        es      6.8M      5078    466012  stanza         CC-BY-NC
+      de Oro                                                 line           4.0
       (adso)
-   4  ADSO 100             es      128K       100     9208  stanza         CC-BY-NC
-      poems corpus                                          line           4.0
+   4  ADSO 100             es      128K       100      9208  stanza         CC-BY-NC
+      poems corpus                                           line           4.0
       (adso100)
-   5  Poesía Lírica        es      3.8M       475   299402  stanza         CC-BY-NC
-      Castellana Siglo                                      line           4.0
-      de Oro                                                word
-      (plc)                                                 syllable
-   6  Gongocorpus (gongo)  es      9.2M       481    99079  stanza         CC-BY-NC-ND
-                                                            line           3.0
-                                                            word           FR
-                                                            syllable
-   7  Eighteenth Century   en      2400M     3084  2063668  stanza         CC
-      Poetry Archive                                        line           BY-SA
-      (ecpa)                                                word           4.0
-   8  For Better           en      39.5M      103    41749  stanza         Unknown
-      For Verse                                             line
+   5  Poesía Lírica        es      3.8M       475    299402  stanza         CC-BY-NC
+      Castellana Siglo                                       line           4.0
+      de Oro                                                 word
+      (plc)                                                  syllable
+   6  Gongocorpus (gongo)  es      9.2M       481     99079  stanza         CC-BY-NC-ND
+                                                             line           3.0
+                                                             word           FR
+                                                             syllable
+   7  Eighteenth Century   en      2400M     3084   2063668  stanza         CC
+      Poetry Archive                                         line           BY-SA
+      (ecpa)                                                 word           4.0
+   8  For Better           en      39.5M      103     41749  stanza         Unknown
+      For Verse                                              line
       (4b4v)
-   9  Métrique en          fr      183M      5081  1850222  stanza         Unknown
-      Ligne (mel)                                           line
-  10  Biblioteca Italiana  it      242M     25341  7121246  stanza         Unknown
-      (bibit)                                               line
-                                                            word
-====  ===================  ======  ======  ======  =======  =============  ===========
+   9  Métrique en          fr      183M      5081   1850222  stanza         Unknown
+      Ligne (mel)                                            line
+  10  Biblioteca Italiana  it      242M     25341   7121246  stanza         Unknown
+      (bibit)                                                line
+                                                             word
+  11  Corpus of            cs      4100M    66428  12636867  stanza         CC-BY-SA
+      Czech Verse                                            line
+      (czverse)                                              word
+====  ===================  ======  ======  ======  ========  =============  ===========
 
 
 Documentation

@@ -134,3 +134,17 @@
         - stanza
         - line
         - word
+- name: Corpus of Czech Verse
+  properties:
+    slug: czverse
+    license: CC-BY-SA
+    language: cs
+    reader: averell.readers.czechverse
+    url: https://github.com/versotym/corpusCzechVerse/archive/refs/heads/master.zip
+    size: 4100M
+    doc_quantity: 66428
+    word_quantity: 12636867
+    granularity:
+        - stanza
+        - line
+        - word
