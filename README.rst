@@ -74,7 +74,7 @@ Available corpora (version 1.1.0)
   11  Corpus of            cs      4100M    66428  12636867  stanza         CC-BY-SA
       Czech Verse                                            line
       (czverse)                                              word
-  12  Stichotheque         pt      11,8M     1702    168411  stanza         Unkwown
+  12  Stichotheque         pt      11.8M     1702    168411  stanza         Unkwown
       (stichopt)                                             line
 ====  ===================  ======  ======  ======  ========  =============  ===========
 
