@@ -155,7 +155,7 @@
     language: pt
     reader: averell.readers.stichotheque
     url: https://gitlab.com/stichotheque/stichotheque-pt/-/archive/master/stichotheque-pt-master.zip
-    size: 11,8M
+    size: 11.8M
     doc_quantity: 1702
     word_quantity: 168411
     granularity:

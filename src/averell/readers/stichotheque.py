@@ -41,8 +41,9 @@ def parse_xml(xml_file):
                 if choice is not None:
                     # keep only the original text
                     choice.remove(choice.find(f"{NS}seg"))
-                if line.get(f"{AOIDOS_NS}meter") is not None:
-                    meter = line.get(f"{AOIDOS_NS}meter")
+                line_meter = line.get(f"{AOIDOS_NS}meter")
+                if line_meter is not None and line_meter != "ignore":
+                    meter = line_meter
                 else:
                     meter = poem.get(f"{AOIDOS_NS}meter")
                 line_text = "".join(line.itertext()).strip()

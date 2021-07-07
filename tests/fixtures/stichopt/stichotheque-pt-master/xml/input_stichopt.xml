@@ -42,7 +42,7 @@
         <lg>
           <pb n="39" edRef="#archive"/>
           <l>Era alta noute, e as beiras dos telhados</l>
-          <l>Pingando mansamente convidavam</l>
+          <l aoidos:meter="ignore">Pingando mansamente convidavam</l>
         </lg>
         <lg>
           <l aoidos:meter="10">Mal a porta emboquei, dentro em mim sinto</l>
