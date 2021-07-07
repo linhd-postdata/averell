@@ -1,0 +1,86 @@
+[
+    {
+        "poem_title": "A EMPRESA NOTURNA",
+        "corpus": "stichopt",
+        "manually_checked": false,
+        "author": "Bocage",
+        "stanzas": [
+            {
+                "stanza_type": null,
+                "stanza_number": 1,
+                "lines": [
+                    {
+                        "line_number": 1,
+                        "line_text": "Era alta noute, e as beiras dos telhados",
+                        "line_length": null
+                    },
+                    {
+                        "line_number": 2,
+                        "line_text": "Pingando mansamente convidavam",
+                        "line_length": null
+                    }
+                ],
+                "stanza_text": "Era alta noute, e as beiras dos telhados\nPingando mansamente convidavam"
+            },
+            {
+                "stanza_type": null,
+                "stanza_number": 2,
+                "lines": [
+                    {
+                        "line_number": 3,
+                        "line_text": "Mal a porta emboquei, dentro em mim sinto",
+                        "line_length": "10"
+                    },
+                    {
+                        "line_number": 4,
+                        "line_text": "Um fogo ativo, que me abrasa todo.",
+                        "line_length": null
+                    }
+                ],
+                "stanza_text": "Mal a porta emboquei, dentro em mim sinto\nUm fogo ativo, que me abrasa todo."
+            }
+        ]
+    },
+    {
+        "poem_title": "Poesias Eróticas, Burlescas e Satíricas-1",
+        "corpus": "stichopt",
+        "manually_checked": false,
+        "author": "Bocage",
+        "stanzas": [
+            {
+                "stanza_type": null,
+                "stanza_number": 1,
+                "lines": [
+                    {
+                        "line_number": 1,
+                        "line_text": "Gênio só dado a sórdidas torpezas,",
+                        "line_length": "10"
+                    },
+                    {
+                        "line_number": 2,
+                        "line_text": "Que usas comprar na imunda Cotovia",
+                        "line_length": "10"
+                    }
+                ],
+                "stanza_text": "Gênio só dado a sórdidas torpezas,\nQue usas comprar na imunda Cotovia"
+            },
+            {
+                "stanza_type": null,
+                "stanza_number": 2,
+                "lines": [
+                    {
+                        "line_number": 3,
+                        "line_text": "Solto o cabelo, as carnes arrepia",
+                        "line_length": "10"
+                    },
+                    {
+                        "line_number": 4,
+                        "line_text": "Na morte d’esta ilustre recoveira,",
+                        "line_length": "10"
+                    }
+                ],
+                "stanza_text": "Solto o cabelo, as carnes arrepia\nNa morte d’esta ilustre recoveira,"
+            }
+        ]
+    }
+]

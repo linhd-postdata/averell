@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:aoidos="https://aoidos.ufsc.br/ns/1.0" xmlns:st="https://gitlab.com/stichotheque/ns/1.0">
+  <teiHeader>
+    <fileDesc st:status="C">
+      <titleStmt>
+        <title>Poesias Eróticas, Burlescas e Satíricas</title>
+        <title type="short">Poesias Eróticas</title>
+        <author>Bocage</author>
+      </titleStmt>
+      <publicationStmt>
+        <distributor>Stichotheque</distributor>
+        <availability status="free">
+          <p>Domínio público.</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note resp="#SM">Samanta usou o texto do <ref target="#gutenberg">projeto Gutenberg</ref>.  A edição do Gutenberg está com ortografia obsoleta, que foi atualizada, mas ainda faltam algumas correções a serem feitas (por exemplo, “cara” em vez de “chara”).</note>
+        <note resp="#AM">Adiel deixou somente os poemas e removeu o restante do material.  Conferências foram feitas com uma <ref target="#archive">edição de 1860</ref>.  Os números de página nos elementos &lt;milestone&gt; se referem às páginas virtuais do arquivo PDF da edição de 1860.</note>
+      </notesStmt>
+      <sourceDesc>
+        <bibl xml:id="gutenberg">
+          <title>POESIAS EROTICAS, BURLESCAS, E SATYRICAS</title>
+          <author>M. M. DE BARBOSA DU BOCAGE</author>
+          <date>2019-01-13</date>
+          <ref target="http://www.gutenberg.org/ebooks/58689"/>
+        </bibl>
+        <bibl xml:id="archive">
+          <title>POESIAS EROTICAS, BURLESCAS, E SATYRICAS</title>
+          <author>M. M. DE BARBOSA DU BOCAGE</author>
+          <date>1860</date>
+          <pubPlace>BRUXELLAS</pubPlace>
+          <ref target="https://archive.org/details/poesiaseroticas00bocauoft"/>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text xml:lang="pt" aoidos:poet="Bocage" st:duplicates="ok">
+    <body>
+      <div type="poem" aoidos:unit="y">
+        <milestone edRef="#archive" n="29" unit="page"/>
+        <head>A EMPRESA NOTURNA</head>
+        <lg>
+          <pb n="39" edRef="#archive"/>
+          <l>Era alta noute, e as beiras dos telhados</l>
+          <l aoidos:meter="ignore">Pingando mansamente convidavam</l>
+        </lg>
+        <lg>
+          <l aoidos:meter="10">Mal a porta emboquei, dentro em mim sinto</l>
+          <l>Um fogo ativo, que me abrasa todo.</l>
+        </lg>
+      </div>
+      <div type="poem" aoidos:unit="y" aoidos:meter="10">
+        <milestone edRef="#archive" n="172" unit="page"/>
+        <lg>
+          <pb n="186" edRef="#archive"/>
+          <l>Gênio só dado a sórdidas torpezas,</l>
+          <l>Que usas comprar na imunda Cotovia</l>
+        </lg>
+        <lg>
+          <l>Solto o cabelo, as carnes arrepia</l>
+          <l>Na morte d’esta <choice><orig>ilustre</orig><seg>ilústre</seg></choice> recoveira,</l>
+        </lg>
+      </div>
+      <div type="pepe" aoidos:unit="y">
+      </div>
+      <div type="poem" aoidos:unit="children">
+      </div>
+    </body>
+  </text>
+</TEI>
