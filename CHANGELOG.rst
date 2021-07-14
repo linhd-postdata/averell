@@ -3,6 +3,18 @@ Changelog
 =========
 
 
+1.2.1 (2021-07-14)
+------------------
+
+* Added two new readers:
+    * `Stichotheque Portuguese corpus <https://gitlab.com/stichotheque/stichotheque-pt>`_ 
+    * `Corpus of Czech Verse <https://github.com/versotym/corpusCzechVerse/>`_
+* `export_filename` is also returned as an output of `export_corpora`
+* Fix writing function so as not to duplicate information
+* Change `name` key to `corpus` for clarity
+* Fix path split on Windows systems
+* Add corpus name to averell output files
+
 1.1.0 (2020-09-18)
 ------------------
 
