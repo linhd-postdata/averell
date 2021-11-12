@@ -1,0 +1,20 @@
+{
+    "upload_type": "software", 
+    "creators": [
+        {   
+            "orcid": "0000-0002-2095-4827",
+            "name": "Díaz Medina, Aitor"
+        },
+        {   
+            "orcid": "0000-0001-5897-1246",
+            "name": "Pérez Pozo, Álvaro"
+        },
+        {   
+            "orcid": "0000-0002-9143-5573",
+            "name": "de la Rosa, Javier"
+        }
+    ],    
+    "license": "Apache-2.0",
+    "title": "Averell: a management tool to transform poetic corpora in JSON POSTDATA ontology compliant.",
+    "grants": [{"id":"679528"}]
+}
