@@ -15,6 +15,6 @@
         }
     ],    
     "license": "Apache-2.0",
-    "title": "Averell: a management tool to transform poetic corpora in JSON POSTDATA ontology compliant.",
+    "title": "Averell: A corpus management tool to transform poetic corpora into a JSON format compliant with the POSTDATA ontology.",
     "grants": [{"id":"679528"}]
 }
