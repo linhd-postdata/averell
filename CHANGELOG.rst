@@ -2,12 +2,21 @@
 Changelog
 =========
 
+1.2.3 (2021-11-13)
+------------------
+
+* Enhanced documentation
+
+1.2.2 (2021-11-13)
+------------------
+
+* Added metadata for Zenodo
 
 1.2.1 (2021-07-14)
 ------------------
 
 * Added two new readers:
-    * `Stichotheque Portuguese corpus <https://gitlab.com/stichotheque/stichotheque-pt>`_ 
+    * `Stichotheque Portuguese corpus <https://gitlab.com/stichotheque/stichotheque-pt>`_
     * `Corpus of Czech Verse <https://github.com/versotym/corpusCzechVerse/>`_
 * `export_filename` is also returned as an output of `export_corpora`
 * Fix writing function so as not to duplicate information
