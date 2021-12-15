@@ -101,4 +101,7 @@ you through the process.
 .. _Python installation guide: http://docs.python-guide.org/en/latest/starting/installation/
 
 
-.. include:: ../USAGE.rst
+Usage
+=====
+
+Check `usage page <https://averell.readthedocs.io/en/latest/usage.html>`_
