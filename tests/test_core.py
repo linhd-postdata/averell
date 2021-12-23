@@ -5,6 +5,7 @@ from unittest import mock
 
 import pytest
 
+from averell.core import create_corpus
 from averell.core import export_corpora
 from averell.core import get_corpora
 
@@ -69,3 +70,19 @@ def test_export_corpora_granularity_not_in_list(mock_download, caplog):
 
 def test_export_corpora_filename(caplog):
     assert "foo" == export_corpora([], "line", FIXTURES_DIR, "foo")[1]
+
+
+def test_create_corpus_index_not_in_range(caplog):
+    message = "No CORPUS selected"
+    with pytest.raises(SystemExit) as pytest_wrapped_e:
+        create_corpus([500000])
+    assert message in caplog.text
+    assert pytest_wrapped_e.type == SystemExit
+
+
+def test_create_corpus_fileformat_not_in_range(caplog):
+    message = "File format not supported"
+    with pytest.raises(SystemExit) as pytest_wrapped_e:
+        create_corpus([5], fileformat="foo")
+    assert message in caplog.text
+    assert pytest_wrapped_e.type == SystemExit

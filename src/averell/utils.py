@@ -1,3 +1,4 @@
+import importlib
 import json
 import logging
 import os
@@ -6,6 +7,7 @@ from pathlib import Path
 from zipfile import ZipFile
 
 import yaml
+from slugify import slugify
 from tqdm import tqdm
 
 BASE_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
@@ -344,6 +346,63 @@ def get_ids(values):
             props = corpus_info["properties"]
             if (str(corpus_id) in values
                     or props["slug"] in values
-                    or props["language"] in values):
+                    or props["language"] in values
+                    or corpus_id in values):
                 ids.append(index)
     return ids
+
+
+def get_corpus_names(values):
+    """Transform numeric index into their corresponding corpus name
+    as per the order in CORPORA_SOURCES.
+
+    :param values: List of indices for CORPORA_SOURCES
+    :type values: list of int
+    :return: List of names in CORPORA_SOURCES
+    :rtype: list of str
+    """
+    names = [CORPORA_SOURCES[index]["name"] for index in values]
+    return names
+
+
+def get_corpora_features(corpus_indices, corpora_folder):
+    """Parse selected corpora from source TEI/JSON to python list of dicts with
+    information for each poem.
+
+    :param corpus_indices: Indices for which corpora will be parsed
+    :type corpus_indices: list of ints
+    :param corpora_folder: Local folder where the corpora are downloaded
+    :type corpora_folder: Path
+    :return: List of dicts for each corpus with information of each poem
+    :rtype: list of lists of dicts
+    """
+    corpora_features = []
+    for index in corpus_indices:
+        folder_name = CORPORA_SOURCES[index]["properties"]['slug']
+        get_features = getattr(importlib.import_module(
+            CORPORA_SOURCES[index]["properties"]["reader"]), "get_features")
+        features = get_features(Path(corpora_folder) / folder_name)
+        corpora_features.append(features)
+    return corpora_features
+
+
+def write_features_by_poem(features, corpora_folder):
+    """Function to write one JSON file for each poem of the corpora.
+    The resulting JSON will be in a folder like
+    `{corpus_folder}/averell/parser/{author}/{poem_title}.json`
+
+    :param features: Dict with all poems information
+    :type features: list of dicts
+    :param corpora_folder: Local folder where the corpora are downloaded
+    :type corpora_folder: Path
+    """
+    for poem in features:
+        # max_length=30 to avoid "too long file name" error
+        author = slugify(poem["author"], max_length=30)
+        corpus = poem["corpus"]
+        gen_path = Path(corpora_folder) / corpus / "averell"
+        author_path = gen_path / "parser" / author
+        if not author_path.exists():
+            os.makedirs(author_path)
+        write_json(poem, str(
+            author_path / slugify(poem["poem_title"], max_length=30)))

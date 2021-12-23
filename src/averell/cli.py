@@ -3,8 +3,10 @@ from pathlib import Path
 import click
 from tabulate import tabulate
 
-from .core import export_corpora
-from .core import get_corpora
+from averell.core import create_corpus
+from averell.core import export_corpora
+from averell.core import get_corpora
+
 from .utils import get_ids
 from .utils import get_main_corpora_info
 
@@ -80,6 +82,44 @@ def list_command(rst):
     click.echo(tabulate(
         table, headers="keys", numalign="right", tablefmt=table_format
     ))
+
+
+@main.command()
+@click.option('--granularity', help='Granularity', default=None)
+@click.option('--corpora-folder', default="./corpora",
+              help='Local folder where the corpora are located')
+@click.option('--filename', default="",
+              help='Result filename')
+@click.option('--fileformat', default="json", help="Format of the result file/s",
+              type=click.Choice(['json', 'rdf'], case_sensitive=False))
+@click.option('--output-type', default="train",
+              type=click.Choice(['standard', 'train']),
+              help='"Standard" for keep structured JSON, '
+                   '"train" for jsonlines like format')
+@click.option('--unique-file', default=False, is_flag=True, type=click.BOOL,
+              help='Export the averell return to unique file, '
+                   'instead of one file per poem of the corpus')
+@click.argument('ids', nargs=-1)
+def create(ids, granularity, corpora_folder, filename, fileformat, output_type,
+           unique_file):
+    """Build a new corpus based on the corpus with IDs into CORPORA_FOLDER with
+    FILEFORMAT file format (rdf | json).
+    If GRANULARITY is provided, this new corpus includes all the information of
+    the poems of the selected corpora at the granularity level selected,
+    otherwise, it includes all available poems information.
+    IDs can be numeric identifiers in the corpora list, corpus shortcodes
+    (shown between parenthesis), the speciall literal "all" to export all
+    corpora, or two-letter ISO language codes to export avaliable corpora in a
+    specific language.
+
+    For example, the command
+    `averell create 1 bibit fr --granularity line --corpora-folder my_corpora --format rdf --filename disco_bibit_fr_lines`
+    will generate a new RDF file compliant with ONTOPOETRY Postdata Ontology
+    containing DISCO V2.1, the Biblioteca Italiana poetry corpus, and all corpora
+    tagged with the French language tag splitting poems line by line.
+    """
+    create_corpus(ids, granularity, corpora_folder, filename, fileformat,
+                  output_type, unique_file)
 
 
 if __name__ == '__main__':

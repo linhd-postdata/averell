@@ -3,6 +3,7 @@ from unittest.mock import patch
 
 from click.testing import CliRunner
 
+from averell.cli import create
 from averell.cli import download
 from averell.cli import export
 from averell.cli import list_command
@@ -65,4 +66,22 @@ def test_list():
     runner = CliRunner()
     result = runner.invoke(list_command, [])
     assert result.output == expected
+    assert result.exit_code == 0
+
+
+def test_create_no_arguments():
+    runner = CliRunner()
+    result = runner.invoke(create, [])
+
+    assert result.exit_code == 1
+
+
+@patch('averell.core.download_corpora')
+def test_create_default(mock_download, caplog):
+    mock_download.return_value = []
+    expected = "Following corpus to be used: ['Poesía Lírica Castellana Siglo de Oro']"
+    runner = CliRunner()
+    result = runner.invoke(create, ["5"])
+    with caplog.at_level(logging.INFO):
+        assert expected in caplog.text
     assert result.exit_code == 0

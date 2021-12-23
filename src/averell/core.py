@@ -1,6 +1,7 @@
 import importlib
 import logging
 import os
+import sys
 from pathlib import Path
 
 from slugify import slugify
@@ -8,7 +9,11 @@ from slugify import slugify
 from .utils import CORPORA_SOURCES
 from .utils import download_corpora
 from .utils import filter_corpus_features
+from .utils import get_corpora_features
+from .utils import get_corpus_names
+from .utils import get_ids
 from .utils import read_features
+from .utils import write_features_by_poem
 from .utils import write_json
 
 DEFAULT_OUTPUT_FOLDER = Path.cwd() / "corpora"
@@ -16,7 +21,12 @@ logging.getLogger().setLevel(logging.INFO)
 
 
 def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
-    """Download and uncompress selected corpora
+    """
+    .. deprecated:: 2.0
+       Use :func:`create_corpus` instead.
+
+    Download, uncompress and parse selected corpora
+
 
     :param corpus_indices: Indices of the corpus that will be downloaded
     :param output_folder: Local folder where the corpus is going to be
@@ -52,6 +62,9 @@ def export_corpora(
     corpus_ids, granularity, corpora_folder, filename, no_download=False
 ):
     """
+    .. deprecated:: 2.0
+       Use :func:`create_corpus` instead.
+
     Generates a single JSON file with the chosen granularity for all of the
         selected corpora
 
@@ -112,3 +125,87 @@ def export_corpora(
     else:
         logging.error("Corpora folder not found")
     return corpora_features, export_filename
+
+
+def create_corpus(corpus_ids, granularity=None,
+                  corpora_folder=DEFAULT_OUTPUT_FOLDER, filename=None,
+                  fileformat="json",
+                  output_type="train", unique_file=True):
+    """This section is intentionally blank
+
+    :param corpus_ids: list
+        IDs of the corpora that will be exported
+    :param granularity: str
+        Level of parsing granularity
+    :param corpora_folder: str
+        Local folder where the corpora is located
+    :param filename: str
+        Name of the output file
+    :param fileformat: str
+        File format of the generated file/s
+    :param output_type: str
+        Structure of the output, jsonl like or structured JSON
+    :param unique_file: bool
+        Whether to generate an unique JSON file with all information or one file
+        poem by poem of the corpora
+    :return:
+        Python dict with all corpora features, splitted with granularity, if
+        provided
+    """
+    slugs = []
+    corpus_indices = get_ids(corpus_ids)
+    if not corpus_indices:
+        logging.error("No CORPUS selected")
+        sys.exit('No CORPUS selected')
+    if fileformat not in {"json", "rdf"}:
+        logging.error("File format not supported.")
+        sys.exit('File format not supported')
+    if granularity is not None:
+        unique_file = True
+
+    logging.info(
+        f"Following corpus to be used: {get_corpus_names(corpus_indices)}")
+    download_corpora(corpus_indices, corpora_folder)
+    corpora_features = get_corpora_features(corpus_indices, corpora_folder)
+    result_features = []
+    for index, corpus_features in enumerate(corpora_features):
+        corpus_id = corpus_indices[index]
+        corpus = CORPORA_SOURCES[corpus_id]
+        if granularity is not None:
+            corpus_name = corpus["name"]
+            granularities_list = corpus["properties"]["granularity"]
+            if granularity not in granularities_list:
+                logging.error(
+                    f"'{granularity}' granularity not found on "
+                    f"'{corpus_name}' properties")
+                continue
+            if output_type == "train":
+                filtered_features = filter_corpus_features(corpus_features,
+                                                           corpus_id,
+                                                           granularity)
+                result_features.extend(filtered_features)
+            elif output_type == "standard":
+                #  TODO: add function to retrieve the granularity with standard structure
+                pass
+        else:
+            result_features.extend(corpus_features)
+        corpus_folder = corpus["properties"]["slug"]
+        slugs.append(corpus_folder)
+
+    if not filename:
+        filename = "_".join(slugs)
+
+    if fileformat == "rdf":
+        if granularity is not None:
+            logging.error(f"File format {fileformat} not supported for granularity.")
+        # TODO: import Horace to write rdf
+        pass
+    elif fileformat == "json":
+        if unique_file:
+            if granularity is not None:
+                filename = f"{filename}_{granularity}s"
+            result_path = Path(corpora_folder) / filename
+            write_json(result_features, str(result_path))
+        else:
+            write_features_by_poem(result_features, corpora_folder)
+    return result_features
