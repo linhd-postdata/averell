@@ -2,6 +2,7 @@ import json
 import logging
 import os
 import urllib.request
+import xml.etree.ElementTree as et
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -16,6 +17,21 @@ DEFAULT_OUTPUT_FOLDER = Path.cwd() / "corpora"
 
 TEI_NAMESPACE = "{http://www.tei-c.org/ns/1.0}"
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
+
+CORPUS_NAMES = {
+    "disco2_1": "Disco V2.1",
+    "disco3": "Disco V3",
+    "adso": "Sonetos Siglo de Oro",
+    "adso100": "ADSO 100 poems corpus",
+    "plc": "Poesía Lírica Castellana Siglo de Oro",
+    "gongo": "Gongocorpus",
+    "ecpa": "Eighteenth Century Poetry Archive",
+    "4b4v": "For Better For Verse",
+    "mel": "Métrique en Ligne",
+    "bibit": "Biblioteca Italiana",
+    "czverse": "Corpus of Czech Verse",
+    "stichopt": "Stichotheque Portuguese",
+}
 
 
 def progress_bar(t):
@@ -347,3 +363,111 @@ def get_ids(values):
                     or props["language"] in values):
                 ids.append(index)
     return ids
+
+def generate_tei(corpora_list, ):
+    filename_list = []
+    for corpus in corpora_list:
+        p = Path('corpora') / corpus / "averell" / "parser"
+        poem_path_list = p.glob("**/*.json")
+        for poem_path in poem_path_list:
+
+            with open(poem_path, "r") as poem_file:
+                poem = json.load(poem_file)
+            file_name = poem_path.stem
+            filename_list.append(file_name)
+            poem_title = poem["poem_title"]
+            author = poem["author"]
+            corpus_name = CORPUS_NAMES[poem["corpus"]]
+            manually_checked = poem["manually_checked"]
+
+            poem_id = f"{author}_{file_name}"
+
+            root = et.Element("TEI")
+            header = et.SubElement(root, "teiHeader")
+
+            file_desc = et.SubElement(header, "fileDesc")
+
+            title_stmt = et.SubElement(file_desc, "titleStmt")
+            title_stmt_desc = et.SubElement(title_stmt, "title")
+            author_stmt_desc = et.SubElement(title_stmt, "author")
+            title_stmt_desc.text = poem_title
+            author_stmt_desc.text = author
+
+            extent = et.SubElement(file_desc, "extent")
+
+            pub_stmt = et.SubElement(file_desc, "publicationStmt")
+            publisher = et.SubElement(pub_stmt, "publisher")
+            publisher.text = "UNED University"
+            idno = et.SubElement(pub_stmt, "idno")
+            idno.text = poem_id
+            availability = et.SubElement(pub_stmt, "availability")
+            availability.attrib["status"] = "free"
+            p = et.SubElement(availability, "p")
+            p.text = "The text is freely available."
+
+            series_stmt = et.SubElement(file_desc, "seriesStmt")
+            title_series = et.SubElement(series_stmt, "title")
+            title_series.text = corpus_name
+
+            source_desc = et.SubElement(file_desc, "sourceDesc")
+            bibl_source = et.SubElement(source_desc, "bibl")
+            bibl_title = et.SubElement(bibl_source, "title")
+            bibl_title.text = title
+            bibl_author = et.SubElement(bibl_source, "author")
+            bibl_author.text = author
+
+            lg_main = et.SubElement(root, "lg")
+            lg_main.attrib["xmlns"] = "http://www.tei-c.org/ns/1.0"
+            lg_main.attrib["type"] = "poem"
+
+            measure_st = et.SubElement(extent, "measure")
+            measure_st.attrib["unit"] = "stanza"
+            measure_st.text = str(len(poem["stanzas"]))
+            n_lines = 0
+
+            for stanza in poem["stanzas"]:
+
+                n_lines += len(stanza["lines"])
+
+                stanza_number = stanza["stanza_number"]
+                stanza_type = stanza.get("stanza_type")
+                lg = et.SubElement(lg_main, "lg")
+                lg.attrib["n"] = str(stanza_number)
+                if stanza_type:
+                    lg.attrib["stanza_type"] = stanza_type
+                for line in stanza["lines"]:
+                    l = et.SubElement(lg, "l")
+                    l.text = line["line_text"]
+                    l.attrib["n"] = str(line["line_number"])
+
+                    metrical_pattern = line.get("metrical_pattern")
+                    rhyme = line.get("rhyme")
+                    line_length = line.get("line_length")
+
+                    if metrical_pattern:
+                        l.attrib["met"] = str(metrical_pattern)
+                    if rhyme:
+                        l.attrib["rhyme"] = str(rhyme)
+                    if line_length:
+                        l.attrib["line_length"] = str(line_length)
+
+            measure_l = et.SubElement(extent, "measure")
+            measure_l.attrib["unit"] = "line"
+            measure_l.text = str(n_lines)
+            tree = et.ElementTree(root)
+
+            # output_path = Path('corpora') / f'{poem["corpus"]}' / 'averell' / 'TEI'
+            output_base_path = Path('corpora') / f'{poem["corpus"]}'
+            output_path = output_base_path / 'TEI'
+
+            # prefix = '{:05d}'.format(filename_list.count(file_name))
+            output_file = f"{poem_id}.xml"
+
+            if not os.path.exists(output_base_path):
+                Path.mkdir(output_base_path)
+            if not os.path.exists(output_path):
+                Path.mkdir(output_path)
+            et.indent(tree, space=" ", level=0)
+
+            tree.write(f"{Path(output_path) / output_file}", encoding="UTF-8",
+                       xml_declaration=True)
