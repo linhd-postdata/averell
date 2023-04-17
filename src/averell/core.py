@@ -188,8 +188,8 @@ def export_corpora_ui(
             export_filename = "_".join(slugs)
             export_filename = f"{export_filename}_{granularity}s"
 
-        if corpora_features:
-            write_json(corpora_features, export_filename)
+        #if corpora_features:
+        #    write_json(corpora_features, export_filename)
     else:
         logging.error("Corpora folder not found")
     return corpora_features, export_filename
