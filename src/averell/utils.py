@@ -365,11 +365,11 @@ def get_ids(values):
     return ids
 
 
-def generate_tei(corpora_list, output_path, ui_enabled=False):
+def generate_tei(corpora_list, output_path, ui_enabled=True):
     filename_list = []
     for corpus in corpora_list:
         if ui_enabled:
-            p = Path(output_path) / "JSON" / corpus
+            p = Path(output_path) / "tmp_corp" / corpus / "averell" / "parser"
         else:
             p = Path(output_path) / corpus / "averell" / "parser"
         poem_path_list = p.glob("**/*.json")
@@ -474,7 +474,7 @@ def generate_tei(corpora_list, output_path, ui_enabled=False):
             if not os.path.exists(output_base_path):
                 Path.mkdir(output_base_path)
             if not os.path.exists(output_extended_path):
-                Path.mkdir(output_extended_path)
+                Path.mkdir(output_extended_path, parents=True)
             et.indent(tree, space=" ", level=0)
             tree.write(f"{Path(output_extended_path) / output_file}",
                        encoding="UTF-8",

@@ -5,3 +5,8 @@ pyyaml>=5
 requests>=2.21.0
 tabulate>=0.8.7
 tqdm>=4.43.0
+
+averell~=1.2.2
+setuptools~=67.7.2
+gradio~=3.27.0
+pycountry~=22.3.5

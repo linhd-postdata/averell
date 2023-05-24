@@ -49,7 +49,8 @@ def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
 
 
 def export_corpora(
-    corpus_ids, granularity, corpora_folder, filename, no_download=False
+    corpus_ids, granularity, corpora_folder, filename, no_download=False,
+    ui_mode=False
 ):
     """
     Generates a single JSON file with the chosen granularity for all of the
@@ -60,6 +61,8 @@ def export_corpora(
     :param corpora_folder: Local folder where the corpora is located
     :param filename: Name of the output file
     :param no_download: Whether to download or not a corpora when missing
+    :param ui_mode: Whether the function is called from the gradio UI
+
     :return: Python dict with the chosen granularity for all of the selected
         corpora
     """
@@ -105,7 +108,6 @@ def export_corpora(
                                                                    corpus_id,
                                                                    granularity)
                         corpora_features.extend(filtered_features)
-                    print(corpora_features)
             else:
                 print("ID not in corpora list")
 
@@ -115,81 +117,9 @@ def export_corpora(
             export_filename = "_".join(slugs)
             export_filename = f"{export_filename}_{granularity}s"
 
-        if corpora_features:
+        if corpora_features and not ui_mode:
             write_json(corpora_features, export_filename)
     else:
         print("Corpora folder not found")
-        logging.error("Corpora folder not found")
-    return corpora_features, export_filename
-
-
-def export_corpora_ui(
-    corpus_ids, granularity, corpora_folder, filename, no_download=False
-):
-    """
-    Generates a single JSON file with the chosen granularity for all of the
-        selected corpora
-
-    :param corpus_ids: IDs of the corpora that will be exported
-    :param granularity: Level of parsing granularity
-    :param corpora_folder: Local folder where the corpora is located
-    :param filename: Name of the output file
-    :param no_download: Whether to download or not a corpora when missing
-    :return: Python dict with the chosen granularity for all of the selected
-        corpora
-    """
-    corpora_features = []
-    slugs = []
-    export_filename = filename
-    if Path(corpora_folder).exists() or not no_download:
-        if not corpus_ids:
-            print("No CORPUS ID selected")
-            logging.error("No CORPUS ID selected")
-        else:
-            if granularity is not None:
-                for corpus_id in corpus_ids:
-                    try:
-                        corpus = CORPORA_SOURCES[corpus_id]
-                    except IndexError:
-                        print("ID not in corpora list")
-                        logging.error("ID not in corpora list")
-                    else:
-                        corpus_folder = corpus["properties"]["slug"]
-                        slugs.append(corpus_folder)
-                        corpus_name = corpus["name"]
-                        if not (Path(corpora_folder) / corpus_folder).exists():
-                            # Si vamos a descargar el corpus
-                            if not no_download:
-                                get_corpora([corpus_id], corpora_folder)
-                            else:
-                                print("Whatever")
-                                logging.error(
-                                    f'"{corpus_name} ({corpus_folder})" not '
-                                    f'found in "{corpora_folder}" folder')
-                                continue
-                        granularities_list = corpus["properties"]["granularity"]
-                        if granularity not in granularities_list:
-                            print("granularity not found")
-
-                            logging.error(
-                                f"'{granularity}' granularity not found on "
-                                f"'{corpus_name}' properties")
-                            continue
-                        features = read_features(
-                            Path(corpora_folder) / corpus_folder)
-                        filtered_features = filter_corpus_features(features,
-                                                                   corpus_id,
-                                                                   granularity)
-                        corpora_features.extend(filtered_features)
-            else:
-                logging.error("No GRANULARITY selected")
-
-        if not export_filename:
-            export_filename = "_".join(slugs)
-            export_filename = f"{export_filename}_{granularity}s"
-
-        #if corpora_features:
-        #    write_json(corpora_features, export_filename)
-    else:
         logging.error("Corpora folder not found")
     return corpora_features, export_filename

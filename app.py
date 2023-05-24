@@ -8,11 +8,11 @@ import gradio as gr
 import pycountry
 
 from averell.utils import get_ids, generate_tei, CORPORA_SOURCES
-from averell.core import export_corpora_ui
+from averell.core import export_corpora
 
 PARAMS = {
     "granularity": "poem",
-    "ouput_format": "JSON",
+    "output_format": "JSON",
     "corpora_list": [
         'bibit', 'stichopt', 'disco2_1',
         'disco3', 'adso', 'adso100',
@@ -22,22 +22,22 @@ PARAMS = {
 }
 
 def get_available_languages(sources):
-    available_languages = []
+    available_langs = []
     for c in sources:
-        lang = c["properties"]["language"]
-        if lang not in available_languages:
-            available_languages.append(lang)
-    return available_languages
+        lg = c["properties"]["language"]
+        if lg not in available_langs:
+            available_langs.append(lg)
+    return available_langs
 
-def filter_corpus_language(sources, lang):
+def filter_corpus_language(sources, lg):
     corpora_sources = copy.deepcopy(sources)
-    filtered_corpora = [c for c in corpora_sources if c["properties"]["language"] == lang]
+    filtered_corpora = [c for c in corpora_sources if c["properties"]["language"] == lg]
     return filtered_corpora
 
 available_languages = get_available_languages(CORPORA_SOURCES)
 
 with gr.Blocks() as app_averell:
-    def export_corpora(output_path, output_format, output_granularity):
+    def export(output_path, output_format, output_granularity):
         corpora_list = PARAMS["corpora_list"]
         if not corpora_list:
             return {out_file: gr.File.update(label="ERROR: No corpus selected")}
@@ -48,75 +48,83 @@ with gr.Blocks() as app_averell:
             generate_tei(corpora_list, output_path, True)
             return {out_file: gr.File.update(value=f"tmp/{output_format}.zip",
                                              label=output_format)}
-        # Expor to JSON
+        # Export to JSON
         if output_granularity == "poem":
+            export_corpora(get_ids(corpora_list),
+                           None,
+                           "tmp/JSON",
+                           None,
+                           no_download=False,
+                           ui_mode=True)
             with ZipFile(filename, "w") as zfile:
-                for corpus in corpora_list:
-                    p = Path(f'{output_path}/{output_format}/{corpus}')
+                for corp in corpora_list:
+                    p = Path(f'{output_path}/{output_format}/{corp}')
                     for f in p.glob("**/*.json"):
                         zfile.write(f)
             return {out_file: gr.File.update(value=f"tmp/{output_format}.zip",
                                              label=output_format)}
         else:
-            json_l, filename = export_corpora_ui(get_ids(corpora_list),
+            json_l, filename = export_corpora(get_ids(corpora_list),
                                                  output_granularity,
-                                                 "tmp/tmp_corp",
+                                                 "tmp/JSON",
                                                  None,
-                                                 False)
+                                                 no_download=False,
+                                                 ui_mode=True)
             with open(f"tmp/{filename}.json", 'w', encoding='utf-8') as f:
                 json.dump(json_l, f, ensure_ascii=False, indent=4)
             return {out_file: gr.File.update(value=f"tmp/{filename}.json",
                                              label=filename)}
 
 
-    def block_granularity(rad_format):
-        if rad_format == "TEI":
-            PARAMS["ouput_format"] = rad_format
+    def block_granularity(r_format):
+        if r_format == "TEI":
+            PARAMS["output_format"] = r_format
             return {rad_granularity: gr.update(value="poem", visible=False)}
         else:
-            PARAMS["ouput_format"] = rad_format
+            PARAMS["output_format"] = r_format
             return {rad_granularity: gr.update(value="poem", visible=True)}
     def update_granularity(value):
         PARAMS["granularity"] = value
         true_l = [gr.Checkbox.update(value=True, visible=True)]
-        false_l = [gr.Checkbox.update(value=False, visible=False)]
+        false_l = [gr.Checkbox.update(value=False, visible=False)] # False
         true_acc = [gr.Box.update(visible=True)]
-        false_acc = [gr.Box.update(visible=False)]
+        false_acc = [gr.Box.update(visible=False)] # False
         if value == "word":
             # 000011100110 + 110110 + 110110
-            corp_list = false_l * 4 + true_l * 3 + false_l * 2 + true_l * 2 + false_l
-            lang_list = true_l * 2 + false_l + true_l * 2 + false_l
-            acc_list = true_acc * 2 + false_acc + true_acc * 2 + false_acc
+            corp_list = false_l*4 + true_l*3 + false_l*2 + true_l*2 + false_l
+            lang_list = true_l*2 + false_l + true_l*2 + false_l
+            acc_list = true_acc*2 + false_acc + true_acc*2 + false_acc
+            PARAMS["corpora_list"] = ["plc", "gongo", "ecpa", "bibit", "czverse"]
             return corp_list + lang_list + acc_list
         elif value == "syllable":
             # 000011000000 + 100000 + 100000
-            corp_list = false_l * 4 + true_l * 2 + false_l * 6
-            lang_list = true_l + false_l * 5
-            acc_list = true_acc + false_acc * 5
+            corp_list = false_l*4 + true_l*2 + false_l*6
+            lang_list = true_l + false_l*5
+            acc_list = true_acc + false_acc*5
+            PARAMS["corpora_list"] = ["plc", "gongo"]
             return corp_list + lang_list + acc_list
         else:
-            # return None
-            return true_l * 18 + true_acc * 6
+            return true_l*18 + true_acc*6
 
 
     def change_selection(value, *labels):
-        for corpus in labels:
-            update_corpora_list(value, corpus)
+        for corpus_name in labels:
+            update_corpora_list(value, corpus_name)
         return value
     def change_global_selection(value, *labels):
-        for corpus in labels:
-            update_corpora_list(value, corpus)
+        for corpus_name in labels:
+            update_corpora_list(value, corpus_name)
         return [gr.Checkbox.update(value=value)] * 6
-    def update_corpora_list(added, corpus):
+    def update_corpora_list(added, corpus_name):
         corpora_list = PARAMS["corpora_list"]
-        if corpus in corpora_list and not added:
-            corpora_list.remove(corpus)
-        elif corpus not in corpora_list and added:
-            corpora_list.append(corpus)
+        if corpus_name in corpora_list and not added:
+            corpora_list.remove(corpus_name)
+        elif corpus_name not in corpora_list and added:
+            corpora_list.append(corpus_name)
 
     app_title = gr.HTML("<h1>Averell</h1>")
     with gr.Row() as row:
-        with gr.Column(scale=1) as c1:
+        with gr.Column(scale=3) as c1:
             rad_format = gr.Radio(["TEI", "JSON"],
                                   label="Output",
                                   info="Choose output format",
@@ -133,12 +141,15 @@ with gr.Blocks() as app_averell:
             corpus_checkboxes = []
             lang_checkboxes = []
             with gr.Box() as b1:
+                gr.HTML(value="<h3>Corpora list<h3>")
+                gr.HTML(value="<br>")
+                all_corp_chk = gr.Checkbox(True, label="Select all/none",
+                                           interactive=True)
                 with gr.Row() as rowa:
-                    all_corp_chk = gr.Checkbox(True, label="Select all/none",
-                                               interactive=True)
                     all_label_list = []
+                    gr.Checkbox(label="dummy",visible=False)
                     for lang in available_languages:
-                        with gr.Box() as b2:
+                        with gr.Column() as b2:
                             language = pycountry.languages.get(
                                 alpha_2=lang).name
                             gr.HTML(language)
@@ -184,7 +195,7 @@ with gr.Blocks() as app_averell:
                                             label_list.append(label)
                                             all_label_list.append(label)
                                         lang_checkboxes.append(lang_chk)
-                # "Selec All/None" checkbox change
+                # "Select All/None" checkbox change
                 all_corp_chk.change(change_global_selection,
                                     [all_corp_chk,
                                      *all_label_list],
@@ -205,11 +216,11 @@ with gr.Blocks() as app_averell:
             exp_btn = gr.Button("Export")
             folder_path = gr.Label(value="tmp/", visible=False)
             out_file = gr.File()
-            exp_btn.click(export_corpora,
+            exp_btn.click(export,
                           [folder_path,
                            rad_format,
                            rad_granularity],
                           out_file,
                           api_name="export")
 
-app_averell.launch(share=True)
+app_averell.launch(share=False, server_port=5741)
