@@ -66,7 +66,7 @@ setup(
     keywords=[
         # eg: 'keyword1', 'keyword2', 'keyword3',
     ],
-    python_requires='>3.6.*',
+    python_requires='>=3.6',
     install_requires=read("requirements.txt").split("\n"),
     extras_require={
         # eg:

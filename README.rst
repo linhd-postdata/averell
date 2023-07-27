@@ -105,3 +105,24 @@ Usage
 =====
 
 Check `usage page <https://averell.readthedocs.io/en/latest/usage.html>`_
+
+
+Docker
+======
+A docker for the frontend is available at https://hub.docker.com/repository/docker/linhdpostdata/averell-ui/
+
+This is a frontend to the POSTDATA group tool Averell. In order to install and run it, follow these steps:
+
+* Download Docker desktop from: https://www.docker.com/products/docker-desktop/
+
+* Open the Docker desktop app
+
+* From the Docker Dashboard you can use Quick Search, which is located in the Dashboard header, to search for:
+    * Any container or Compose app on your local system. You can see an overview of associated environment variables or perform quick actions, such as start, stop, or delete.
+    * Public Docker Hub images, local images, and images from remote repositories. Depending on the type of image you select, you can either pull the image by tag, view documentation, go to Docker Hub for more details, or run a new container using the image.    
+    * Extensions. From here, you can learn more about the extension and install it with a single click. Or, if you already have an extension installed, you can open it straight from the search results.    
+    * Any volume. From here you can view the associated container.
+
+* Search for linhdpostdata/averell-ui and download it.
+
+* Run the container and enter url 127.0.0.1:5741 in your browser to access the UI.
