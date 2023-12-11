@@ -8,8 +8,10 @@ from slugify import slugify
 from .utils import CORPORA_SOURCES
 from .utils import download_corpora
 from .utils import filter_corpus_features
+from .utils import get_corpora_info
 from .utils import read_features
 from .utils import write_json
+
 
 DEFAULT_OUTPUT_FOLDER = Path.cwd() / "corpora"
 logging.getLogger().setLevel(logging.INFO)
@@ -42,6 +44,12 @@ def get_corpora(corpus_indices=None, output_folder=DEFAULT_OUTPUT_FOLDER):
                     author_path / slugify(poem["poem_title"], max_length=30)))
             corpora_features.append(features)
             logging.info(f"Downloaded {CORPORA_SOURCES[index]['name']} corpus")
+        corpus_info_path = gen_path / "info" 
+        if not corpus_info_path.exists():
+            os.makedirs(corpus_info_path)
+        corpus_info = get_corpora_info(folder_name)
+        write_json(corpus_info, str(
+            corpus_info_path / folder_name))
     except IndexError:
         logging.error("Index number not in corpora list")
     finally:

@@ -471,3 +471,16 @@ def generate_tei(corpora_list, ):
 
             tree.write(f"{Path(output_path) / output_file}", encoding="UTF-8",
                        xml_declaration=True)
+
+
+def get_corpora_info(slug):
+    corpus = [corpus for corpus in CORPORA_SOURCES if corpus["properties"]["slug"] == slug][0]
+    corpus_info = {
+        "name": corpus["name"],
+        "license":  corpus["properties"]["license"],
+        "language":  corpus["properties"]["language"],
+        "size":  corpus["properties"]["size"],
+        "doc_quantity":  corpus["properties"]["doc_quantity"],
+        "word_quantity":  corpus["properties"]["word_quantity"],
+    }
+    return corpus_info
